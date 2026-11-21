@@ -1,0 +1,35 @@
+/*
+ * Copyright 2026 Davils
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.davils.kollect.core.fixture
+
+import com.davils.kollect.core.Payload
+import com.davils.kollect.core.export.Delivery
+import com.davils.kollect.core.export.Transport
+import kotlinx.coroutines.CompletableDeferred
+
+internal class ScriptedTransport(private val answers: List<Delivery?>) : Transport {
+    val sent: MutableList<Payload> = mutableListOf()
+    private var index: Int = 0
+
+    override suspend fun send(payload: Payload): Delivery {
+        sent.add(payload)
+        val answer = answers.getOrElse(index) { answers.last() }
+        index += 1
+        if (answer == null) CompletableDeferred<Unit>().await()
+        return answer ?: Delivery.Rejected
+    }
+}
