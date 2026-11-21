@@ -34,9 +34,8 @@ kreate {
                 note = "OpenMetrics 1.0: the exposition, its negotiation, units, _created, state sets, info and # EOF."
                 tags = """^v\d+\.\d+\.\d+$"""
             }
-            document("Prometheus text exposition format 0.0.4") {
-                note = "The default exposition: names, escaping of label values and help texts, and histogram samples."
-                url = "https://prometheus.io/docs/instrumenting/exposition_formats/"
+            github("prometheus/docs") {
+                note = "The Prometheus text exposition format 0.0.4, the default exposition of kollect."
             }
             github("open-telemetry/opentelemetry-proto") {
                 note = "The OTLP metrics messages the encoder writes and the ingestion reads, and ExportMetricsServiceResponse."
@@ -54,13 +53,12 @@ kreate {
                 note = "The wire format of the bounded protobuf writer and reader behind OTLP."
                 url = "https://protobuf.dev/programming-guides/encoding/"
             }
-            document("UCUM") {
-                note = "The unit codes of MeasureUnit and their annotations."
-                url = "https://ucum.org/ucum"
+            github("ucum-org/ucum") {
+                note = "UCUM: the unit codes of MeasureUnit and their annotations."
+                tags = """^v\d+\.\d+$"""
             }
-            document("Health Check Response Format for HTTP APIs") {
-                note = "The application/health+json bodies of ProbeRenderer, an Internet-Draft."
-                url = "https://datatracker.ietf.org/doc/html/draft-inadarei-api-health-check"
+            draft("draft-inadarei-api-health-check") {
+                note = "Health Check Response Format for HTTP APIs: the application/health+json bodies of ProbeRenderer."
             }
             rfc(9110) {
                 note = "The Accept header that negotiateExposition reads and the status codes of ingestion and export."

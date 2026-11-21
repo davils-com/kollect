@@ -2,32 +2,6 @@
     "schemaVersion": 1,
     "standards": [
         {
-            "id": "document:health-check-response-format-for-http-apis",
-            "reviewedOn": "2026-11-21",
-            "note": "ProbeRenderer writes application/health+json with pass, warn and fail and, only with ProbeDetail.Checks, the checks of every member.",
-            "snapshot": {
-                "title": "document:health-check-response-format-for-http-apis",
-                "withdrawn": false,
-                "replacedBy": [],
-                "updatedBy": [],
-                "errata": {},
-                "fingerprint": "sha256:4bf68a95c0f2e682a631b274b435cc9c8c57db6c4c6eaaf4defe99ed3646a551"
-            }
-        },
-        {
-            "id": "document:prometheus-text-exposition-format-0.0.4",
-            "reviewedOn": "2026-11-21",
-            "note": "The default exposition of kollect: names translated by PrometheusNaming, label values escaped, histograms with _bucket, _sum and _count.",
-            "snapshot": {
-                "title": "document:prometheus-text-exposition-format-0.0.4",
-                "withdrawn": false,
-                "replacedBy": [],
-                "updatedBy": [],
-                "errata": {},
-                "fingerprint": "sha256:93d9a0a115c159f89bf6cd9c7126031ab62d3937f0878b2a154d4b634b38040a"
-            }
-        },
-        {
             "id": "document:protocol-buffers-encoding",
             "reviewedOn": "2026-11-21",
             "note": "The bounded ProtoWriter and ProtoReader: varints of at most ten bytes, length-delimited fields checked before allocation, groups refused, unknown fields skipped without recursion.",
@@ -41,16 +15,18 @@
             }
         },
         {
-            "id": "document:ucum",
+            "id": "draft:draft-inadarei-api-health-check",
             "reviewedOn": "2026-11-21",
-            "note": "MeasureUnit offers UCUM base codes such as s, By, 1, Cel, V, A, W, J, Hz and m and checked annotations such as {request}.",
+            "note": "ProbeRenderer writes application/health+json with pass, warn and fail and, only with ProbeDetail.Checks, the checks of every member.",
             "snapshot": {
-                "title": "document:ucum",
+                "title": "Health Check Response Format for HTTP APIs",
+                "status": "Expired",
+                "revision": "06",
+                "published": "2022-04-19",
                 "withdrawn": false,
                 "replacedBy": [],
                 "updatedBy": [],
-                "errata": {},
-                "fingerprint": "sha256:28752ebc54ece1d29578695a627dbf1c327eb647bbb818768a6abc79dbcd4b04"
+                "errata": {}
             }
         },
         {
@@ -96,6 +72,18 @@
             }
         },
         {
+            "id": "github:prometheus/docs",
+            "reviewedOn": "2026-11-21",
+            "note": "The default exposition of kollect follows the text format 0.0.4 of these docs: names translated by PrometheusNaming, label values escaped, histograms with _bucket, _sum and _count.",
+            "snapshot": {
+                "title": "prometheus/docs",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {}
+            }
+        },
+        {
             "id": "github:prometheus/openmetrics",
             "reviewedOn": "2026-11-21",
             "note": "kollect writes OpenMetrics 1.0 with UNIT, _created, stateset, info and # EOF and negotiates it from Accept; refused text is reported, never altered.",
@@ -103,6 +91,20 @@
                 "title": "prometheus/openmetrics",
                 "revision": "v1.0.0",
                 "published": "2024-11-28",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {}
+            }
+        },
+        {
+            "id": "github:ucum-org/ucum",
+            "reviewedOn": "2026-11-21",
+            "note": "MeasureUnit offers UCUM base codes such as s, By, 1, Cel, V, A, W, J, Hz and m and checked annotations such as {request}.",
+            "snapshot": {
+                "title": "ucum-org/ucum",
+                "revision": "v2.2",
+                "published": "2024-06-28",
                 "withdrawn": false,
                 "replacedBy": [],
                 "updatedBy": [],
