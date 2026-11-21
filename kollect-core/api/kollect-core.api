@@ -1,0 +1,1368 @@
+public final class com/davils/kollect/core/Family {
+	public final fun getDescriptor ()Lcom/davils/kollect/core/meter/Descriptor;
+	public final fun getMeter ()Ljava/lang/Object;
+	public final fun getSize ()I
+	public final fun remove ([Ljava/lang/String;)Z
+	public fun toString ()Ljava/lang/String;
+	public final fun with ([Ljava/lang/String;)Ljava/lang/Object;
+}
+
+public final class com/davils/kollect/core/MeterRegistriesKt {
+	public static final fun meterRegistry (Lkotlin/time/Clock;Lkotlin/time/TimeSource$WithComparableMarks;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/MeterRegistry;
+	public static synthetic fun meterRegistry$default (Lkotlin/time/Clock;Lkotlin/time/TimeSource$WithComparableMarks;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/MeterRegistry;
+}
+
+public final class com/davils/kollect/core/MeterRegistry {
+	public final fun close ()V
+	public final fun counter (Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/Registration;
+	public static synthetic fun counter$default (Lcom/davils/kollect/core/MeterRegistry;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/Registration;
+	public final fun gauge (Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/Registration;
+	public static synthetic fun gauge$default (Lcom/davils/kollect/core/MeterRegistry;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/Registration;
+	public final fun getLimits ()Lcom/davils/kollect/core/limit/RegistryLimits;
+	public final fun histogram (Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/Registration;
+	public static synthetic fun histogram$default (Lcom/davils/kollect/core/MeterRegistry;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/Registration;
+	public final fun info (Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/Registration;
+	public static synthetic fun info$default (Lcom/davils/kollect/core/MeterRegistry;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/Registration;
+	public final fun longTaskTimer (Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/Registration;
+	public static synthetic fun longTaskTimer$default (Lcom/davils/kollect/core/MeterRegistry;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/Registration;
+	public final fun observedCounter (Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/Registration;
+	public static synthetic fun observedCounter$default (Lcom/davils/kollect/core/MeterRegistry;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/Registration;
+	public final fun observedGauge (Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/Registration;
+	public static synthetic fun observedGauge$default (Lcom/davils/kollect/core/MeterRegistry;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/Registration;
+	public final fun observedUpDownCounter (Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/Registration;
+	public static synthetic fun observedUpDownCounter$default (Lcom/davils/kollect/core/MeterRegistry;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/Registration;
+	public final fun remove-frbcguE (Ljava/lang/String;)Z
+	public final fun snapshot ()Lcom/davils/kollect/core/snapshot/MetricsSnapshot;
+	public final fun stateSet (Ljava/lang/String;Ljava/util/List;ILkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/Registration;
+	public final fun timer (Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/Registration;
+	public static synthetic fun timer$default (Lcom/davils/kollect/core/MeterRegistry;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/Registration;
+	public fun toString ()Ljava/lang/String;
+	public final fun upDownCounter (Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/Registration;
+	public static synthetic fun upDownCounter$default (Lcom/davils/kollect/core/MeterRegistry;Ljava/lang/String;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/Registration;
+}
+
+public final class com/davils/kollect/core/MeterRegistryBuilder {
+	public final fun events (Lcom/davils/konfetti/core/EventBus;)V
+	public final fun filter (Lcom/davils/kollect/core/filter/MeterFilter;)V
+	public final fun getLimits ()Lcom/davils/kollect/core/limit/RegistryLimits;
+	public final fun setLimits (Lcom/davils/kollect/core/limit/RegistryLimits;)V
+}
+
+public final class com/davils/kollect/core/MetricViolationCodes {
+	public static final field INSTANCE Lcom/davils/kollect/core/MetricViolationCodes;
+	public final fun getABOVE_HARD_LIMIT-J_S2PC0 ()Ljava/lang/String;
+	public final fun getNOT_POSITIVE-J_S2PC0 ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/ObservedFamily : java/lang/AutoCloseable {
+	public fun close ()V
+	public final fun getDescriptor ()Lcom/davils/kollect/core/meter/Descriptor;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/Payload {
+	public final fun copyBytes ()[B
+	public final fun getContentType ()Ljava/lang/String;
+	public final fun getSize ()I
+	public fun toString ()Ljava/lang/String;
+	public final fun writeTo (Lkotlin/jvm/functions/Function2;)V
+}
+
+public abstract interface class com/davils/kollect/core/Refusal {
+	public abstract fun getLabel ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/Refusal$Closed : com/davils/kollect/core/Refusal {
+	public static final field INSTANCE Lcom/davils/kollect/core/Refusal$Closed;
+	public fun getLabel ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/Refusal$Conflict : com/davils/kollect/core/Refusal {
+	public final fun getExisting ()Lcom/davils/kollect/core/meter/Descriptor;
+	public fun getLabel ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/Refusal$Denied : com/davils/kollect/core/Refusal {
+	public static final field INSTANCE Lcom/davils/kollect/core/Refusal$Denied;
+	public fun getLabel ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/Refusal$FilterFailed : com/davils/kollect/core/Refusal {
+	public static final field INSTANCE Lcom/davils/kollect/core/Refusal$FilterFailed;
+	public fun getLabel ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/Refusal$Invalid : com/davils/kollect/core/Refusal {
+	public fun getLabel ()Ljava/lang/String;
+	public final fun getProblem ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/Refusal$LimitReached : com/davils/kollect/core/Refusal {
+	public fun getLabel ()Ljava/lang/String;
+	public final fun getLimit ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/davils/kollect/core/Registration {
+	public abstract fun getFamily ()Ljava/lang/Object;
+}
+
+public final class com/davils/kollect/core/Registration$Declared : com/davils/kollect/core/Registration {
+	public fun getFamily ()Ljava/lang/Object;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/Registration$Existing : com/davils/kollect/core/Registration {
+	public fun getFamily ()Ljava/lang/Object;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/Registration$Refused : com/davils/kollect/core/Registration {
+	public fun getFamily ()Ljava/lang/Object;
+	public final fun getRefusal ()Lcom/davils/kollect/core/Refusal;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/RegistrationKt {
+	public static final fun orThrow (Lcom/davils/kollect/core/Registration;)Ljava/lang/Object;
+}
+
+public final class com/davils/kollect/core/binder/BindersKt {
+	public static final fun bindBusMetrics (Lcom/davils/kollect/core/MeterRegistry;Lcom/davils/konfetti/core/EventBus;)Lcom/davils/kollect/core/binder/BusMetrics;
+}
+
+public final class com/davils/kollect/core/binder/BusMetrics : java/lang/AutoCloseable {
+	public fun close ()V
+	public final fun getRegistrations ()Ljava/util/List;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/binder/CoroutineMetricsKt {
+	public static final fun jobMonitor (Lcom/davils/kollect/core/MeterRegistry;Ljava/lang/String;)Lcom/davils/kollect/core/binder/JobMonitor;
+	public static final fun metered (Lkotlinx/coroutines/CoroutineDispatcher;Lcom/davils/kollect/core/MeterRegistry;Ljava/lang/String;)Lcom/davils/kollect/core/binder/MeteredDispatcher;
+}
+
+public final class com/davils/kollect/core/binder/JobMonitor {
+	public final fun getName ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+	public final fun watch (Lkotlinx/coroutines/Job;)Lkotlinx/coroutines/Job;
+}
+
+public final class com/davils/kollect/core/binder/MeteredDispatcher : kotlinx/coroutines/CoroutineDispatcher {
+	public fun dispatch (Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)V
+	public fun isDispatchNeeded (Lkotlin/coroutines/CoroutineContext;)Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public class com/davils/kollect/core/declare/FamilyBuilder {
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getUnit ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun labelKeys ([Ljava/lang/String;)V
+	public final fun setDescription (Ljava/lang/String;)V
+	public final fun setUnit (Lcom/davils/kollect/core/meter/MeasureUnit;)V
+}
+
+public final class com/davils/kollect/core/declare/HistogramBuilder : com/davils/kollect/core/declare/FamilyBuilder {
+	public final fun getBounds ()Lcom/davils/kollect/core/meter/ExplicitBounds;
+	public final fun isNegativeAllowed ()Z
+	public final fun setBounds (Lcom/davils/kollect/core/meter/ExplicitBounds;)V
+	public final fun setNegativeAllowed (Z)V
+}
+
+public abstract interface class com/davils/kollect/core/event/HealthEvent : com/davils/konfetti/core/Event {
+}
+
+public final class com/davils/kollect/core/event/HealthEvent$StatusChanged : com/davils/kollect/core/event/HealthEvent {
+	public final fun getFrom ()Lcom/davils/kollect/core/health/HealthStatus;
+	public final fun getPath ()Ljava/lang/String;
+	public final fun getTo ()Lcom/davils/kollect/core/health/HealthStatus;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/event/MetricTopics {
+	public static final field INSTANCE Lcom/davils/kollect/core/event/MetricTopics;
+	public final fun getHEALTH ()Lcom/davils/konfetti/core/TopicKey;
+	public final fun getREGISTRY ()Lcom/davils/konfetti/core/TopicKey;
+}
+
+public abstract interface class com/davils/kollect/core/event/RegistryEvent : com/davils/konfetti/core/Event {
+}
+
+public final class com/davils/kollect/core/event/RegistryEvent$DeclarationRefused : com/davils/kollect/core/event/RegistryEvent {
+	public final fun getName ()Ljava/lang/String;
+	public final fun getRefusal ()Lcom/davils/kollect/core/Refusal;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/event/RegistryEvent$FamilyDeclared : com/davils/kollect/core/event/RegistryEvent {
+	public final fun getDescriptor ()Lcom/davils/kollect/core/meter/Descriptor;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/event/RegistryEvent$FamilyOverflowed : com/davils/kollect/core/event/RegistryEvent {
+	public final fun getName-7M4EZ9g ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/event/RegistryEvent$FamilyRemoved : com/davils/kollect/core/event/RegistryEvent {
+	public final fun getName-7M4EZ9g ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/event/RegistryEvent$FamilyUnreadable : com/davils/kollect/core/event/RegistryEvent {
+	public final fun getName-7M4EZ9g ()Ljava/lang/String;
+	public final fun getReason ()Lcom/davils/kollect/core/snapshot/Unreadability;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/event/RegistryEvent$MeasurementsRejected : com/davils/kollect/core/event/RegistryEvent {
+	public final fun getCount ()J
+	public final fun getRejection ()Lcom/davils/kollect/core/meter/Rejection;
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/davils/kollect/core/export/Delivery {
+}
+
+public final class com/davils/kollect/core/export/Delivery$Accepted : com/davils/kollect/core/export/Delivery {
+	public fun <init> ()V
+	public fun <init> (J)V
+	public synthetic fun <init> (JILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getRejectedPoints ()J
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/export/Delivery$Rejected : com/davils/kollect/core/export/Delivery {
+	public static final field INSTANCE Lcom/davils/kollect/core/export/Delivery$Rejected;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/export/Delivery$Retryable : com/davils/kollect/core/export/Delivery {
+	public static final field INSTANCE Lcom/davils/kollect/core/export/Delivery$Retryable;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/export/Delivery$Throttled : com/davils/kollect/core/export/Delivery {
+	public fun <init> ()V
+	public synthetic fun <init> (Lkotlin/time/Duration;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lkotlin/time/Duration;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getRetryAfter-FghU774 ()Lkotlin/time/Duration;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/export/DropReason : java/lang/Enum {
+	public static final field QueueFull Lcom/davils/kollect/core/export/DropReason;
+	public static final field Rejected Lcom/davils/kollect/core/export/DropReason;
+	public static final field RetriesExhausted Lcom/davils/kollect/core/export/DropReason;
+	public static final field ShutdownDeadline Lcom/davils/kollect/core/export/DropReason;
+	public static final field Superseded Lcom/davils/kollect/core/export/DropReason;
+	public static final field TooLarge Lcom/davils/kollect/core/export/DropReason;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/export/DropReason;
+	public static fun values ()[Lcom/davils/kollect/core/export/DropReason;
+}
+
+public final class com/davils/kollect/core/export/ExportAccounting {
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDelivered ()J
+	public final fun getDropped ()Ljava/util/Map;
+	public final fun getPending ()J
+	public final fun getProduced ()J
+	public final fun getRejected ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/davils/kollect/core/export/ExportEvent {
+}
+
+public final class com/davils/kollect/core/export/ExportEvent$Delivered : com/davils/kollect/core/export/ExportEvent {
+	public final fun getPoints ()J
+	public final fun getRejectedPoints ()J
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/export/ExportEvent$Dropped : com/davils/kollect/core/export/ExportEvent {
+	public final fun getPoints ()J
+	public final fun getReason ()Lcom/davils/kollect/core/export/DropReason;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/export/ExportEvent$Retrying : com/davils/kollect/core/export/ExportEvent {
+	public final fun getAttempt ()I
+	public final fun getDelay-UwyO8pc ()J
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/davils/kollect/core/export/ExportObserver {
+	public static final field Companion Lcom/davils/kollect/core/export/ExportObserver$Companion;
+	public abstract fun observe (Lcom/davils/kollect/core/export/ExportEvent;)V
+}
+
+public final class com/davils/kollect/core/export/ExportObserver$Companion {
+	public final fun getNone ()Lcom/davils/kollect/core/export/ExportObserver;
+}
+
+public final class com/davils/kollect/core/export/ExporterBuilder {
+	public final fun getEntropy ()Lcom/davils/konfetti/core/bus/Entropy;
+	public final fun getInterval-UwyO8pc ()J
+	public final fun getLimits ()Lcom/davils/kollect/core/limit/ExportLimits;
+	public final fun getObserver ()Lcom/davils/kollect/core/export/ExportObserver;
+	public final fun getTemporality ()Lcom/davils/kollect/core/snapshot/Temporality;
+	public final fun setEntropy (Lcom/davils/konfetti/core/bus/Entropy;)V
+	public final fun setInterval-LRDsOJo (J)V
+	public final fun setLimits (Lcom/davils/kollect/core/limit/ExportLimits;)V
+	public final fun setObserver (Lcom/davils/kollect/core/export/ExportObserver;)V
+	public final fun setTemporality (Lcom/davils/kollect/core/snapshot/Temporality;)V
+}
+
+public final class com/davils/kollect/core/export/MetricExporter {
+	public final fun accounting ()Lcom/davils/kollect/core/export/ExportAccounting;
+	public final fun flush-VtjQ1oo (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun shutdown-VtjQ1oo (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/export/MetricExportersKt {
+	public static final fun metricExporter (Lkotlinx/coroutines/CoroutineScope;Lcom/davils/kollect/core/MeterRegistry;Lcom/davils/kollect/core/otlp/Resource;Lcom/davils/kollect/core/export/Transport;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/export/MetricExporter;
+	public static synthetic fun metricExporter$default (Lkotlinx/coroutines/CoroutineScope;Lcom/davils/kollect/core/MeterRegistry;Lcom/davils/kollect/core/otlp/Resource;Lcom/davils/kollect/core/export/Transport;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/export/MetricExporter;
+}
+
+public final class com/davils/kollect/core/export/OtlpResponses {
+	public static final field INSTANCE Lcom/davils/kollect/core/export/OtlpResponses;
+	public final fun deliveryOf-moChb0s (I[BLkotlin/time/Duration;)Lcom/davils/kollect/core/export/Delivery;
+	public static synthetic fun deliveryOf-moChb0s$default (Lcom/davils/kollect/core/export/OtlpResponses;I[BLkotlin/time/Duration;ILjava/lang/Object;)Lcom/davils/kollect/core/export/Delivery;
+}
+
+public abstract interface class com/davils/kollect/core/export/Transport {
+	public abstract fun send (Lcom/davils/kollect/core/Payload;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/davils/kollect/core/exposition/Exposition {
+	public final fun getLimits ()Lcom/davils/kollect/core/limit/ExpositionLimits;
+	public final fun getRedaction ()Lcom/davils/kollect/core/exposition/LabelRedaction;
+	public fun toString ()Ljava/lang/String;
+	public final fun write (Lcom/davils/kollect/core/exposition/ExpositionFormat;[Lcom/davils/kollect/core/snapshot/MetricsSnapshot;)Lcom/davils/kollect/core/exposition/ExpositionResult;
+}
+
+public final class com/davils/kollect/core/exposition/ExpositionBuilder {
+	public final fun getLimits ()Lcom/davils/kollect/core/limit/ExpositionLimits;
+	public final fun getRedaction ()Lcom/davils/kollect/core/exposition/LabelRedaction;
+	public final fun setLimits (Lcom/davils/kollect/core/limit/ExpositionLimits;)V
+	public final fun setRedaction (Lcom/davils/kollect/core/exposition/LabelRedaction;)V
+}
+
+public final class com/davils/kollect/core/exposition/ExpositionFormat : java/lang/Enum {
+	public static final field OpenMetrics Lcom/davils/kollect/core/exposition/ExpositionFormat;
+	public static final field PrometheusText Lcom/davils/kollect/core/exposition/ExpositionFormat;
+	public final fun getContentType ()Ljava/lang/String;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/exposition/ExpositionFormat;
+	public static fun values ()[Lcom/davils/kollect/core/exposition/ExpositionFormat;
+}
+
+public final class com/davils/kollect/core/exposition/ExpositionReport {
+	public final fun getFamilies ()I
+	public final fun getRefused ()Ljava/util/List;
+	public final fun getSeries ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/davils/kollect/core/exposition/ExpositionResult {
+}
+
+public final class com/davils/kollect/core/exposition/ExpositionResult$Refused : com/davils/kollect/core/exposition/ExpositionResult {
+	public final fun getLimit ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/exposition/ExpositionResult$Written : com/davils/kollect/core/exposition/ExpositionResult {
+	public final fun getPayload ()Lcom/davils/kollect/core/Payload;
+	public final fun getReport ()Lcom/davils/kollect/core/exposition/ExpositionReport;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/exposition/ExpositionsKt {
+	public static final fun exposition (Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/exposition/Exposition;
+	public static synthetic fun exposition$default (Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/exposition/Exposition;
+	public static final fun negotiateExposition (Ljava/lang/String;)Lcom/davils/kollect/core/exposition/ExpositionFormat;
+}
+
+public final class com/davils/kollect/core/exposition/FamilyProblem : java/lang/Enum {
+	public static final field DuplicateSeries Lcom/davils/kollect/core/exposition/FamilyProblem;
+	public static final field InvalidText Lcom/davils/kollect/core/exposition/FamilyProblem;
+	public static final field NameCollision Lcom/davils/kollect/core/exposition/FamilyProblem;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/exposition/FamilyProblem;
+	public static fun values ()[Lcom/davils/kollect/core/exposition/FamilyProblem;
+}
+
+public abstract interface class com/davils/kollect/core/exposition/LabelRedaction {
+	public static final field Companion Lcom/davils/kollect/core/exposition/LabelRedaction$Companion;
+	public abstract fun redacts-CR_CoHg (Ljava/lang/String;)Z
+}
+
+public final class com/davils/kollect/core/exposition/LabelRedaction$Companion {
+	public final fun getNone ()Lcom/davils/kollect/core/exposition/LabelRedaction;
+	public final fun getSensitive ()Lcom/davils/kollect/core/exposition/LabelRedaction;
+}
+
+public final class com/davils/kollect/core/exposition/RefusedFamily {
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getName-7M4EZ9g ()Ljava/lang/String;
+	public final fun getProblem ()Lcom/davils/kollect/core/exposition/FamilyProblem;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/davils/kollect/core/filter/FilterDecision {
+}
+
+public final class com/davils/kollect/core/filter/FilterDecision$Accept : com/davils/kollect/core/filter/FilterDecision {
+	public static final field INSTANCE Lcom/davils/kollect/core/filter/FilterDecision$Accept;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/filter/FilterDecision$Deny : com/davils/kollect/core/filter/FilterDecision {
+	public static final field INSTANCE Lcom/davils/kollect/core/filter/FilterDecision$Deny;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/filter/FilterDecision$Neutral : com/davils/kollect/core/filter/FilterDecision {
+	public static final field INSTANCE Lcom/davils/kollect/core/filter/FilterDecision$Neutral;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/filter/FilterDecision$Reshape : com/davils/kollect/core/filter/FilterDecision {
+	public fun <init> (Ljava/util/Set;)V
+	public final fun getDropLabels ()Ljava/util/Set;
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/davils/kollect/core/filter/MeterFilter {
+	public static final field Companion Lcom/davils/kollect/core/filter/MeterFilter$Companion;
+	public abstract fun decide (Lcom/davils/kollect/core/meter/Descriptor;)Lcom/davils/kollect/core/filter/FilterDecision;
+}
+
+public final class com/davils/kollect/core/filter/MeterFilter$Companion {
+	public final fun denyPrefix (Ljava/lang/String;)Lcom/davils/kollect/core/filter/MeterFilter;
+	public final fun dropLabels ([Ljava/lang/String;)Lcom/davils/kollect/core/filter/MeterFilter;
+}
+
+public final class com/davils/kollect/core/health/Health {
+	public static final field Companion Lcom/davils/kollect/core/health/Health$Companion;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getReasons ()Ljava/util/List;
+	public final fun getStatus ()Lcom/davils/kollect/core/health/HealthStatus;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/health/Health$Companion {
+	public final fun degraded ([Lcom/davils/kollect/core/health/ReasonCode;)Lcom/davils/kollect/core/health/Health;
+	public final fun down ([Lcom/davils/kollect/core/health/ReasonCode;)Lcom/davils/kollect/core/health/Health;
+	public final fun getUp ()Lcom/davils/kollect/core/health/Health;
+}
+
+public class com/davils/kollect/core/health/HealthGroupBuilder {
+	public final fun group (Ljava/lang/String;Lcom/davils/kollect/core/health/Impact;Lkotlin/jvm/functions/Function1;)V
+	public static synthetic fun group$default (Lcom/davils/kollect/core/health/HealthGroupBuilder;Ljava/lang/String;Lcom/davils/kollect/core/health/Impact;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
+	public final fun indicator-exY8QGI (Ljava/lang/String;Lcom/davils/kollect/core/health/Impact;JLcom/davils/kollect/core/health/HealthIndicator;)V
+	public static synthetic fun indicator-exY8QGI$default (Lcom/davils/kollect/core/health/HealthGroupBuilder;Ljava/lang/String;Lcom/davils/kollect/core/health/Impact;JLcom/davils/kollect/core/health/HealthIndicator;ILjava/lang/Object;)V
+	public final fun state (Ljava/lang/String;Lcom/davils/kollect/core/health/Impact;Lkotlin/jvm/functions/Function1;)V
+	public static synthetic fun state$default (Lcom/davils/kollect/core/health/HealthGroupBuilder;Ljava/lang/String;Lcom/davils/kollect/core/health/Impact;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
+	public final fun threshold (Ljava/lang/String;Lcom/davils/kollect/core/health/Impact;Lkotlin/jvm/functions/Function1;)V
+	public static synthetic fun threshold$default (Lcom/davils/kollect/core/health/HealthGroupBuilder;Ljava/lang/String;Lcom/davils/kollect/core/health/Impact;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)V
+}
+
+public abstract interface class com/davils/kollect/core/health/HealthIndicator {
+	public abstract fun check (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/davils/kollect/core/health/HealthRegistriesKt {
+	public static final fun healthRegistry (Lcom/davils/kollect/core/MeterRegistry;Lkotlin/time/Clock;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/health/HealthRegistry;
+	public static synthetic fun healthRegistry$default (Lcom/davils/kollect/core/MeterRegistry;Lkotlin/time/Clock;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/health/HealthRegistry;
+}
+
+public final class com/davils/kollect/core/health/HealthRegistry {
+	public final fun evaluate (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getLimits ()Lcom/davils/kollect/core/limit/HealthLimits;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/health/HealthRegistryBuilder : com/davils/kollect/core/health/HealthGroupBuilder {
+	public final fun events (Lcom/davils/konfetti/core/EventBus;)V
+	public final fun getLimits ()Lcom/davils/kollect/core/limit/HealthLimits;
+	public final fun setLimits (Lcom/davils/kollect/core/limit/HealthLimits;)V
+}
+
+public final class com/davils/kollect/core/health/HealthReport {
+	public final fun getEvaluatedAt ()Lkotlin/time/Instant;
+	public final fun getMembers ()Ljava/util/List;
+	public final fun getStatus ()Lcom/davils/kollect/core/health/HealthStatus;
+	public final fun member (Ljava/lang/String;)Lcom/davils/kollect/core/health/MemberReport;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/health/HealthStatus : java/lang/Enum {
+	public static final field Degraded Lcom/davils/kollect/core/health/HealthStatus;
+	public static final field Down Lcom/davils/kollect/core/health/HealthStatus;
+	public static final field Up Lcom/davils/kollect/core/health/HealthStatus;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/health/HealthStatus;
+	public static fun values ()[Lcom/davils/kollect/core/health/HealthStatus;
+}
+
+public final class com/davils/kollect/core/health/Impact : java/lang/Enum {
+	public static final field Critical Lcom/davils/kollect/core/health/Impact;
+	public static final field Degrading Lcom/davils/kollect/core/health/Impact;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/health/Impact;
+	public static fun values ()[Lcom/davils/kollect/core/health/Impact;
+}
+
+public final class com/davils/kollect/core/health/MemberReport {
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPath ()Ljava/lang/String;
+	public final fun getReasons ()Ljava/util/List;
+	public final fun getStatus ()Lcom/davils/kollect/core/health/HealthStatus;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/health/ProbeDetail : java/lang/Enum {
+	public static final field Checks Lcom/davils/kollect/core/health/ProbeDetail;
+	public static final field StatusOnly Lcom/davils/kollect/core/health/ProbeDetail;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/health/ProbeDetail;
+	public static fun values ()[Lcom/davils/kollect/core/health/ProbeDetail;
+}
+
+public final class com/davils/kollect/core/health/ProbeRenderer {
+	public fun <init> ()V
+	public fun <init> (Lcom/davils/kollect/core/health/ProbeDetail;)V
+	public synthetic fun <init> (Lcom/davils/kollect/core/health/ProbeDetail;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getDetail ()Lcom/davils/kollect/core/health/ProbeDetail;
+	public final fun live ()Lcom/davils/kollect/core/health/ProbeResponse;
+	public final fun ready (Lcom/davils/kollect/core/health/HealthReport;)Lcom/davils/kollect/core/health/ProbeResponse;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/health/ProbeResponse {
+	public final fun getBody ()Lcom/davils/kollect/core/Payload;
+	public final fun getStatusCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/health/ReasonCode : java/lang/Enum {
+	public static final field CheckFailed Lcom/davils/kollect/core/health/ReasonCode;
+	public static final field EmptyGroup Lcom/davils/kollect/core/health/ReasonCode;
+	public static final field InsufficientSamples Lcom/davils/kollect/core/health/ReasonCode;
+	public static final field NoData Lcom/davils/kollect/core/health/ReasonCode;
+	public static final field NotANumber Lcom/davils/kollect/core/health/ReasonCode;
+	public static final field Reported Lcom/davils/kollect/core/health/ReasonCode;
+	public static final field Stale Lcom/davils/kollect/core/health/ReasonCode;
+	public static final field StateMatched Lcom/davils/kollect/core/health/ReasonCode;
+	public static final field ThresholdCrossed Lcom/davils/kollect/core/health/ReasonCode;
+	public static final field TimedOut Lcom/davils/kollect/core/health/ReasonCode;
+	public static final field Unreadable Lcom/davils/kollect/core/health/ReasonCode;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/health/ReasonCode;
+	public static fun values ()[Lcom/davils/kollect/core/health/ReasonCode;
+}
+
+public final class com/davils/kollect/core/health/rule/Direction : java/lang/Enum {
+	public static final field Above Lcom/davils/kollect/core/health/rule/Direction;
+	public static final field Below Lcom/davils/kollect/core/health/rule/Direction;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/health/rule/Direction;
+	public static fun values ()[Lcom/davils/kollect/core/health/rule/Direction;
+}
+
+public final class com/davils/kollect/core/health/rule/StateRuleBuilder {
+	public final fun degraded ([Ljava/lang/String;)V
+	public final fun down ([Ljava/lang/String;)V
+	public final fun getMeter ()Ljava/lang/String;
+	public final fun getUndetermined ()Lcom/davils/kollect/core/health/rule/Undetermined;
+	public final fun setMeter (Ljava/lang/String;)V
+	public final fun setUndetermined (Lcom/davils/kollect/core/health/rule/Undetermined;)V
+}
+
+public abstract interface class com/davils/kollect/core/health/rule/Statistic {
+}
+
+public final class com/davils/kollect/core/health/rule/Statistic$Count : com/davils/kollect/core/health/rule/Statistic {
+	public static final field INSTANCE Lcom/davils/kollect/core/health/rule/Statistic$Count;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/health/rule/Statistic$Mean : com/davils/kollect/core/health/rule/Statistic {
+	public static final field INSTANCE Lcom/davils/kollect/core/health/rule/Statistic$Mean;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/health/rule/Statistic$Rate : com/davils/kollect/core/health/rule/Statistic {
+	public synthetic fun <init> (JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getWindow-UwyO8pc ()J
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/health/rule/Statistic$Value : com/davils/kollect/core/health/rule/Statistic {
+	public static final field INSTANCE Lcom/davils/kollect/core/health/rule/Statistic$Value;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/health/rule/ThresholdRuleBuilder {
+	public final fun above (Ljava/lang/Double;Ljava/lang/Double;)V
+	public static synthetic fun above$default (Lcom/davils/kollect/core/health/rule/ThresholdRuleBuilder;Ljava/lang/Double;Ljava/lang/Double;ILjava/lang/Object;)V
+	public final fun below (Ljava/lang/Double;Ljava/lang/Double;)V
+	public static synthetic fun below$default (Lcom/davils/kollect/core/health/rule/ThresholdRuleBuilder;Ljava/lang/Double;Ljava/lang/Double;ILjava/lang/Object;)V
+	public final fun getMaximumAge-FghU774 ()Lkotlin/time/Duration;
+	public final fun getMeter ()Ljava/lang/String;
+	public final fun getStatistic ()Lcom/davils/kollect/core/health/rule/Statistic;
+	public final fun getUndetermined ()Lcom/davils/kollect/core/health/rule/Undetermined;
+	public final fun setMaximumAge-BwNAW2A (Lkotlin/time/Duration;)V
+	public final fun setMeter (Ljava/lang/String;)V
+	public final fun setStatistic (Lcom/davils/kollect/core/health/rule/Statistic;)V
+	public final fun setUndetermined (Lcom/davils/kollect/core/health/rule/Undetermined;)V
+}
+
+public final class com/davils/kollect/core/health/rule/Undetermined : java/lang/Enum {
+	public static final field Degraded Lcom/davils/kollect/core/health/rule/Undetermined;
+	public static final field Down Lcom/davils/kollect/core/health/rule/Undetermined;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/health/rule/Undetermined;
+	public static fun values ()[Lcom/davils/kollect/core/health/rule/Undetermined;
+}
+
+public final class com/davils/kollect/core/jvm/JvmBindingsKt {
+	public static final fun bindJvmMetrics (Lcom/davils/kollect/core/MeterRegistry;Ljava/util/Set;)Lcom/davils/kollect/core/jvm/JvmMetrics;
+	public static synthetic fun bindJvmMetrics$default (Lcom/davils/kollect/core/MeterRegistry;Ljava/util/Set;ILjava/lang/Object;)Lcom/davils/kollect/core/jvm/JvmMetrics;
+}
+
+public final class com/davils/kollect/core/jvm/JvmMetricGroup : java/lang/Enum {
+	public static final field Classes Lcom/davils/kollect/core/jvm/JvmMetricGroup;
+	public static final field Cpu Lcom/davils/kollect/core/jvm/JvmMetricGroup;
+	public static final field FileDescriptors Lcom/davils/kollect/core/jvm/JvmMetricGroup;
+	public static final field GarbageCollection Lcom/davils/kollect/core/jvm/JvmMetricGroup;
+	public static final field Memory Lcom/davils/kollect/core/jvm/JvmMetricGroup;
+	public static final field Threads Lcom/davils/kollect/core/jvm/JvmMetricGroup;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/jvm/JvmMetricGroup;
+	public static fun values ()[Lcom/davils/kollect/core/jvm/JvmMetricGroup;
+}
+
+public final class com/davils/kollect/core/jvm/JvmMetrics : java/lang/AutoCloseable {
+	public fun close ()V
+	public final fun getRegistrations ()Ljava/util/List;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/limit/ExportLimits : com/davils/kore/core/validation/Validatable {
+	public static final field Companion Lcom/davils/kollect/core/limit/ExportLimits$Companion;
+	public static final field HARD_ATTEMPTS I
+	public static final field HARD_PAYLOAD_BYTES I
+	public static final field HARD_POINTS_PER_PAYLOAD I
+	public static final field HARD_QUEUED_BATCHES I
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMaximumAttempts ()I
+	public final fun getMaximumBackoff-UwyO8pc ()J
+	public final fun getMaximumPayloadBytes ()I
+	public final fun getMaximumPointsPerPayload ()I
+	public final fun getMaximumQueuedBatches ()I
+	public final fun getMaximumRetryAfter-UwyO8pc ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public fun validate (Lcom/davils/kore/core/validation/ValidationScope;)V
+}
+
+public final class com/davils/kollect/core/limit/ExportLimits$Companion {
+	public final fun getDefault ()Lcom/davils/kollect/core/limit/ExportLimits;
+	public final fun getHARD_BACKOFF-UwyO8pc ()J
+}
+
+public final class com/davils/kollect/core/limit/ExportLimitsBuilder : com/davils/kore/core/dsl/ValidatingBuilder {
+	public synthetic fun assemble ()Lcom/davils/kore/core/validation/Validatable;
+	public final fun getMaximumAttempts ()I
+	public final fun getMaximumBackoff-UwyO8pc ()J
+	public final fun getMaximumPayloadBytes ()I
+	public final fun getMaximumPointsPerPayload ()I
+	public final fun getMaximumQueuedBatches ()I
+	public final fun getMaximumRetryAfter-UwyO8pc ()J
+	public final fun setMaximumAttempts (I)V
+	public final fun setMaximumBackoff-LRDsOJo (J)V
+	public final fun setMaximumPayloadBytes (I)V
+	public final fun setMaximumPointsPerPayload (I)V
+	public final fun setMaximumQueuedBatches (I)V
+	public final fun setMaximumRetryAfter-LRDsOJo (J)V
+}
+
+public final class com/davils/kollect/core/limit/ExpositionLimits : com/davils/kore/core/validation/Validatable {
+	public static final field Companion Lcom/davils/kollect/core/limit/ExpositionLimits$Companion;
+	public static final field HARD_BYTES I
+	public static final field HARD_SERIES I
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMaximumBytes ()I
+	public final fun getMaximumSeries ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public fun validate (Lcom/davils/kore/core/validation/ValidationScope;)V
+}
+
+public final class com/davils/kollect/core/limit/ExpositionLimits$Companion {
+	public final fun getDefault ()Lcom/davils/kollect/core/limit/ExpositionLimits;
+}
+
+public final class com/davils/kollect/core/limit/ExpositionLimitsBuilder : com/davils/kore/core/dsl/ValidatingBuilder {
+	public synthetic fun assemble ()Lcom/davils/kore/core/validation/Validatable;
+	public final fun getMaximumBytes ()I
+	public final fun getMaximumSeries ()I
+	public final fun setMaximumBytes (I)V
+	public final fun setMaximumSeries (I)V
+}
+
+public final class com/davils/kollect/core/limit/HealthLimits : com/davils/kore/core/validation/Validatable {
+	public static final field Companion Lcom/davils/kollect/core/limit/HealthLimits$Companion;
+	public static final field HARD_CHECKPOINTS I
+	public static final field HARD_CONCURRENT_CHECKS I
+	public static final field HARD_DEPTH I
+	public static final field HARD_MEMBERS I
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMaximumCheckTimeout-UwyO8pc ()J
+	public final fun getMaximumCheckpoints ()I
+	public final fun getMaximumConcurrentChecks ()I
+	public final fun getMaximumDepth ()I
+	public final fun getMaximumMembers ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public fun validate (Lcom/davils/kore/core/validation/ValidationScope;)V
+}
+
+public final class com/davils/kollect/core/limit/HealthLimits$Companion {
+	public final fun getDefault ()Lcom/davils/kollect/core/limit/HealthLimits;
+	public final fun getHARD_CHECK_TIMEOUT-UwyO8pc ()J
+}
+
+public final class com/davils/kollect/core/limit/HealthLimitsBuilder : com/davils/kore/core/dsl/ValidatingBuilder {
+	public synthetic fun assemble ()Lcom/davils/kore/core/validation/Validatable;
+	public final fun getMaximumCheckTimeout-UwyO8pc ()J
+	public final fun getMaximumCheckpoints ()I
+	public final fun getMaximumConcurrentChecks ()I
+	public final fun getMaximumDepth ()I
+	public final fun getMaximumMembers ()I
+	public final fun setMaximumCheckTimeout-LRDsOJo (J)V
+	public final fun setMaximumCheckpoints (I)V
+	public final fun setMaximumConcurrentChecks (I)V
+	public final fun setMaximumDepth (I)V
+	public final fun setMaximumMembers (I)V
+}
+
+public final class com/davils/kollect/core/limit/IngestLimits : com/davils/kore/core/validation/Validatable {
+	public static final field Companion Lcom/davils/kollect/core/limit/IngestLimits$Companion;
+	public static final field HARD_ATTRIBUTES I
+	public static final field HARD_BUCKETS I
+	public static final field HARD_PAYLOAD_BYTES I
+	public static final field HARD_POINTS_PER_MINUTE I
+	public static final field HARD_POINTS_PER_REQUEST I
+	public static final field HARD_SERIES I
+	public static final field HARD_SERIES_PER_SOURCE I
+	public static final field HARD_SOURCES I
+	public static final field HARD_STRING_BYTES I
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getInstanceExpiry-UwyO8pc ()J
+	public final fun getMaximumAttributes ()I
+	public final fun getMaximumBuckets ()I
+	public final fun getMaximumClockSkew-UwyO8pc ()J
+	public final fun getMaximumPayloadBytes ()I
+	public final fun getMaximumPointAge-UwyO8pc ()J
+	public final fun getMaximumPointsPerMinute ()I
+	public final fun getMaximumPointsPerRequest ()I
+	public final fun getMaximumSeries ()I
+	public final fun getMaximumSeriesPerSource ()I
+	public final fun getMaximumSources ()I
+	public final fun getMaximumStringBytes ()I
+	public final fun getSeriesExpiry-UwyO8pc ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public fun validate (Lcom/davils/kore/core/validation/ValidationScope;)V
+}
+
+public final class com/davils/kollect/core/limit/IngestLimits$Companion {
+	public final fun getDefault ()Lcom/davils/kollect/core/limit/IngestLimits;
+	public final fun getHARD_CLOCK_SKEW-UwyO8pc ()J
+	public final fun getHARD_INSTANCE_EXPIRY-UwyO8pc ()J
+	public final fun getHARD_POINT_AGE-UwyO8pc ()J
+	public final fun getHARD_SERIES_EXPIRY-UwyO8pc ()J
+}
+
+public final class com/davils/kollect/core/limit/IngestLimitsBuilder : com/davils/kore/core/dsl/ValidatingBuilder {
+	public synthetic fun assemble ()Lcom/davils/kore/core/validation/Validatable;
+	public final fun getInstanceExpiry-UwyO8pc ()J
+	public final fun getMaximumAttributes ()I
+	public final fun getMaximumBuckets ()I
+	public final fun getMaximumClockSkew-UwyO8pc ()J
+	public final fun getMaximumPayloadBytes ()I
+	public final fun getMaximumPointAge-UwyO8pc ()J
+	public final fun getMaximumPointsPerMinute ()I
+	public final fun getMaximumPointsPerRequest ()I
+	public final fun getMaximumSeries ()I
+	public final fun getMaximumSeriesPerSource ()I
+	public final fun getMaximumSources ()I
+	public final fun getMaximumStringBytes ()I
+	public final fun getSeriesExpiry-UwyO8pc ()J
+	public final fun setInstanceExpiry-LRDsOJo (J)V
+	public final fun setMaximumAttributes (I)V
+	public final fun setMaximumBuckets (I)V
+	public final fun setMaximumClockSkew-LRDsOJo (J)V
+	public final fun setMaximumPayloadBytes (I)V
+	public final fun setMaximumPointAge-LRDsOJo (J)V
+	public final fun setMaximumPointsPerMinute (I)V
+	public final fun setMaximumPointsPerRequest (I)V
+	public final fun setMaximumSeries (I)V
+	public final fun setMaximumSeriesPerSource (I)V
+	public final fun setMaximumSources (I)V
+	public final fun setMaximumStringBytes (I)V
+	public final fun setSeriesExpiry-LRDsOJo (J)V
+}
+
+public final class com/davils/kollect/core/limit/LimitsDslKt {
+	public static final fun exportLimits (Lcom/davils/kollect/core/limit/ExportLimits;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/limit/ExportLimits;
+	public static synthetic fun exportLimits$default (Lcom/davils/kollect/core/limit/ExportLimits;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/limit/ExportLimits;
+	public static final fun expositionLimits (Lcom/davils/kollect/core/limit/ExpositionLimits;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/limit/ExpositionLimits;
+	public static synthetic fun expositionLimits$default (Lcom/davils/kollect/core/limit/ExpositionLimits;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/limit/ExpositionLimits;
+	public static final fun healthLimits (Lcom/davils/kollect/core/limit/HealthLimits;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/limit/HealthLimits;
+	public static synthetic fun healthLimits$default (Lcom/davils/kollect/core/limit/HealthLimits;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/limit/HealthLimits;
+	public static final fun ingestLimits (Lcom/davils/kollect/core/limit/IngestLimits;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/limit/IngestLimits;
+	public static synthetic fun ingestLimits$default (Lcom/davils/kollect/core/limit/IngestLimits;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/limit/IngestLimits;
+	public static final fun registryLimits (Lcom/davils/kollect/core/limit/RegistryLimits;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/limit/RegistryLimits;
+	public static synthetic fun registryLimits$default (Lcom/davils/kollect/core/limit/RegistryLimits;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/limit/RegistryLimits;
+}
+
+public final class com/davils/kollect/core/limit/RegistryLimits : com/davils/kore/core/validation/Validatable {
+	public static final field Companion Lcom/davils/kollect/core/limit/RegistryLimits$Companion;
+	public static final field HARD_ACTIVE_TASKS I
+	public static final field HARD_BUCKETS I
+	public static final field HARD_DESCRIPTION_LENGTH I
+	public static final field HARD_FAMILIES I
+	public static final field HARD_FILTERS I
+	public static final field HARD_LABELS I
+	public static final field HARD_LABEL_VALUE_LENGTH I
+	public static final field HARD_NAME_LENGTH I
+	public static final field HARD_SERIES I
+	public static final field HARD_SERIES_PER_FAMILY I
+	public static final field HARD_STATES I
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMaximumActiveTasks ()I
+	public final fun getMaximumBuckets ()I
+	public final fun getMaximumDescriptionLength ()I
+	public final fun getMaximumFamilies ()I
+	public final fun getMaximumFilters ()I
+	public final fun getMaximumLabelValueLength ()I
+	public final fun getMaximumLabels ()I
+	public final fun getMaximumNameLength ()I
+	public final fun getMaximumSeries ()I
+	public final fun getMaximumSeriesPerFamily ()I
+	public final fun getMaximumSnapshotStall-UwyO8pc ()J
+	public final fun getMaximumStates ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public fun validate (Lcom/davils/kore/core/validation/ValidationScope;)V
+}
+
+public final class com/davils/kollect/core/limit/RegistryLimits$Companion {
+	public final fun getDefault ()Lcom/davils/kollect/core/limit/RegistryLimits;
+	public final fun getHARD_SNAPSHOT_STALL-UwyO8pc ()J
+}
+
+public final class com/davils/kollect/core/limit/RegistryLimitsBuilder : com/davils/kore/core/dsl/ValidatingBuilder {
+	public synthetic fun assemble ()Lcom/davils/kore/core/validation/Validatable;
+	public final fun getMaximumActiveTasks ()I
+	public final fun getMaximumBuckets ()I
+	public final fun getMaximumDescriptionLength ()I
+	public final fun getMaximumFamilies ()I
+	public final fun getMaximumFilters ()I
+	public final fun getMaximumLabelValueLength ()I
+	public final fun getMaximumLabels ()I
+	public final fun getMaximumNameLength ()I
+	public final fun getMaximumSeries ()I
+	public final fun getMaximumSeriesPerFamily ()I
+	public final fun getMaximumSnapshotStall-UwyO8pc ()J
+	public final fun getMaximumStates ()I
+	public final fun setMaximumActiveTasks (I)V
+	public final fun setMaximumBuckets (I)V
+	public final fun setMaximumDescriptionLength (I)V
+	public final fun setMaximumFamilies (I)V
+	public final fun setMaximumFilters (I)V
+	public final fun setMaximumLabelValueLength (I)V
+	public final fun setMaximumLabels (I)V
+	public final fun setMaximumNameLength (I)V
+	public final fun setMaximumSeries (I)V
+	public final fun setMaximumSeriesPerFamily (I)V
+	public final fun setMaximumSnapshotStall-LRDsOJo (J)V
+	public final fun setMaximumStates (I)V
+}
+
+public abstract interface class com/davils/kollect/core/meter/Counter : com/davils/kollect/core/meter/Meter {
+	public static final field Companion Lcom/davils/kollect/core/meter/Counter$Companion;
+	public static final field MAXIMUM_INCREMENT J
+	public abstract fun add (J)V
+	public abstract fun increment ()V
+}
+
+public final class com/davils/kollect/core/meter/Counter$Companion {
+	public static final field MAXIMUM_INCREMENT J
+}
+
+public final class com/davils/kollect/core/meter/Descriptor {
+	public synthetic fun <init> (Ljava/lang/String;Lcom/davils/kollect/core/meter/MeterKind;Lcom/davils/kollect/core/meter/MeasureUnit;Ljava/lang/String;Ljava/util/List;Lcom/davils/kollect/core/meter/ExplicitBounds;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBounds ()Lcom/davils/kollect/core/meter/ExplicitBounds;
+	public final fun getDescription ()Ljava/lang/String;
+	public final fun getKind ()Lcom/davils/kollect/core/meter/MeterKind;
+	public final fun getLabelKeys ()Ljava/util/List;
+	public final fun getName-7M4EZ9g ()Ljava/lang/String;
+	public final fun getStates ()Ljava/util/List;
+	public final fun getUnit ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/meter/ExplicitBounds {
+	public static final field Companion Lcom/davils/kollect/core/meter/ExplicitBounds$Companion;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBucketCount ()I
+	public final fun getValues ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/meter/ExplicitBounds$Companion {
+	public final fun getDEFAULT ()Lcom/davils/kollect/core/meter/ExplicitBounds;
+	public final fun getSECONDS ()Lcom/davils/kollect/core/meter/ExplicitBounds;
+	public final fun of (Ljava/util/List;)Lcom/davils/kollect/core/meter/ExplicitBounds;
+	public final fun of ([D)Lcom/davils/kollect/core/meter/ExplicitBounds;
+	public final fun ofOrNull (Ljava/util/List;)Lcom/davils/kollect/core/meter/ExplicitBounds;
+}
+
+public abstract interface class com/davils/kollect/core/meter/Gauge : com/davils/kollect/core/meter/Meter {
+	public abstract fun set (D)V
+}
+
+public abstract interface class com/davils/kollect/core/meter/Histogram : com/davils/kollect/core/meter/Meter {
+	public abstract fun record (D)V
+}
+
+public abstract interface class com/davils/kollect/core/meter/Info : com/davils/kollect/core/meter/Meter {
+}
+
+public abstract interface class com/davils/kollect/core/meter/LongTask : java/lang/AutoCloseable {
+	public abstract fun close ()V
+}
+
+public abstract interface class com/davils/kollect/core/meter/LongTaskTimer : com/davils/kollect/core/meter/Meter {
+	public abstract fun start ()Lcom/davils/kollect/core/meter/LongTask;
+}
+
+public final class com/davils/kollect/core/meter/MeasureUnit {
+	public static final field Companion Lcom/davils/kollect/core/meter/MeasureUnit$Companion;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getPrometheusSuffix ()Ljava/lang/String;
+	public final fun getUcum ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/meter/MeasureUnit$Companion {
+	public final fun annotation (Ljava/lang/String;)Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun getAMPERES ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun getBYTES ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun getCELSIUS ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun getHERTZ ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun getJOULES ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun getMETERS ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun getNONE ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun getPERCENT ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun getRATIO ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun getSECONDS ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun getVOLTS ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun getWATTS ()Lcom/davils/kollect/core/meter/MeasureUnit;
+	public final fun ofUcumOrNull (Ljava/lang/String;)Lcom/davils/kollect/core/meter/MeasureUnit;
+}
+
+public abstract interface class com/davils/kollect/core/meter/Meter {
+}
+
+public final class com/davils/kollect/core/meter/MeterKind : java/lang/Enum {
+	public static final field Counter Lcom/davils/kollect/core/meter/MeterKind;
+	public static final field Gauge Lcom/davils/kollect/core/meter/MeterKind;
+	public static final field Histogram Lcom/davils/kollect/core/meter/MeterKind;
+	public static final field Info Lcom/davils/kollect/core/meter/MeterKind;
+	public static final field StateSet Lcom/davils/kollect/core/meter/MeterKind;
+	public static final field UpDownCounter Lcom/davils/kollect/core/meter/MeterKind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/meter/MeterKind;
+	public static fun values ()[Lcom/davils/kollect/core/meter/MeterKind;
+}
+
+public abstract interface class com/davils/kollect/core/meter/ObservationSink {
+	public abstract fun observe (D[Ljava/lang/String;)V
+}
+
+public final class com/davils/kollect/core/meter/Rejection : java/lang/Enum {
+	public static final field Duplicate Lcom/davils/kollect/core/meter/Rejection;
+	public static final field InvalidLabels Lcom/davils/kollect/core/meter/Rejection;
+	public static final field Negative Lcom/davils/kollect/core/meter/Rejection;
+	public static final field NotFinite Lcom/davils/kollect/core/meter/Rejection;
+	public static final field TooLarge Lcom/davils/kollect/core/meter/Rejection;
+	public static final field Untracked Lcom/davils/kollect/core/meter/Rejection;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getLabel ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/meter/Rejection;
+	public static fun values ()[Lcom/davils/kollect/core/meter/Rejection;
+}
+
+public abstract interface class com/davils/kollect/core/meter/StateSet : com/davils/kollect/core/meter/Meter {
+	public abstract fun set (Ljava/lang/Enum;)V
+}
+
+public abstract interface class com/davils/kollect/core/meter/Timer : com/davils/kollect/core/meter/Meter {
+	public abstract fun getTimeSource ()Lkotlin/time/TimeSource;
+	public abstract fun record-LRDsOJo (J)V
+}
+
+public final class com/davils/kollect/core/meter/TimerKt {
+	public static final fun time (Lcom/davils/kollect/core/meter/Timer;Lkotlin/jvm/functions/Function0;)Ljava/lang/Object;
+}
+
+public abstract interface class com/davils/kollect/core/meter/UpDownCounter : com/davils/kollect/core/meter/Meter {
+	public abstract fun add (J)V
+	public abstract fun decrement ()V
+	public abstract fun increment ()V
+}
+
+public final class com/davils/kollect/core/name/LabelKey : java/lang/Comparable {
+	public static final field Companion Lcom/davils/kollect/core/name/LabelKey$Companion;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Lcom/davils/kollect/core/name/LabelKey;
+	public synthetic fun compareTo (Ljava/lang/Object;)I
+	public fun compareTo-CR_CoHg (Ljava/lang/String;)I
+	public static fun compareTo-CR_CoHg (Ljava/lang/String;Ljava/lang/String;)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public static final fun isReserved-impl (Ljava/lang/String;)Z
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/name/LabelKey$Companion {
+	public final fun getOVERFLOW-eKFTaAA ()Ljava/lang/String;
+	public final fun of-Vdcbx1Y (Ljava/lang/String;)Ljava/lang/String;
+	public final fun ofOrNull-giuDnBU (Ljava/lang/String;)Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/name/Labels : java/lang/Comparable {
+	public static final field Companion Lcom/davils/kollect/core/name/Labels$Companion;
+	public fun compareTo (Lcom/davils/kollect/core/name/Labels;)I
+	public synthetic fun compareTo (Ljava/lang/Object;)I
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun get-CR_CoHg (Ljava/lang/String;)Ljava/lang/String;
+	public final fun getKeys ()Ljava/util/List;
+	public final fun getSize ()I
+	public final fun getValues ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/name/Labels$Companion {
+	public final fun getEMPTY ()Lcom/davils/kollect/core/name/Labels;
+}
+
+public final class com/davils/kollect/core/name/MetricName : java/lang/Comparable {
+	public static final field Companion Lcom/davils/kollect/core/name/MetricName$Companion;
+	public static final field MAXIMUM_LENGTH I
+	public static final synthetic fun box-impl (Ljava/lang/String;)Lcom/davils/kollect/core/name/MetricName;
+	public synthetic fun compareTo (Ljava/lang/Object;)I
+	public fun compareTo-frbcguE (Ljava/lang/String;)I
+	public static fun compareTo-frbcguE (Ljava/lang/String;Ljava/lang/String;)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/name/MetricName$Companion {
+	public final fun of-SoYlNfg (Ljava/lang/String;)Ljava/lang/String;
+	public final fun ofOrNull-7bnHQpo (Ljava/lang/String;)Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/name/PrometheusNaming {
+	public static final field INSTANCE Lcom/davils/kollect/core/name/PrometheusNaming;
+	public final fun familyName (Lcom/davils/kollect/core/meter/Descriptor;)Ljava/lang/String;
+	public final fun getRESERVED_SUFFIXES ()Ljava/util/List;
+	public final fun isReserved (Lcom/davils/kollect/core/meter/Descriptor;)Z
+	public final fun labelName-CR_CoHg (Ljava/lang/String;)Ljava/lang/String;
+	public final fun sampleNames (Lcom/davils/kollect/core/meter/Descriptor;)Ljava/util/List;
+}
+
+public final class com/davils/kollect/core/otlp/IngestRejection : java/lang/Enum {
+	public static final field InvalidLabels Lcom/davils/kollect/core/otlp/IngestRejection;
+	public static final field InvalidValue Lcom/davils/kollect/core/otlp/IngestRejection;
+	public static final field Mismatch Lcom/davils/kollect/core/otlp/IngestRejection;
+	public static final field OutOfOrder Lcom/davils/kollect/core/otlp/IngestRejection;
+	public static final field OutOfTime Lcom/davils/kollect/core/otlp/IngestRejection;
+	public static final field SeriesLimit Lcom/davils/kollect/core/otlp/IngestRejection;
+	public static final field UndeclaredFamily Lcom/davils/kollect/core/otlp/IngestRejection;
+	public static final field UnsupportedType Lcom/davils/kollect/core/otlp/IngestRejection;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/otlp/IngestRejection;
+	public static fun values ()[Lcom/davils/kollect/core/otlp/IngestRejection;
+}
+
+public final class com/davils/kollect/core/otlp/IngestVerdict : java/lang/Enum {
+	public static final field Accepted Lcom/davils/kollect/core/otlp/IngestVerdict;
+	public static final field Malformed Lcom/davils/kollect/core/otlp/IngestVerdict;
+	public static final field PartiallyAccepted Lcom/davils/kollect/core/otlp/IngestVerdict;
+	public static final field Throttled Lcom/davils/kollect/core/otlp/IngestVerdict;
+	public static final field TooLarge Lcom/davils/kollect/core/otlp/IngestVerdict;
+	public static final field UnsupportedContent Lcom/davils/kollect/core/otlp/IngestVerdict;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getStatusCode ()I
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/otlp/IngestVerdict;
+	public static fun values ()[Lcom/davils/kollect/core/otlp/IngestVerdict;
+}
+
+public final class com/davils/kollect/core/otlp/Ingestion {
+	public final fun getAccepted ()J
+	public final fun getRejected ()Ljava/util/Map;
+	public final fun getResponse ()Lcom/davils/kollect/core/Payload;
+	public final fun getVerdict ()Lcom/davils/kollect/core/otlp/IngestVerdict;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/otlp/OtlpBatch {
+	public final fun getDroppedPoints ()I
+	public final fun getPayloads ()Ljava/util/List;
+	public final fun getPoints ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/otlp/OtlpEncodingKt {
+	public static final fun encodeOtlp (Lcom/davils/kollect/core/snapshot/MetricsSnapshot;Lcom/davils/kollect/core/otlp/Resource;Lcom/davils/kollect/core/limit/ExportLimits;)Lcom/davils/kollect/core/otlp/OtlpBatch;
+	public static synthetic fun encodeOtlp$default (Lcom/davils/kollect/core/snapshot/MetricsSnapshot;Lcom/davils/kollect/core/otlp/Resource;Lcom/davils/kollect/core/limit/ExportLimits;ILjava/lang/Object;)Lcom/davils/kollect/core/otlp/OtlpBatch;
+}
+
+public final class com/davils/kollect/core/otlp/OtlpIngestion {
+	public final fun forget-Vt-zVBY (Ljava/lang/String;)Z
+	public final fun getLimits ()Lcom/davils/kollect/core/limit/IngestLimits;
+	public final fun getSourceCount ()I
+	public final fun ingest-xvjZZLQ (Ljava/lang/String;Ljava/lang/String;[B)Lcom/davils/kollect/core/otlp/Ingestion;
+	public final fun snapshot ()Lcom/davils/kollect/core/snapshot/MetricsSnapshot;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/otlp/OtlpIngestionBuilder {
+	public final fun acceptAnyFamily (Ljava/lang/String;)V
+	public final fun acceptFamily (Ljava/lang/String;Lcom/davils/kollect/core/meter/MeterKind;Lcom/davils/kollect/core/meter/MeasureUnit;[Ljava/lang/String;)V
+	public static synthetic fun acceptFamily$default (Lcom/davils/kollect/core/otlp/OtlpIngestionBuilder;Ljava/lang/String;Lcom/davils/kollect/core/meter/MeterKind;Lcom/davils/kollect/core/meter/MeasureUnit;[Ljava/lang/String;ILjava/lang/Object;)V
+	public final fun getLimits ()Lcom/davils/kollect/core/limit/IngestLimits;
+	public final fun setLimits (Lcom/davils/kollect/core/limit/IngestLimits;)V
+}
+
+public final class com/davils/kollect/core/otlp/OtlpIngestionsKt {
+	public static final fun otlpIngestion (Lkotlin/time/Clock;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/otlp/OtlpIngestion;
+	public static synthetic fun otlpIngestion$default (Lkotlin/time/Clock;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/otlp/OtlpIngestion;
+}
+
+public final class com/davils/kollect/core/otlp/Resource {
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun get (Ljava/lang/String;)Ljava/lang/String;
+	public final fun getAttributes ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/otlp/ResourceBuilder {
+	public final fun allow (Ljava/lang/String;)V
+	public final fun attribute (Ljava/lang/String;Ljava/lang/String;)V
+}
+
+public final class com/davils/kollect/core/otlp/ResourcesKt {
+	public static final fun resource (Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Lcom/davils/kollect/core/otlp/Resource;
+	public static synthetic fun resource$default (Ljava/lang/String;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lcom/davils/kollect/core/otlp/Resource;
+}
+
+public final class com/davils/kollect/core/otlp/Source : java/lang/Comparable {
+	public static final field Companion Lcom/davils/kollect/core/otlp/Source$Companion;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Lcom/davils/kollect/core/otlp/Source;
+	public synthetic fun compareTo (Ljava/lang/Object;)I
+	public fun compareTo-Vt-zVBY (Ljava/lang/String;)I
+	public static fun compareTo-Vt-zVBY (Ljava/lang/String;Ljava/lang/String;)I
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/otlp/Source$Companion {
+	public final fun of-pMcF_bc (Ljava/lang/String;)Ljava/lang/String;
+	public final fun ofOrNull-t4gXDtg (Ljava/lang/String;)Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/snapshot/FamilySnapshot {
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDescriptor ()Lcom/davils/kollect/core/meter/Descriptor;
+	public final fun getPoints ()Ljava/util/List;
+	public final fun getTemporality ()Lcom/davils/kollect/core/snapshot/Temporality;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/snapshot/GaugePoint : com/davils/kollect/core/snapshot/Point {
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getLabels ()Lcom/davils/kollect/core/name/Labels;
+	public final fun getObservedAt ()Lkotlin/time/Instant;
+	public fun getStart ()Lkotlin/time/Instant;
+	public final fun getValue ()D
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/snapshot/HistogramPoint : com/davils/kollect/core/snapshot/Point {
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBucketCounts ()Ljava/util/List;
+	public final fun getCount ()J
+	public fun getLabels ()Lcom/davils/kollect/core/name/Labels;
+	public final fun getMax ()Ljava/lang/Double;
+	public final fun getMin ()Ljava/lang/Double;
+	public fun getStart ()Lkotlin/time/Instant;
+	public final fun getSum ()D
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/snapshot/InfoPoint : com/davils/kollect/core/snapshot/Point {
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getLabels ()Lcom/davils/kollect/core/name/Labels;
+	public fun getStart ()Lkotlin/time/Instant;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/snapshot/MetricsSnapshot {
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun family-frbcguE (Ljava/lang/String;)Lcom/davils/kollect/core/snapshot/FamilySnapshot;
+	public final fun getFamilies ()Ljava/util/List;
+	public final fun getTimestamp ()Lkotlin/time/Instant;
+	public final fun getUnreadable ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/davils/kollect/core/snapshot/Point {
+	public abstract fun getLabels ()Lcom/davils/kollect/core/name/Labels;
+	public abstract fun getStart ()Lkotlin/time/Instant;
+}
+
+public final class com/davils/kollect/core/snapshot/StateSetPoint : com/davils/kollect/core/snapshot/Point {
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getActive ()I
+	public fun getLabels ()Lcom/davils/kollect/core/name/Labels;
+	public fun getStart ()Lkotlin/time/Instant;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/snapshot/SumPoint : com/davils/kollect/core/snapshot/Point {
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getLabels ()Lcom/davils/kollect/core/name/Labels;
+	public fun getStart ()Lkotlin/time/Instant;
+	public final fun getValue ()D
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/davils/kollect/core/snapshot/Temporality : java/lang/Enum {
+	public static final field Cumulative Lcom/davils/kollect/core/snapshot/Temporality;
+	public static final field Delta Lcom/davils/kollect/core/snapshot/Temporality;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/snapshot/Temporality;
+	public static fun values ()[Lcom/davils/kollect/core/snapshot/Temporality;
+}
+
+public final class com/davils/kollect/core/snapshot/Unreadability : java/lang/Enum {
+	public static final field CallbackFailed Lcom/davils/kollect/core/snapshot/Unreadability;
+	public static final field Stalled Lcom/davils/kollect/core/snapshot/Unreadability;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/snapshot/Unreadability;
+	public static fun values ()[Lcom/davils/kollect/core/snapshot/Unreadability;
+}
+
+public final class com/davils/kollect/core/snapshot/Unreadable {
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getName-7M4EZ9g ()Ljava/lang/String;
+	public final fun getReason ()Lcom/davils/kollect/core/snapshot/Unreadability;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/davils/kollect/core/trace/Span {
+	public abstract fun attribute (Ljava/lang/String;Ljava/lang/String;)V
+	public abstract fun end (Lcom/davils/kollect/core/trace/SpanOutcome;)V
+}
+
+public final class com/davils/kollect/core/trace/SpanKind : java/lang/Enum {
+	public static final field Client Lcom/davils/kollect/core/trace/SpanKind;
+	public static final field Consumer Lcom/davils/kollect/core/trace/SpanKind;
+	public static final field Internal Lcom/davils/kollect/core/trace/SpanKind;
+	public static final field Producer Lcom/davils/kollect/core/trace/SpanKind;
+	public static final field Server Lcom/davils/kollect/core/trace/SpanKind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/trace/SpanKind;
+	public static fun values ()[Lcom/davils/kollect/core/trace/SpanKind;
+}
+
+public final class com/davils/kollect/core/trace/SpanOutcome : java/lang/Enum {
+	public static final field Error Lcom/davils/kollect/core/trace/SpanOutcome;
+	public static final field Ok Lcom/davils/kollect/core/trace/SpanOutcome;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getLabel ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcom/davils/kollect/core/trace/SpanOutcome;
+	public static fun values ()[Lcom/davils/kollect/core/trace/SpanOutcome;
+}
+
+public abstract interface class com/davils/kollect/core/trace/Tracer {
+	public static final field None Lcom/davils/kollect/core/trace/Tracer$None;
+	public abstract fun start (Ljava/lang/String;Lcom/davils/kollect/core/trace/SpanKind;)Lcom/davils/kollect/core/trace/Span;
+	public static synthetic fun start$default (Lcom/davils/kollect/core/trace/Tracer;Ljava/lang/String;Lcom/davils/kollect/core/trace/SpanKind;ILjava/lang/Object;)Lcom/davils/kollect/core/trace/Span;
+}
+
+public final class com/davils/kollect/core/trace/Tracer$None : com/davils/kollect/core/trace/Tracer {
+	public fun start (Ljava/lang/String;Lcom/davils/kollect/core/trace/SpanKind;)Lcom/davils/kollect/core/trace/Span;
+}
+
+public final class com/davils/kollect/core/trace/TracingKt {
+	public static final fun metered (Lcom/davils/kollect/core/trace/Tracer;Lcom/davils/kollect/core/MeterRegistry;Lcom/davils/kollect/core/meter/ExplicitBounds;)Lcom/davils/kollect/core/trace/Tracer;
+	public static synthetic fun metered$default (Lcom/davils/kollect/core/trace/Tracer;Lcom/davils/kollect/core/MeterRegistry;Lcom/davils/kollect/core/meter/ExplicitBounds;ILjava/lang/Object;)Lcom/davils/kollect/core/trace/Tracer;
+	public static final fun traced (Lcom/davils/kollect/core/trace/Tracer;Ljava/lang/String;Lcom/davils/kollect/core/trace/SpanKind;Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
+	public static synthetic fun traced$default (Lcom/davils/kollect/core/trace/Tracer;Ljava/lang/String;Lcom/davils/kollect/core/trace/SpanKind;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/Object;
+}
+

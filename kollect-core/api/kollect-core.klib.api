@@ -1,0 +1,1642 @@
+// Klib ABI Dump
+// Targets: [wasmJs]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <com.davils:kollect-core>
+final enum class com.davils.kollect.core.export/DropReason : kotlin/Enum<com.davils.kollect.core.export/DropReason> { // com.davils.kollect.core.export/DropReason|null[0]
+    enum entry QueueFull // com.davils.kollect.core.export/DropReason.QueueFull|null[0]
+    enum entry Rejected // com.davils.kollect.core.export/DropReason.Rejected|null[0]
+    enum entry RetriesExhausted // com.davils.kollect.core.export/DropReason.RetriesExhausted|null[0]
+    enum entry ShutdownDeadline // com.davils.kollect.core.export/DropReason.ShutdownDeadline|null[0]
+    enum entry Superseded // com.davils.kollect.core.export/DropReason.Superseded|null[0]
+    enum entry TooLarge // com.davils.kollect.core.export/DropReason.TooLarge|null[0]
+
+    final val entries // com.davils.kollect.core.export/DropReason.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.export/DropReason> // com.davils.kollect.core.export/DropReason.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.export/DropReason // com.davils.kollect.core.export/DropReason.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.export/DropReason> // com.davils.kollect.core.export/DropReason.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.exposition/ExpositionFormat : kotlin/Enum<com.davils.kollect.core.exposition/ExpositionFormat> { // com.davils.kollect.core.exposition/ExpositionFormat|null[0]
+    enum entry OpenMetrics // com.davils.kollect.core.exposition/ExpositionFormat.OpenMetrics|null[0]
+    enum entry PrometheusText // com.davils.kollect.core.exposition/ExpositionFormat.PrometheusText|null[0]
+
+    final val contentType // com.davils.kollect.core.exposition/ExpositionFormat.contentType|{}contentType[0]
+        final fun <get-contentType>(): kotlin/String // com.davils.kollect.core.exposition/ExpositionFormat.contentType.<get-contentType>|<get-contentType>(){}[0]
+    final val entries // com.davils.kollect.core.exposition/ExpositionFormat.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.exposition/ExpositionFormat> // com.davils.kollect.core.exposition/ExpositionFormat.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.exposition/ExpositionFormat // com.davils.kollect.core.exposition/ExpositionFormat.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.exposition/ExpositionFormat> // com.davils.kollect.core.exposition/ExpositionFormat.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.exposition/FamilyProblem : kotlin/Enum<com.davils.kollect.core.exposition/FamilyProblem> { // com.davils.kollect.core.exposition/FamilyProblem|null[0]
+    enum entry DuplicateSeries // com.davils.kollect.core.exposition/FamilyProblem.DuplicateSeries|null[0]
+    enum entry InvalidText // com.davils.kollect.core.exposition/FamilyProblem.InvalidText|null[0]
+    enum entry NameCollision // com.davils.kollect.core.exposition/FamilyProblem.NameCollision|null[0]
+
+    final val entries // com.davils.kollect.core.exposition/FamilyProblem.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.exposition/FamilyProblem> // com.davils.kollect.core.exposition/FamilyProblem.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.exposition/FamilyProblem // com.davils.kollect.core.exposition/FamilyProblem.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.exposition/FamilyProblem> // com.davils.kollect.core.exposition/FamilyProblem.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.health.rule/Direction : kotlin/Enum<com.davils.kollect.core.health.rule/Direction> { // com.davils.kollect.core.health.rule/Direction|null[0]
+    enum entry Above // com.davils.kollect.core.health.rule/Direction.Above|null[0]
+    enum entry Below // com.davils.kollect.core.health.rule/Direction.Below|null[0]
+
+    final val entries // com.davils.kollect.core.health.rule/Direction.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.health.rule/Direction> // com.davils.kollect.core.health.rule/Direction.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.health.rule/Direction // com.davils.kollect.core.health.rule/Direction.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.health.rule/Direction> // com.davils.kollect.core.health.rule/Direction.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.health.rule/Undetermined : kotlin/Enum<com.davils.kollect.core.health.rule/Undetermined> { // com.davils.kollect.core.health.rule/Undetermined|null[0]
+    enum entry Degraded // com.davils.kollect.core.health.rule/Undetermined.Degraded|null[0]
+    enum entry Down // com.davils.kollect.core.health.rule/Undetermined.Down|null[0]
+
+    final val entries // com.davils.kollect.core.health.rule/Undetermined.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.health.rule/Undetermined> // com.davils.kollect.core.health.rule/Undetermined.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.health.rule/Undetermined // com.davils.kollect.core.health.rule/Undetermined.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.health.rule/Undetermined> // com.davils.kollect.core.health.rule/Undetermined.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.health/HealthStatus : kotlin/Enum<com.davils.kollect.core.health/HealthStatus> { // com.davils.kollect.core.health/HealthStatus|null[0]
+    enum entry Degraded // com.davils.kollect.core.health/HealthStatus.Degraded|null[0]
+    enum entry Down // com.davils.kollect.core.health/HealthStatus.Down|null[0]
+    enum entry Up // com.davils.kollect.core.health/HealthStatus.Up|null[0]
+
+    final val entries // com.davils.kollect.core.health/HealthStatus.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.health/HealthStatus> // com.davils.kollect.core.health/HealthStatus.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.health/HealthStatus // com.davils.kollect.core.health/HealthStatus.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.health/HealthStatus> // com.davils.kollect.core.health/HealthStatus.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.health/Impact : kotlin/Enum<com.davils.kollect.core.health/Impact> { // com.davils.kollect.core.health/Impact|null[0]
+    enum entry Critical // com.davils.kollect.core.health/Impact.Critical|null[0]
+    enum entry Degrading // com.davils.kollect.core.health/Impact.Degrading|null[0]
+
+    final val entries // com.davils.kollect.core.health/Impact.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.health/Impact> // com.davils.kollect.core.health/Impact.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.health/Impact // com.davils.kollect.core.health/Impact.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.health/Impact> // com.davils.kollect.core.health/Impact.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.health/ProbeDetail : kotlin/Enum<com.davils.kollect.core.health/ProbeDetail> { // com.davils.kollect.core.health/ProbeDetail|null[0]
+    enum entry Checks // com.davils.kollect.core.health/ProbeDetail.Checks|null[0]
+    enum entry StatusOnly // com.davils.kollect.core.health/ProbeDetail.StatusOnly|null[0]
+
+    final val entries // com.davils.kollect.core.health/ProbeDetail.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.health/ProbeDetail> // com.davils.kollect.core.health/ProbeDetail.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.health/ProbeDetail // com.davils.kollect.core.health/ProbeDetail.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.health/ProbeDetail> // com.davils.kollect.core.health/ProbeDetail.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.health/ReasonCode : kotlin/Enum<com.davils.kollect.core.health/ReasonCode> { // com.davils.kollect.core.health/ReasonCode|null[0]
+    enum entry CheckFailed // com.davils.kollect.core.health/ReasonCode.CheckFailed|null[0]
+    enum entry EmptyGroup // com.davils.kollect.core.health/ReasonCode.EmptyGroup|null[0]
+    enum entry InsufficientSamples // com.davils.kollect.core.health/ReasonCode.InsufficientSamples|null[0]
+    enum entry NoData // com.davils.kollect.core.health/ReasonCode.NoData|null[0]
+    enum entry NotANumber // com.davils.kollect.core.health/ReasonCode.NotANumber|null[0]
+    enum entry Reported // com.davils.kollect.core.health/ReasonCode.Reported|null[0]
+    enum entry Stale // com.davils.kollect.core.health/ReasonCode.Stale|null[0]
+    enum entry StateMatched // com.davils.kollect.core.health/ReasonCode.StateMatched|null[0]
+    enum entry ThresholdCrossed // com.davils.kollect.core.health/ReasonCode.ThresholdCrossed|null[0]
+    enum entry TimedOut // com.davils.kollect.core.health/ReasonCode.TimedOut|null[0]
+    enum entry Unreadable // com.davils.kollect.core.health/ReasonCode.Unreadable|null[0]
+
+    final val entries // com.davils.kollect.core.health/ReasonCode.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.health/ReasonCode> // com.davils.kollect.core.health/ReasonCode.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.health/ReasonCode // com.davils.kollect.core.health/ReasonCode.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.health/ReasonCode> // com.davils.kollect.core.health/ReasonCode.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.meter/MeterKind : kotlin/Enum<com.davils.kollect.core.meter/MeterKind> { // com.davils.kollect.core.meter/MeterKind|null[0]
+    enum entry Counter // com.davils.kollect.core.meter/MeterKind.Counter|null[0]
+    enum entry Gauge // com.davils.kollect.core.meter/MeterKind.Gauge|null[0]
+    enum entry Histogram // com.davils.kollect.core.meter/MeterKind.Histogram|null[0]
+    enum entry Info // com.davils.kollect.core.meter/MeterKind.Info|null[0]
+    enum entry StateSet // com.davils.kollect.core.meter/MeterKind.StateSet|null[0]
+    enum entry UpDownCounter // com.davils.kollect.core.meter/MeterKind.UpDownCounter|null[0]
+
+    final val entries // com.davils.kollect.core.meter/MeterKind.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.meter/MeterKind> // com.davils.kollect.core.meter/MeterKind.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.meter/MeterKind // com.davils.kollect.core.meter/MeterKind.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.meter/MeterKind> // com.davils.kollect.core.meter/MeterKind.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.meter/Rejection : kotlin/Enum<com.davils.kollect.core.meter/Rejection> { // com.davils.kollect.core.meter/Rejection|null[0]
+    enum entry Duplicate // com.davils.kollect.core.meter/Rejection.Duplicate|null[0]
+    enum entry InvalidLabels // com.davils.kollect.core.meter/Rejection.InvalidLabels|null[0]
+    enum entry Negative // com.davils.kollect.core.meter/Rejection.Negative|null[0]
+    enum entry NotFinite // com.davils.kollect.core.meter/Rejection.NotFinite|null[0]
+    enum entry TooLarge // com.davils.kollect.core.meter/Rejection.TooLarge|null[0]
+    enum entry Untracked // com.davils.kollect.core.meter/Rejection.Untracked|null[0]
+
+    final val entries // com.davils.kollect.core.meter/Rejection.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.meter/Rejection> // com.davils.kollect.core.meter/Rejection.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val label // com.davils.kollect.core.meter/Rejection.label|{}label[0]
+        final fun <get-label>(): kotlin/String // com.davils.kollect.core.meter/Rejection.label.<get-label>|<get-label>(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.meter/Rejection // com.davils.kollect.core.meter/Rejection.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.meter/Rejection> // com.davils.kollect.core.meter/Rejection.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.otlp/IngestRejection : kotlin/Enum<com.davils.kollect.core.otlp/IngestRejection> { // com.davils.kollect.core.otlp/IngestRejection|null[0]
+    enum entry InvalidLabels // com.davils.kollect.core.otlp/IngestRejection.InvalidLabels|null[0]
+    enum entry InvalidValue // com.davils.kollect.core.otlp/IngestRejection.InvalidValue|null[0]
+    enum entry Mismatch // com.davils.kollect.core.otlp/IngestRejection.Mismatch|null[0]
+    enum entry OutOfOrder // com.davils.kollect.core.otlp/IngestRejection.OutOfOrder|null[0]
+    enum entry OutOfTime // com.davils.kollect.core.otlp/IngestRejection.OutOfTime|null[0]
+    enum entry SeriesLimit // com.davils.kollect.core.otlp/IngestRejection.SeriesLimit|null[0]
+    enum entry UndeclaredFamily // com.davils.kollect.core.otlp/IngestRejection.UndeclaredFamily|null[0]
+    enum entry UnsupportedType // com.davils.kollect.core.otlp/IngestRejection.UnsupportedType|null[0]
+
+    final val entries // com.davils.kollect.core.otlp/IngestRejection.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.otlp/IngestRejection> // com.davils.kollect.core.otlp/IngestRejection.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.otlp/IngestRejection // com.davils.kollect.core.otlp/IngestRejection.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.otlp/IngestRejection> // com.davils.kollect.core.otlp/IngestRejection.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.otlp/IngestVerdict : kotlin/Enum<com.davils.kollect.core.otlp/IngestVerdict> { // com.davils.kollect.core.otlp/IngestVerdict|null[0]
+    enum entry Accepted // com.davils.kollect.core.otlp/IngestVerdict.Accepted|null[0]
+    enum entry Malformed // com.davils.kollect.core.otlp/IngestVerdict.Malformed|null[0]
+    enum entry PartiallyAccepted // com.davils.kollect.core.otlp/IngestVerdict.PartiallyAccepted|null[0]
+    enum entry Throttled // com.davils.kollect.core.otlp/IngestVerdict.Throttled|null[0]
+    enum entry TooLarge // com.davils.kollect.core.otlp/IngestVerdict.TooLarge|null[0]
+    enum entry UnsupportedContent // com.davils.kollect.core.otlp/IngestVerdict.UnsupportedContent|null[0]
+
+    final val entries // com.davils.kollect.core.otlp/IngestVerdict.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.otlp/IngestVerdict> // com.davils.kollect.core.otlp/IngestVerdict.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val statusCode // com.davils.kollect.core.otlp/IngestVerdict.statusCode|{}statusCode[0]
+        final fun <get-statusCode>(): kotlin/Int // com.davils.kollect.core.otlp/IngestVerdict.statusCode.<get-statusCode>|<get-statusCode>(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.otlp/IngestVerdict // com.davils.kollect.core.otlp/IngestVerdict.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.otlp/IngestVerdict> // com.davils.kollect.core.otlp/IngestVerdict.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.snapshot/Temporality : kotlin/Enum<com.davils.kollect.core.snapshot/Temporality> { // com.davils.kollect.core.snapshot/Temporality|null[0]
+    enum entry Cumulative // com.davils.kollect.core.snapshot/Temporality.Cumulative|null[0]
+    enum entry Delta // com.davils.kollect.core.snapshot/Temporality.Delta|null[0]
+
+    final val entries // com.davils.kollect.core.snapshot/Temporality.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.snapshot/Temporality> // com.davils.kollect.core.snapshot/Temporality.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.snapshot/Temporality // com.davils.kollect.core.snapshot/Temporality.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.snapshot/Temporality> // com.davils.kollect.core.snapshot/Temporality.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.snapshot/Unreadability : kotlin/Enum<com.davils.kollect.core.snapshot/Unreadability> { // com.davils.kollect.core.snapshot/Unreadability|null[0]
+    enum entry CallbackFailed // com.davils.kollect.core.snapshot/Unreadability.CallbackFailed|null[0]
+    enum entry Stalled // com.davils.kollect.core.snapshot/Unreadability.Stalled|null[0]
+
+    final val entries // com.davils.kollect.core.snapshot/Unreadability.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.snapshot/Unreadability> // com.davils.kollect.core.snapshot/Unreadability.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.snapshot/Unreadability // com.davils.kollect.core.snapshot/Unreadability.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.snapshot/Unreadability> // com.davils.kollect.core.snapshot/Unreadability.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.trace/SpanKind : kotlin/Enum<com.davils.kollect.core.trace/SpanKind> { // com.davils.kollect.core.trace/SpanKind|null[0]
+    enum entry Client // com.davils.kollect.core.trace/SpanKind.Client|null[0]
+    enum entry Consumer // com.davils.kollect.core.trace/SpanKind.Consumer|null[0]
+    enum entry Internal // com.davils.kollect.core.trace/SpanKind.Internal|null[0]
+    enum entry Producer // com.davils.kollect.core.trace/SpanKind.Producer|null[0]
+    enum entry Server // com.davils.kollect.core.trace/SpanKind.Server|null[0]
+
+    final val entries // com.davils.kollect.core.trace/SpanKind.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.trace/SpanKind> // com.davils.kollect.core.trace/SpanKind.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.trace/SpanKind // com.davils.kollect.core.trace/SpanKind.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.trace/SpanKind> // com.davils.kollect.core.trace/SpanKind.values|values#static(){}[0]
+}
+
+final enum class com.davils.kollect.core.trace/SpanOutcome : kotlin/Enum<com.davils.kollect.core.trace/SpanOutcome> { // com.davils.kollect.core.trace/SpanOutcome|null[0]
+    enum entry Error // com.davils.kollect.core.trace/SpanOutcome.Error|null[0]
+    enum entry Ok // com.davils.kollect.core.trace/SpanOutcome.Ok|null[0]
+
+    final val entries // com.davils.kollect.core.trace/SpanOutcome.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<com.davils.kollect.core.trace/SpanOutcome> // com.davils.kollect.core.trace/SpanOutcome.entries.<get-entries>|<get-entries>#static(){}[0]
+    final val label // com.davils.kollect.core.trace/SpanOutcome.label|{}label[0]
+        final fun <get-label>(): kotlin/String // com.davils.kollect.core.trace/SpanOutcome.label.<get-label>|<get-label>(){}[0]
+
+    final fun valueOf(kotlin/String): com.davils.kollect.core.trace/SpanOutcome // com.davils.kollect.core.trace/SpanOutcome.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<com.davils.kollect.core.trace/SpanOutcome> // com.davils.kollect.core.trace/SpanOutcome.values|values#static(){}[0]
+}
+
+abstract fun interface com.davils.kollect.core.export/ExportObserver { // com.davils.kollect.core.export/ExportObserver|null[0]
+    abstract fun observe(com.davils.kollect.core.export/ExportEvent) // com.davils.kollect.core.export/ExportObserver.observe|observe(com.davils.kollect.core.export.ExportEvent){}[0]
+
+    final object Companion { // com.davils.kollect.core.export/ExportObserver.Companion|null[0]
+        final val None // com.davils.kollect.core.export/ExportObserver.Companion.None|{}None[0]
+            final fun <get-None>(): com.davils.kollect.core.export/ExportObserver // com.davils.kollect.core.export/ExportObserver.Companion.None.<get-None>|<get-None>(){}[0]
+    }
+}
+
+abstract fun interface com.davils.kollect.core.export/Transport { // com.davils.kollect.core.export/Transport|null[0]
+    abstract suspend fun send(com.davils.kollect.core/Payload): com.davils.kollect.core.export/Delivery // com.davils.kollect.core.export/Transport.send|send(com.davils.kollect.core.Payload){}[0]
+}
+
+abstract fun interface com.davils.kollect.core.exposition/LabelRedaction { // com.davils.kollect.core.exposition/LabelRedaction|null[0]
+    abstract fun redacts(com.davils.kollect.core.name/LabelKey): kotlin/Boolean // com.davils.kollect.core.exposition/LabelRedaction.redacts|redacts(com.davils.kollect.core.name.LabelKey){}[0]
+
+    final object Companion { // com.davils.kollect.core.exposition/LabelRedaction.Companion|null[0]
+        final val None // com.davils.kollect.core.exposition/LabelRedaction.Companion.None|{}None[0]
+            final fun <get-None>(): com.davils.kollect.core.exposition/LabelRedaction // com.davils.kollect.core.exposition/LabelRedaction.Companion.None.<get-None>|<get-None>(){}[0]
+        final val Sensitive // com.davils.kollect.core.exposition/LabelRedaction.Companion.Sensitive|{}Sensitive[0]
+            final fun <get-Sensitive>(): com.davils.kollect.core.exposition/LabelRedaction // com.davils.kollect.core.exposition/LabelRedaction.Companion.Sensitive.<get-Sensitive>|<get-Sensitive>(){}[0]
+    }
+}
+
+abstract fun interface com.davils.kollect.core.filter/MeterFilter { // com.davils.kollect.core.filter/MeterFilter|null[0]
+    abstract fun decide(com.davils.kollect.core.meter/Descriptor): com.davils.kollect.core.filter/FilterDecision // com.davils.kollect.core.filter/MeterFilter.decide|decide(com.davils.kollect.core.meter.Descriptor){}[0]
+
+    final object Companion { // com.davils.kollect.core.filter/MeterFilter.Companion|null[0]
+        final fun denyPrefix(kotlin/String): com.davils.kollect.core.filter/MeterFilter // com.davils.kollect.core.filter/MeterFilter.Companion.denyPrefix|denyPrefix(kotlin.String){}[0]
+        final fun dropLabels(kotlin/Array<out kotlin/String>...): com.davils.kollect.core.filter/MeterFilter // com.davils.kollect.core.filter/MeterFilter.Companion.dropLabels|dropLabels(kotlin.Array<out|kotlin.String>...){}[0]
+    }
+}
+
+abstract fun interface com.davils.kollect.core.health/HealthIndicator { // com.davils.kollect.core.health/HealthIndicator|null[0]
+    abstract suspend fun check(): com.davils.kollect.core.health/Health // com.davils.kollect.core.health/HealthIndicator.check|check(){}[0]
+}
+
+abstract interface <#A: kotlin/Enum<#A>> com.davils.kollect.core.meter/StateSet : com.davils.kollect.core.meter/Meter { // com.davils.kollect.core.meter/StateSet|null[0]
+    abstract fun set(#A) // com.davils.kollect.core.meter/StateSet.set|set(1:0){}[0]
+}
+
+abstract interface com.davils.kollect.core.meter/Counter : com.davils.kollect.core.meter/Meter { // com.davils.kollect.core.meter/Counter|null[0]
+    abstract fun add(kotlin/Long) // com.davils.kollect.core.meter/Counter.add|add(kotlin.Long){}[0]
+    abstract fun increment() // com.davils.kollect.core.meter/Counter.increment|increment(){}[0]
+
+    final object Companion { // com.davils.kollect.core.meter/Counter.Companion|null[0]
+        final const val MAXIMUM_INCREMENT // com.davils.kollect.core.meter/Counter.Companion.MAXIMUM_INCREMENT|{}MAXIMUM_INCREMENT[0]
+            final fun <get-MAXIMUM_INCREMENT>(): kotlin/Long // com.davils.kollect.core.meter/Counter.Companion.MAXIMUM_INCREMENT.<get-MAXIMUM_INCREMENT>|<get-MAXIMUM_INCREMENT>(){}[0]
+    }
+}
+
+abstract interface com.davils.kollect.core.meter/Gauge : com.davils.kollect.core.meter/Meter { // com.davils.kollect.core.meter/Gauge|null[0]
+    abstract fun set(kotlin/Double) // com.davils.kollect.core.meter/Gauge.set|set(kotlin.Double){}[0]
+}
+
+abstract interface com.davils.kollect.core.meter/Histogram : com.davils.kollect.core.meter/Meter { // com.davils.kollect.core.meter/Histogram|null[0]
+    abstract fun record(kotlin/Double) // com.davils.kollect.core.meter/Histogram.record|record(kotlin.Double){}[0]
+}
+
+abstract interface com.davils.kollect.core.meter/Info : com.davils.kollect.core.meter/Meter // com.davils.kollect.core.meter/Info|null[0]
+
+abstract interface com.davils.kollect.core.meter/LongTask : kotlin/AutoCloseable { // com.davils.kollect.core.meter/LongTask|null[0]
+    abstract fun close() // com.davils.kollect.core.meter/LongTask.close|close(){}[0]
+}
+
+abstract interface com.davils.kollect.core.meter/LongTaskTimer : com.davils.kollect.core.meter/Meter { // com.davils.kollect.core.meter/LongTaskTimer|null[0]
+    abstract fun start(): com.davils.kollect.core.meter/LongTask // com.davils.kollect.core.meter/LongTaskTimer.start|start(){}[0]
+}
+
+abstract interface com.davils.kollect.core.meter/Meter // com.davils.kollect.core.meter/Meter|null[0]
+
+abstract interface com.davils.kollect.core.meter/ObservationSink { // com.davils.kollect.core.meter/ObservationSink|null[0]
+    abstract fun observe(kotlin/Double, kotlin/Array<out kotlin/String>...) // com.davils.kollect.core.meter/ObservationSink.observe|observe(kotlin.Double;kotlin.Array<out|kotlin.String>...){}[0]
+}
+
+abstract interface com.davils.kollect.core.meter/Timer : com.davils.kollect.core.meter/Meter { // com.davils.kollect.core.meter/Timer|null[0]
+    abstract val timeSource // com.davils.kollect.core.meter/Timer.timeSource|{}timeSource[0]
+        abstract fun <get-timeSource>(): kotlin.time/TimeSource // com.davils.kollect.core.meter/Timer.timeSource.<get-timeSource>|<get-timeSource>(){}[0]
+
+    abstract fun record(kotlin.time/Duration) // com.davils.kollect.core.meter/Timer.record|record(kotlin.time.Duration){}[0]
+}
+
+abstract interface com.davils.kollect.core.meter/UpDownCounter : com.davils.kollect.core.meter/Meter { // com.davils.kollect.core.meter/UpDownCounter|null[0]
+    abstract fun add(kotlin/Long) // com.davils.kollect.core.meter/UpDownCounter.add|add(kotlin.Long){}[0]
+    abstract fun decrement() // com.davils.kollect.core.meter/UpDownCounter.decrement|decrement(){}[0]
+    abstract fun increment() // com.davils.kollect.core.meter/UpDownCounter.increment|increment(){}[0]
+}
+
+abstract interface com.davils.kollect.core.trace/Span { // com.davils.kollect.core.trace/Span|null[0]
+    abstract fun attribute(kotlin/String, kotlin/String) // com.davils.kollect.core.trace/Span.attribute|attribute(kotlin.String;kotlin.String){}[0]
+    abstract fun end(com.davils.kollect.core.trace/SpanOutcome) // com.davils.kollect.core.trace/Span.end|end(com.davils.kollect.core.trace.SpanOutcome){}[0]
+}
+
+abstract interface com.davils.kollect.core.trace/Tracer { // com.davils.kollect.core.trace/Tracer|null[0]
+    abstract fun start(kotlin/String, com.davils.kollect.core.trace/SpanKind = ...): com.davils.kollect.core.trace/Span // com.davils.kollect.core.trace/Tracer.start|start(kotlin.String;com.davils.kollect.core.trace.SpanKind){}[0]
+
+    final object None : com.davils.kollect.core.trace/Tracer { // com.davils.kollect.core.trace/Tracer.None|null[0]
+        final fun start(kotlin/String, com.davils.kollect.core.trace/SpanKind): com.davils.kollect.core.trace/Span // com.davils.kollect.core.trace/Tracer.None.start|start(kotlin.String;com.davils.kollect.core.trace.SpanKind){}[0]
+    }
+}
+
+sealed interface <#A: out kotlin/Any?> com.davils.kollect.core/Registration { // com.davils.kollect.core/Registration|null[0]
+    abstract val family // com.davils.kollect.core/Registration.family|{}family[0]
+        abstract fun <get-family>(): #A // com.davils.kollect.core/Registration.family.<get-family>|<get-family>(){}[0]
+
+    final class <#A1: out kotlin/Any?> Declared : com.davils.kollect.core/Registration<#A1> { // com.davils.kollect.core/Registration.Declared|null[0]
+        final val family // com.davils.kollect.core/Registration.Declared.family|{}family[0]
+            final fun <get-family>(): #A1 // com.davils.kollect.core/Registration.Declared.family.<get-family>|<get-family>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core/Registration.Declared.toString|toString(){}[0]
+    }
+
+    final class <#A1: out kotlin/Any?> Existing : com.davils.kollect.core/Registration<#A1> { // com.davils.kollect.core/Registration.Existing|null[0]
+        final val family // com.davils.kollect.core/Registration.Existing.family|{}family[0]
+            final fun <get-family>(): #A1 // com.davils.kollect.core/Registration.Existing.family.<get-family>|<get-family>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core/Registration.Existing.toString|toString(){}[0]
+    }
+
+    final class <#A1: out kotlin/Any?> Refused : com.davils.kollect.core/Registration<#A1> { // com.davils.kollect.core/Registration.Refused|null[0]
+        final val family // com.davils.kollect.core/Registration.Refused.family|{}family[0]
+            final fun <get-family>(): #A1 // com.davils.kollect.core/Registration.Refused.family.<get-family>|<get-family>(){}[0]
+        final val refusal // com.davils.kollect.core/Registration.Refused.refusal|{}refusal[0]
+            final fun <get-refusal>(): com.davils.kollect.core/Refusal // com.davils.kollect.core/Registration.Refused.refusal.<get-refusal>|<get-refusal>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core/Registration.Refused.toString|toString(){}[0]
+    }
+}
+
+sealed interface com.davils.kollect.core.event/HealthEvent : com.davils.konfetti.core/Event { // com.davils.kollect.core.event/HealthEvent|null[0]
+    final class StatusChanged : com.davils.kollect.core.event/HealthEvent { // com.davils.kollect.core.event/HealthEvent.StatusChanged|null[0]
+        final val from // com.davils.kollect.core.event/HealthEvent.StatusChanged.from|{}from[0]
+            final fun <get-from>(): com.davils.kollect.core.health/HealthStatus // com.davils.kollect.core.event/HealthEvent.StatusChanged.from.<get-from>|<get-from>(){}[0]
+        final val path // com.davils.kollect.core.event/HealthEvent.StatusChanged.path|{}path[0]
+            final fun <get-path>(): kotlin/String? // com.davils.kollect.core.event/HealthEvent.StatusChanged.path.<get-path>|<get-path>(){}[0]
+        final val to // com.davils.kollect.core.event/HealthEvent.StatusChanged.to|{}to[0]
+            final fun <get-to>(): com.davils.kollect.core.health/HealthStatus // com.davils.kollect.core.event/HealthEvent.StatusChanged.to.<get-to>|<get-to>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.event/HealthEvent.StatusChanged.toString|toString(){}[0]
+    }
+}
+
+sealed interface com.davils.kollect.core.event/RegistryEvent : com.davils.konfetti.core/Event { // com.davils.kollect.core.event/RegistryEvent|null[0]
+    final class DeclarationRefused : com.davils.kollect.core.event/RegistryEvent { // com.davils.kollect.core.event/RegistryEvent.DeclarationRefused|null[0]
+        final val name // com.davils.kollect.core.event/RegistryEvent.DeclarationRefused.name|{}name[0]
+            final fun <get-name>(): kotlin/String // com.davils.kollect.core.event/RegistryEvent.DeclarationRefused.name.<get-name>|<get-name>(){}[0]
+        final val refusal // com.davils.kollect.core.event/RegistryEvent.DeclarationRefused.refusal|{}refusal[0]
+            final fun <get-refusal>(): com.davils.kollect.core/Refusal // com.davils.kollect.core.event/RegistryEvent.DeclarationRefused.refusal.<get-refusal>|<get-refusal>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.event/RegistryEvent.DeclarationRefused.toString|toString(){}[0]
+    }
+
+    final class FamilyDeclared : com.davils.kollect.core.event/RegistryEvent { // com.davils.kollect.core.event/RegistryEvent.FamilyDeclared|null[0]
+        final val descriptor // com.davils.kollect.core.event/RegistryEvent.FamilyDeclared.descriptor|{}descriptor[0]
+            final fun <get-descriptor>(): com.davils.kollect.core.meter/Descriptor // com.davils.kollect.core.event/RegistryEvent.FamilyDeclared.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.event/RegistryEvent.FamilyDeclared.toString|toString(){}[0]
+    }
+
+    final class FamilyOverflowed : com.davils.kollect.core.event/RegistryEvent { // com.davils.kollect.core.event/RegistryEvent.FamilyOverflowed|null[0]
+        final val name // com.davils.kollect.core.event/RegistryEvent.FamilyOverflowed.name|{}name[0]
+            final fun <get-name>(): com.davils.kollect.core.name/MetricName // com.davils.kollect.core.event/RegistryEvent.FamilyOverflowed.name.<get-name>|<get-name>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.event/RegistryEvent.FamilyOverflowed.toString|toString(){}[0]
+    }
+
+    final class FamilyRemoved : com.davils.kollect.core.event/RegistryEvent { // com.davils.kollect.core.event/RegistryEvent.FamilyRemoved|null[0]
+        final val name // com.davils.kollect.core.event/RegistryEvent.FamilyRemoved.name|{}name[0]
+            final fun <get-name>(): com.davils.kollect.core.name/MetricName // com.davils.kollect.core.event/RegistryEvent.FamilyRemoved.name.<get-name>|<get-name>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.event/RegistryEvent.FamilyRemoved.toString|toString(){}[0]
+    }
+
+    final class FamilyUnreadable : com.davils.kollect.core.event/RegistryEvent { // com.davils.kollect.core.event/RegistryEvent.FamilyUnreadable|null[0]
+        final val name // com.davils.kollect.core.event/RegistryEvent.FamilyUnreadable.name|{}name[0]
+            final fun <get-name>(): com.davils.kollect.core.name/MetricName // com.davils.kollect.core.event/RegistryEvent.FamilyUnreadable.name.<get-name>|<get-name>(){}[0]
+        final val reason // com.davils.kollect.core.event/RegistryEvent.FamilyUnreadable.reason|{}reason[0]
+            final fun <get-reason>(): com.davils.kollect.core.snapshot/Unreadability // com.davils.kollect.core.event/RegistryEvent.FamilyUnreadable.reason.<get-reason>|<get-reason>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.event/RegistryEvent.FamilyUnreadable.toString|toString(){}[0]
+    }
+
+    final class MeasurementsRejected : com.davils.kollect.core.event/RegistryEvent { // com.davils.kollect.core.event/RegistryEvent.MeasurementsRejected|null[0]
+        final val count // com.davils.kollect.core.event/RegistryEvent.MeasurementsRejected.count|{}count[0]
+            final fun <get-count>(): kotlin/Long // com.davils.kollect.core.event/RegistryEvent.MeasurementsRejected.count.<get-count>|<get-count>(){}[0]
+        final val rejection // com.davils.kollect.core.event/RegistryEvent.MeasurementsRejected.rejection|{}rejection[0]
+            final fun <get-rejection>(): com.davils.kollect.core.meter/Rejection // com.davils.kollect.core.event/RegistryEvent.MeasurementsRejected.rejection.<get-rejection>|<get-rejection>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.event/RegistryEvent.MeasurementsRejected.toString|toString(){}[0]
+    }
+}
+
+sealed interface com.davils.kollect.core.export/Delivery { // com.davils.kollect.core.export/Delivery|null[0]
+    final class Accepted : com.davils.kollect.core.export/Delivery { // com.davils.kollect.core.export/Delivery.Accepted|null[0]
+        constructor <init>(kotlin/Long = ...) // com.davils.kollect.core.export/Delivery.Accepted.<init>|<init>(kotlin.Long){}[0]
+
+        final val rejectedPoints // com.davils.kollect.core.export/Delivery.Accepted.rejectedPoints|{}rejectedPoints[0]
+            final fun <get-rejectedPoints>(): kotlin/Long // com.davils.kollect.core.export/Delivery.Accepted.rejectedPoints.<get-rejectedPoints>|<get-rejectedPoints>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.export/Delivery.Accepted.toString|toString(){}[0]
+    }
+
+    final class Throttled : com.davils.kollect.core.export/Delivery { // com.davils.kollect.core.export/Delivery.Throttled|null[0]
+        constructor <init>(kotlin.time/Duration? = ...) // com.davils.kollect.core.export/Delivery.Throttled.<init>|<init>(kotlin.time.Duration?){}[0]
+
+        final val retryAfter // com.davils.kollect.core.export/Delivery.Throttled.retryAfter|{}retryAfter[0]
+            final fun <get-retryAfter>(): kotlin.time/Duration? // com.davils.kollect.core.export/Delivery.Throttled.retryAfter.<get-retryAfter>|<get-retryAfter>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.export/Delivery.Throttled.toString|toString(){}[0]
+    }
+
+    final object Rejected : com.davils.kollect.core.export/Delivery { // com.davils.kollect.core.export/Delivery.Rejected|null[0]
+        final fun toString(): kotlin/String // com.davils.kollect.core.export/Delivery.Rejected.toString|toString(){}[0]
+    }
+
+    final object Retryable : com.davils.kollect.core.export/Delivery { // com.davils.kollect.core.export/Delivery.Retryable|null[0]
+        final fun toString(): kotlin/String // com.davils.kollect.core.export/Delivery.Retryable.toString|toString(){}[0]
+    }
+}
+
+sealed interface com.davils.kollect.core.export/ExportEvent { // com.davils.kollect.core.export/ExportEvent|null[0]
+    final class Delivered : com.davils.kollect.core.export/ExportEvent { // com.davils.kollect.core.export/ExportEvent.Delivered|null[0]
+        final val points // com.davils.kollect.core.export/ExportEvent.Delivered.points|{}points[0]
+            final fun <get-points>(): kotlin/Long // com.davils.kollect.core.export/ExportEvent.Delivered.points.<get-points>|<get-points>(){}[0]
+        final val rejectedPoints // com.davils.kollect.core.export/ExportEvent.Delivered.rejectedPoints|{}rejectedPoints[0]
+            final fun <get-rejectedPoints>(): kotlin/Long // com.davils.kollect.core.export/ExportEvent.Delivered.rejectedPoints.<get-rejectedPoints>|<get-rejectedPoints>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.export/ExportEvent.Delivered.toString|toString(){}[0]
+    }
+
+    final class Dropped : com.davils.kollect.core.export/ExportEvent { // com.davils.kollect.core.export/ExportEvent.Dropped|null[0]
+        final val points // com.davils.kollect.core.export/ExportEvent.Dropped.points|{}points[0]
+            final fun <get-points>(): kotlin/Long // com.davils.kollect.core.export/ExportEvent.Dropped.points.<get-points>|<get-points>(){}[0]
+        final val reason // com.davils.kollect.core.export/ExportEvent.Dropped.reason|{}reason[0]
+            final fun <get-reason>(): com.davils.kollect.core.export/DropReason // com.davils.kollect.core.export/ExportEvent.Dropped.reason.<get-reason>|<get-reason>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.export/ExportEvent.Dropped.toString|toString(){}[0]
+    }
+
+    final class Retrying : com.davils.kollect.core.export/ExportEvent { // com.davils.kollect.core.export/ExportEvent.Retrying|null[0]
+        final val attempt // com.davils.kollect.core.export/ExportEvent.Retrying.attempt|{}attempt[0]
+            final fun <get-attempt>(): kotlin/Int // com.davils.kollect.core.export/ExportEvent.Retrying.attempt.<get-attempt>|<get-attempt>(){}[0]
+        final val delay // com.davils.kollect.core.export/ExportEvent.Retrying.delay|{}delay[0]
+            final fun <get-delay>(): kotlin.time/Duration // com.davils.kollect.core.export/ExportEvent.Retrying.delay.<get-delay>|<get-delay>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.export/ExportEvent.Retrying.toString|toString(){}[0]
+    }
+}
+
+sealed interface com.davils.kollect.core.exposition/ExpositionResult { // com.davils.kollect.core.exposition/ExpositionResult|null[0]
+    final class Refused : com.davils.kollect.core.exposition/ExpositionResult { // com.davils.kollect.core.exposition/ExpositionResult.Refused|null[0]
+        final val limit // com.davils.kollect.core.exposition/ExpositionResult.Refused.limit|{}limit[0]
+            final fun <get-limit>(): kotlin/String // com.davils.kollect.core.exposition/ExpositionResult.Refused.limit.<get-limit>|<get-limit>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.exposition/ExpositionResult.Refused.toString|toString(){}[0]
+    }
+
+    final class Written : com.davils.kollect.core.exposition/ExpositionResult { // com.davils.kollect.core.exposition/ExpositionResult.Written|null[0]
+        final val payload // com.davils.kollect.core.exposition/ExpositionResult.Written.payload|{}payload[0]
+            final fun <get-payload>(): com.davils.kollect.core/Payload // com.davils.kollect.core.exposition/ExpositionResult.Written.payload.<get-payload>|<get-payload>(){}[0]
+        final val report // com.davils.kollect.core.exposition/ExpositionResult.Written.report|{}report[0]
+            final fun <get-report>(): com.davils.kollect.core.exposition/ExpositionReport // com.davils.kollect.core.exposition/ExpositionResult.Written.report.<get-report>|<get-report>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.exposition/ExpositionResult.Written.toString|toString(){}[0]
+    }
+}
+
+sealed interface com.davils.kollect.core.filter/FilterDecision { // com.davils.kollect.core.filter/FilterDecision|null[0]
+    final class Reshape : com.davils.kollect.core.filter/FilterDecision { // com.davils.kollect.core.filter/FilterDecision.Reshape|null[0]
+        constructor <init>(kotlin.collections/Set<com.davils.kollect.core.name/LabelKey>) // com.davils.kollect.core.filter/FilterDecision.Reshape.<init>|<init>(kotlin.collections.Set<com.davils.kollect.core.name.LabelKey>){}[0]
+
+        final val dropLabels // com.davils.kollect.core.filter/FilterDecision.Reshape.dropLabels|{}dropLabels[0]
+            final fun <get-dropLabels>(): kotlin.collections/Set<com.davils.kollect.core.name/LabelKey> // com.davils.kollect.core.filter/FilterDecision.Reshape.dropLabels.<get-dropLabels>|<get-dropLabels>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.filter/FilterDecision.Reshape.toString|toString(){}[0]
+    }
+
+    final object Accept : com.davils.kollect.core.filter/FilterDecision { // com.davils.kollect.core.filter/FilterDecision.Accept|null[0]
+        final fun toString(): kotlin/String // com.davils.kollect.core.filter/FilterDecision.Accept.toString|toString(){}[0]
+    }
+
+    final object Deny : com.davils.kollect.core.filter/FilterDecision { // com.davils.kollect.core.filter/FilterDecision.Deny|null[0]
+        final fun toString(): kotlin/String // com.davils.kollect.core.filter/FilterDecision.Deny.toString|toString(){}[0]
+    }
+
+    final object Neutral : com.davils.kollect.core.filter/FilterDecision { // com.davils.kollect.core.filter/FilterDecision.Neutral|null[0]
+        final fun toString(): kotlin/String // com.davils.kollect.core.filter/FilterDecision.Neutral.toString|toString(){}[0]
+    }
+}
+
+sealed interface com.davils.kollect.core.health.rule/Statistic { // com.davils.kollect.core.health.rule/Statistic|null[0]
+    final class Rate : com.davils.kollect.core.health.rule/Statistic { // com.davils.kollect.core.health.rule/Statistic.Rate|null[0]
+        constructor <init>(kotlin.time/Duration) // com.davils.kollect.core.health.rule/Statistic.Rate.<init>|<init>(kotlin.time.Duration){}[0]
+
+        final val window // com.davils.kollect.core.health.rule/Statistic.Rate.window|{}window[0]
+            final fun <get-window>(): kotlin.time/Duration // com.davils.kollect.core.health.rule/Statistic.Rate.window.<get-window>|<get-window>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core.health.rule/Statistic.Rate.toString|toString(){}[0]
+    }
+
+    final object Count : com.davils.kollect.core.health.rule/Statistic { // com.davils.kollect.core.health.rule/Statistic.Count|null[0]
+        final fun toString(): kotlin/String // com.davils.kollect.core.health.rule/Statistic.Count.toString|toString(){}[0]
+    }
+
+    final object Mean : com.davils.kollect.core.health.rule/Statistic { // com.davils.kollect.core.health.rule/Statistic.Mean|null[0]
+        final fun toString(): kotlin/String // com.davils.kollect.core.health.rule/Statistic.Mean.toString|toString(){}[0]
+    }
+
+    final object Value : com.davils.kollect.core.health.rule/Statistic { // com.davils.kollect.core.health.rule/Statistic.Value|null[0]
+        final fun toString(): kotlin/String // com.davils.kollect.core.health.rule/Statistic.Value.toString|toString(){}[0]
+    }
+}
+
+sealed interface com.davils.kollect.core.snapshot/Point { // com.davils.kollect.core.snapshot/Point|null[0]
+    abstract val labels // com.davils.kollect.core.snapshot/Point.labels|{}labels[0]
+        abstract fun <get-labels>(): com.davils.kollect.core.name/Labels // com.davils.kollect.core.snapshot/Point.labels.<get-labels>|<get-labels>(){}[0]
+    abstract val start // com.davils.kollect.core.snapshot/Point.start|{}start[0]
+        abstract fun <get-start>(): kotlin.time/Instant // com.davils.kollect.core.snapshot/Point.start.<get-start>|<get-start>(){}[0]
+}
+
+sealed interface com.davils.kollect.core/Refusal { // com.davils.kollect.core/Refusal|null[0]
+    abstract val label // com.davils.kollect.core/Refusal.label|{}label[0]
+        abstract fun <get-label>(): kotlin/String // com.davils.kollect.core/Refusal.label.<get-label>|<get-label>(){}[0]
+
+    final class Conflict : com.davils.kollect.core/Refusal { // com.davils.kollect.core/Refusal.Conflict|null[0]
+        final val existing // com.davils.kollect.core/Refusal.Conflict.existing|{}existing[0]
+            final fun <get-existing>(): com.davils.kollect.core.meter/Descriptor // com.davils.kollect.core/Refusal.Conflict.existing.<get-existing>|<get-existing>(){}[0]
+        final val label // com.davils.kollect.core/Refusal.Conflict.label|{}label[0]
+            final fun <get-label>(): kotlin/String // com.davils.kollect.core/Refusal.Conflict.label.<get-label>|<get-label>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core/Refusal.Conflict.toString|toString(){}[0]
+    }
+
+    final class Invalid : com.davils.kollect.core/Refusal { // com.davils.kollect.core/Refusal.Invalid|null[0]
+        final val label // com.davils.kollect.core/Refusal.Invalid.label|{}label[0]
+            final fun <get-label>(): kotlin/String // com.davils.kollect.core/Refusal.Invalid.label.<get-label>|<get-label>(){}[0]
+        final val problem // com.davils.kollect.core/Refusal.Invalid.problem|{}problem[0]
+            final fun <get-problem>(): kotlin/String // com.davils.kollect.core/Refusal.Invalid.problem.<get-problem>|<get-problem>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core/Refusal.Invalid.toString|toString(){}[0]
+    }
+
+    final class LimitReached : com.davils.kollect.core/Refusal { // com.davils.kollect.core/Refusal.LimitReached|null[0]
+        final val label // com.davils.kollect.core/Refusal.LimitReached.label|{}label[0]
+            final fun <get-label>(): kotlin/String // com.davils.kollect.core/Refusal.LimitReached.label.<get-label>|<get-label>(){}[0]
+        final val limit // com.davils.kollect.core/Refusal.LimitReached.limit|{}limit[0]
+            final fun <get-limit>(): kotlin/String // com.davils.kollect.core/Refusal.LimitReached.limit.<get-limit>|<get-limit>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core/Refusal.LimitReached.toString|toString(){}[0]
+    }
+
+    final object Closed : com.davils.kollect.core/Refusal { // com.davils.kollect.core/Refusal.Closed|null[0]
+        final val label // com.davils.kollect.core/Refusal.Closed.label|{}label[0]
+            final fun <get-label>(): kotlin/String // com.davils.kollect.core/Refusal.Closed.label.<get-label>|<get-label>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core/Refusal.Closed.toString|toString(){}[0]
+    }
+
+    final object Denied : com.davils.kollect.core/Refusal { // com.davils.kollect.core/Refusal.Denied|null[0]
+        final val label // com.davils.kollect.core/Refusal.Denied.label|{}label[0]
+            final fun <get-label>(): kotlin/String // com.davils.kollect.core/Refusal.Denied.label.<get-label>|<get-label>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core/Refusal.Denied.toString|toString(){}[0]
+    }
+
+    final object FilterFailed : com.davils.kollect.core/Refusal { // com.davils.kollect.core/Refusal.FilterFailed|null[0]
+        final val label // com.davils.kollect.core/Refusal.FilterFailed.label|{}label[0]
+            final fun <get-label>(): kotlin/String // com.davils.kollect.core/Refusal.FilterFailed.label.<get-label>|<get-label>(){}[0]
+
+        final fun toString(): kotlin/String // com.davils.kollect.core/Refusal.FilterFailed.toString|toString(){}[0]
+    }
+}
+
+final class <#A: out kotlin/Any?> com.davils.kollect.core/Family { // com.davils.kollect.core/Family|null[0]
+    final val descriptor // com.davils.kollect.core/Family.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): com.davils.kollect.core.meter/Descriptor? // com.davils.kollect.core/Family.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+    final val meter // com.davils.kollect.core/Family.meter|{}meter[0]
+        final fun <get-meter>(): #A // com.davils.kollect.core/Family.meter.<get-meter>|<get-meter>(){}[0]
+    final val size // com.davils.kollect.core/Family.size|{}size[0]
+        final fun <get-size>(): kotlin/Int // com.davils.kollect.core/Family.size.<get-size>|<get-size>(){}[0]
+
+    final fun remove(kotlin/Array<out kotlin/String>...): kotlin/Boolean // com.davils.kollect.core/Family.remove|remove(kotlin.Array<out|kotlin.String>...){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core/Family.toString|toString(){}[0]
+    final fun with(kotlin/Array<out kotlin/String>...): #A // com.davils.kollect.core/Family.with|with(kotlin.Array<out|kotlin.String>...){}[0]
+}
+
+final class com.davils.kollect.core.binder/BusMetrics : kotlin/AutoCloseable { // com.davils.kollect.core.binder/BusMetrics|null[0]
+    final val registrations // com.davils.kollect.core.binder/BusMetrics.registrations|{}registrations[0]
+        final fun <get-registrations>(): kotlin.collections/List<com.davils.kollect.core/Registration<com.davils.kollect.core/ObservedFamily>> // com.davils.kollect.core.binder/BusMetrics.registrations.<get-registrations>|<get-registrations>(){}[0]
+
+    final fun close() // com.davils.kollect.core.binder/BusMetrics.close|close(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.binder/BusMetrics.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.binder/JobMonitor { // com.davils.kollect.core.binder/JobMonitor|null[0]
+    final val name // com.davils.kollect.core.binder/JobMonitor.name|{}name[0]
+        final fun <get-name>(): kotlin/String // com.davils.kollect.core.binder/JobMonitor.name.<get-name>|<get-name>(){}[0]
+
+    final fun toString(): kotlin/String // com.davils.kollect.core.binder/JobMonitor.toString|toString(){}[0]
+    final fun watch(kotlinx.coroutines/Job): kotlinx.coroutines/Job // com.davils.kollect.core.binder/JobMonitor.watch|watch(kotlinx.coroutines.Job){}[0]
+}
+
+final class com.davils.kollect.core.binder/MeteredDispatcher : kotlinx.coroutines/CoroutineDispatcher { // com.davils.kollect.core.binder/MeteredDispatcher|null[0]
+    final fun dispatch(kotlin.coroutines/CoroutineContext, kotlinx.coroutines/Runnable) // com.davils.kollect.core.binder/MeteredDispatcher.dispatch|dispatch(kotlin.coroutines.CoroutineContext;kotlinx.coroutines.Runnable){}[0]
+    final fun isDispatchNeeded(kotlin.coroutines/CoroutineContext): kotlin/Boolean // com.davils.kollect.core.binder/MeteredDispatcher.isDispatchNeeded|isDispatchNeeded(kotlin.coroutines.CoroutineContext){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.binder/MeteredDispatcher.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.declare/HistogramBuilder : com.davils.kollect.core.declare/FamilyBuilder { // com.davils.kollect.core.declare/HistogramBuilder|null[0]
+    final var bounds // com.davils.kollect.core.declare/HistogramBuilder.bounds|{}bounds[0]
+        final fun <get-bounds>(): com.davils.kollect.core.meter/ExplicitBounds // com.davils.kollect.core.declare/HistogramBuilder.bounds.<get-bounds>|<get-bounds>(){}[0]
+        final fun <set-bounds>(com.davils.kollect.core.meter/ExplicitBounds) // com.davils.kollect.core.declare/HistogramBuilder.bounds.<set-bounds>|<set-bounds>(com.davils.kollect.core.meter.ExplicitBounds){}[0]
+    final var isNegativeAllowed // com.davils.kollect.core.declare/HistogramBuilder.isNegativeAllowed|{}isNegativeAllowed[0]
+        final fun <get-isNegativeAllowed>(): kotlin/Boolean // com.davils.kollect.core.declare/HistogramBuilder.isNegativeAllowed.<get-isNegativeAllowed>|<get-isNegativeAllowed>(){}[0]
+        final fun <set-isNegativeAllowed>(kotlin/Boolean) // com.davils.kollect.core.declare/HistogramBuilder.isNegativeAllowed.<set-isNegativeAllowed>|<set-isNegativeAllowed>(kotlin.Boolean){}[0]
+}
+
+final class com.davils.kollect.core.export/ExportAccounting { // com.davils.kollect.core.export/ExportAccounting|null[0]
+    final val delivered // com.davils.kollect.core.export/ExportAccounting.delivered|{}delivered[0]
+        final fun <get-delivered>(): kotlin/Long // com.davils.kollect.core.export/ExportAccounting.delivered.<get-delivered>|<get-delivered>(){}[0]
+    final val dropped // com.davils.kollect.core.export/ExportAccounting.dropped|{}dropped[0]
+        final fun <get-dropped>(): kotlin.collections/Map<com.davils.kollect.core.export/DropReason, kotlin/Long> // com.davils.kollect.core.export/ExportAccounting.dropped.<get-dropped>|<get-dropped>(){}[0]
+    final val pending // com.davils.kollect.core.export/ExportAccounting.pending|{}pending[0]
+        final fun <get-pending>(): kotlin/Long // com.davils.kollect.core.export/ExportAccounting.pending.<get-pending>|<get-pending>(){}[0]
+    final val produced // com.davils.kollect.core.export/ExportAccounting.produced|{}produced[0]
+        final fun <get-produced>(): kotlin/Long // com.davils.kollect.core.export/ExportAccounting.produced.<get-produced>|<get-produced>(){}[0]
+    final val rejected // com.davils.kollect.core.export/ExportAccounting.rejected|{}rejected[0]
+        final fun <get-rejected>(): kotlin/Long // com.davils.kollect.core.export/ExportAccounting.rejected.<get-rejected>|<get-rejected>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.export/ExportAccounting.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.export/ExportAccounting.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.export/ExportAccounting.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.export/ExporterBuilder { // com.davils.kollect.core.export/ExporterBuilder|null[0]
+    final var entropy // com.davils.kollect.core.export/ExporterBuilder.entropy|{}entropy[0]
+        final fun <get-entropy>(): com.davils.konfetti.core.bus/Entropy // com.davils.kollect.core.export/ExporterBuilder.entropy.<get-entropy>|<get-entropy>(){}[0]
+        final fun <set-entropy>(com.davils.konfetti.core.bus/Entropy) // com.davils.kollect.core.export/ExporterBuilder.entropy.<set-entropy>|<set-entropy>(com.davils.konfetti.core.bus.Entropy){}[0]
+    final var interval // com.davils.kollect.core.export/ExporterBuilder.interval|{}interval[0]
+        final fun <get-interval>(): kotlin.time/Duration // com.davils.kollect.core.export/ExporterBuilder.interval.<get-interval>|<get-interval>(){}[0]
+        final fun <set-interval>(kotlin.time/Duration) // com.davils.kollect.core.export/ExporterBuilder.interval.<set-interval>|<set-interval>(kotlin.time.Duration){}[0]
+    final var limits // com.davils.kollect.core.export/ExporterBuilder.limits|{}limits[0]
+        final fun <get-limits>(): com.davils.kollect.core.limit/ExportLimits // com.davils.kollect.core.export/ExporterBuilder.limits.<get-limits>|<get-limits>(){}[0]
+        final fun <set-limits>(com.davils.kollect.core.limit/ExportLimits) // com.davils.kollect.core.export/ExporterBuilder.limits.<set-limits>|<set-limits>(com.davils.kollect.core.limit.ExportLimits){}[0]
+    final var observer // com.davils.kollect.core.export/ExporterBuilder.observer|{}observer[0]
+        final fun <get-observer>(): com.davils.kollect.core.export/ExportObserver // com.davils.kollect.core.export/ExporterBuilder.observer.<get-observer>|<get-observer>(){}[0]
+        final fun <set-observer>(com.davils.kollect.core.export/ExportObserver) // com.davils.kollect.core.export/ExporterBuilder.observer.<set-observer>|<set-observer>(com.davils.kollect.core.export.ExportObserver){}[0]
+    final var temporality // com.davils.kollect.core.export/ExporterBuilder.temporality|{}temporality[0]
+        final fun <get-temporality>(): com.davils.kollect.core.snapshot/Temporality // com.davils.kollect.core.export/ExporterBuilder.temporality.<get-temporality>|<get-temporality>(){}[0]
+        final fun <set-temporality>(com.davils.kollect.core.snapshot/Temporality) // com.davils.kollect.core.export/ExporterBuilder.temporality.<set-temporality>|<set-temporality>(com.davils.kollect.core.snapshot.Temporality){}[0]
+}
+
+final class com.davils.kollect.core.export/MetricExporter { // com.davils.kollect.core.export/MetricExporter|null[0]
+    final fun accounting(): com.davils.kollect.core.export/ExportAccounting // com.davils.kollect.core.export/MetricExporter.accounting|accounting(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.export/MetricExporter.toString|toString(){}[0]
+    final suspend fun flush(kotlin.time/Duration): com.davils.kollect.core.export/ExportAccounting // com.davils.kollect.core.export/MetricExporter.flush|flush(kotlin.time.Duration){}[0]
+    final suspend fun shutdown(kotlin.time/Duration): com.davils.kollect.core.export/ExportAccounting // com.davils.kollect.core.export/MetricExporter.shutdown|shutdown(kotlin.time.Duration){}[0]
+}
+
+final class com.davils.kollect.core.exposition/Exposition { // com.davils.kollect.core.exposition/Exposition|null[0]
+    final val limits // com.davils.kollect.core.exposition/Exposition.limits|{}limits[0]
+        final fun <get-limits>(): com.davils.kollect.core.limit/ExpositionLimits // com.davils.kollect.core.exposition/Exposition.limits.<get-limits>|<get-limits>(){}[0]
+    final val redaction // com.davils.kollect.core.exposition/Exposition.redaction|{}redaction[0]
+        final fun <get-redaction>(): com.davils.kollect.core.exposition/LabelRedaction // com.davils.kollect.core.exposition/Exposition.redaction.<get-redaction>|<get-redaction>(){}[0]
+
+    final fun toString(): kotlin/String // com.davils.kollect.core.exposition/Exposition.toString|toString(){}[0]
+    final fun write(com.davils.kollect.core.exposition/ExpositionFormat, kotlin/Array<out com.davils.kollect.core.snapshot/MetricsSnapshot>...): com.davils.kollect.core.exposition/ExpositionResult // com.davils.kollect.core.exposition/Exposition.write|write(com.davils.kollect.core.exposition.ExpositionFormat;kotlin.Array<out|com.davils.kollect.core.snapshot.MetricsSnapshot>...){}[0]
+}
+
+final class com.davils.kollect.core.exposition/ExpositionBuilder { // com.davils.kollect.core.exposition/ExpositionBuilder|null[0]
+    final var limits // com.davils.kollect.core.exposition/ExpositionBuilder.limits|{}limits[0]
+        final fun <get-limits>(): com.davils.kollect.core.limit/ExpositionLimits // com.davils.kollect.core.exposition/ExpositionBuilder.limits.<get-limits>|<get-limits>(){}[0]
+        final fun <set-limits>(com.davils.kollect.core.limit/ExpositionLimits) // com.davils.kollect.core.exposition/ExpositionBuilder.limits.<set-limits>|<set-limits>(com.davils.kollect.core.limit.ExpositionLimits){}[0]
+    final var redaction // com.davils.kollect.core.exposition/ExpositionBuilder.redaction|{}redaction[0]
+        final fun <get-redaction>(): com.davils.kollect.core.exposition/LabelRedaction // com.davils.kollect.core.exposition/ExpositionBuilder.redaction.<get-redaction>|<get-redaction>(){}[0]
+        final fun <set-redaction>(com.davils.kollect.core.exposition/LabelRedaction) // com.davils.kollect.core.exposition/ExpositionBuilder.redaction.<set-redaction>|<set-redaction>(com.davils.kollect.core.exposition.LabelRedaction){}[0]
+}
+
+final class com.davils.kollect.core.exposition/ExpositionReport { // com.davils.kollect.core.exposition/ExpositionReport|null[0]
+    final val families // com.davils.kollect.core.exposition/ExpositionReport.families|{}families[0]
+        final fun <get-families>(): kotlin/Int // com.davils.kollect.core.exposition/ExpositionReport.families.<get-families>|<get-families>(){}[0]
+    final val refused // com.davils.kollect.core.exposition/ExpositionReport.refused|{}refused[0]
+        final fun <get-refused>(): kotlin.collections/List<com.davils.kollect.core.exposition/RefusedFamily> // com.davils.kollect.core.exposition/ExpositionReport.refused.<get-refused>|<get-refused>(){}[0]
+    final val series // com.davils.kollect.core.exposition/ExpositionReport.series|{}series[0]
+        final fun <get-series>(): kotlin/Int // com.davils.kollect.core.exposition/ExpositionReport.series.<get-series>|<get-series>(){}[0]
+
+    final fun toString(): kotlin/String // com.davils.kollect.core.exposition/ExpositionReport.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.exposition/RefusedFamily { // com.davils.kollect.core.exposition/RefusedFamily|null[0]
+    final val name // com.davils.kollect.core.exposition/RefusedFamily.name|{}name[0]
+        final fun <get-name>(): com.davils.kollect.core.name/MetricName // com.davils.kollect.core.exposition/RefusedFamily.name.<get-name>|<get-name>(){}[0]
+    final val problem // com.davils.kollect.core.exposition/RefusedFamily.problem|{}problem[0]
+        final fun <get-problem>(): com.davils.kollect.core.exposition/FamilyProblem // com.davils.kollect.core.exposition/RefusedFamily.problem.<get-problem>|<get-problem>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.exposition/RefusedFamily.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.exposition/RefusedFamily.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.exposition/RefusedFamily.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.health.rule/StateRuleBuilder { // com.davils.kollect.core.health.rule/StateRuleBuilder|null[0]
+    final var meter // com.davils.kollect.core.health.rule/StateRuleBuilder.meter|{}meter[0]
+        final fun <get-meter>(): kotlin/String // com.davils.kollect.core.health.rule/StateRuleBuilder.meter.<get-meter>|<get-meter>(){}[0]
+        final fun <set-meter>(kotlin/String) // com.davils.kollect.core.health.rule/StateRuleBuilder.meter.<set-meter>|<set-meter>(kotlin.String){}[0]
+    final var undetermined // com.davils.kollect.core.health.rule/StateRuleBuilder.undetermined|{}undetermined[0]
+        final fun <get-undetermined>(): com.davils.kollect.core.health.rule/Undetermined // com.davils.kollect.core.health.rule/StateRuleBuilder.undetermined.<get-undetermined>|<get-undetermined>(){}[0]
+        final fun <set-undetermined>(com.davils.kollect.core.health.rule/Undetermined) // com.davils.kollect.core.health.rule/StateRuleBuilder.undetermined.<set-undetermined>|<set-undetermined>(com.davils.kollect.core.health.rule.Undetermined){}[0]
+
+    final fun degraded(kotlin/Array<out kotlin/String>...) // com.davils.kollect.core.health.rule/StateRuleBuilder.degraded|degraded(kotlin.Array<out|kotlin.String>...){}[0]
+    final fun down(kotlin/Array<out kotlin/String>...) // com.davils.kollect.core.health.rule/StateRuleBuilder.down|down(kotlin.Array<out|kotlin.String>...){}[0]
+}
+
+final class com.davils.kollect.core.health.rule/ThresholdRuleBuilder { // com.davils.kollect.core.health.rule/ThresholdRuleBuilder|null[0]
+    final var maximumAge // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.maximumAge|{}maximumAge[0]
+        final fun <get-maximumAge>(): kotlin.time/Duration? // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.maximumAge.<get-maximumAge>|<get-maximumAge>(){}[0]
+        final fun <set-maximumAge>(kotlin.time/Duration?) // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.maximumAge.<set-maximumAge>|<set-maximumAge>(kotlin.time.Duration?){}[0]
+    final var meter // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.meter|{}meter[0]
+        final fun <get-meter>(): kotlin/String // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.meter.<get-meter>|<get-meter>(){}[0]
+        final fun <set-meter>(kotlin/String) // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.meter.<set-meter>|<set-meter>(kotlin.String){}[0]
+    final var statistic // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.statistic|{}statistic[0]
+        final fun <get-statistic>(): com.davils.kollect.core.health.rule/Statistic // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.statistic.<get-statistic>|<get-statistic>(){}[0]
+        final fun <set-statistic>(com.davils.kollect.core.health.rule/Statistic) // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.statistic.<set-statistic>|<set-statistic>(com.davils.kollect.core.health.rule.Statistic){}[0]
+    final var undetermined // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.undetermined|{}undetermined[0]
+        final fun <get-undetermined>(): com.davils.kollect.core.health.rule/Undetermined // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.undetermined.<get-undetermined>|<get-undetermined>(){}[0]
+        final fun <set-undetermined>(com.davils.kollect.core.health.rule/Undetermined) // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.undetermined.<set-undetermined>|<set-undetermined>(com.davils.kollect.core.health.rule.Undetermined){}[0]
+
+    final fun above(kotlin/Double? = ..., kotlin/Double? = ...) // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.above|above(kotlin.Double?;kotlin.Double?){}[0]
+    final fun below(kotlin/Double? = ..., kotlin/Double? = ...) // com.davils.kollect.core.health.rule/ThresholdRuleBuilder.below|below(kotlin.Double?;kotlin.Double?){}[0]
+}
+
+final class com.davils.kollect.core.health/Health { // com.davils.kollect.core.health/Health|null[0]
+    final val reasons // com.davils.kollect.core.health/Health.reasons|{}reasons[0]
+        final fun <get-reasons>(): kotlin.collections/List<com.davils.kollect.core.health/ReasonCode> // com.davils.kollect.core.health/Health.reasons.<get-reasons>|<get-reasons>(){}[0]
+    final val status // com.davils.kollect.core.health/Health.status|{}status[0]
+        final fun <get-status>(): com.davils.kollect.core.health/HealthStatus // com.davils.kollect.core.health/Health.status.<get-status>|<get-status>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.health/Health.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.health/Health.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.health/Health.toString|toString(){}[0]
+
+    final object Companion { // com.davils.kollect.core.health/Health.Companion|null[0]
+        final val Up // com.davils.kollect.core.health/Health.Companion.Up|{}Up[0]
+            final fun <get-Up>(): com.davils.kollect.core.health/Health // com.davils.kollect.core.health/Health.Companion.Up.<get-Up>|<get-Up>(){}[0]
+
+        final fun degraded(kotlin/Array<out com.davils.kollect.core.health/ReasonCode>...): com.davils.kollect.core.health/Health // com.davils.kollect.core.health/Health.Companion.degraded|degraded(kotlin.Array<out|com.davils.kollect.core.health.ReasonCode>...){}[0]
+        final fun down(kotlin/Array<out com.davils.kollect.core.health/ReasonCode>...): com.davils.kollect.core.health/Health // com.davils.kollect.core.health/Health.Companion.down|down(kotlin.Array<out|com.davils.kollect.core.health.ReasonCode>...){}[0]
+    }
+}
+
+final class com.davils.kollect.core.health/HealthRegistry { // com.davils.kollect.core.health/HealthRegistry|null[0]
+    final val limits // com.davils.kollect.core.health/HealthRegistry.limits|{}limits[0]
+        final fun <get-limits>(): com.davils.kollect.core.limit/HealthLimits // com.davils.kollect.core.health/HealthRegistry.limits.<get-limits>|<get-limits>(){}[0]
+
+    final fun toString(): kotlin/String // com.davils.kollect.core.health/HealthRegistry.toString|toString(){}[0]
+    final suspend fun evaluate(): com.davils.kollect.core.health/HealthReport // com.davils.kollect.core.health/HealthRegistry.evaluate|evaluate(){}[0]
+}
+
+final class com.davils.kollect.core.health/HealthRegistryBuilder : com.davils.kollect.core.health/HealthGroupBuilder { // com.davils.kollect.core.health/HealthRegistryBuilder|null[0]
+    final var limits // com.davils.kollect.core.health/HealthRegistryBuilder.limits|{}limits[0]
+        final fun <get-limits>(): com.davils.kollect.core.limit/HealthLimits // com.davils.kollect.core.health/HealthRegistryBuilder.limits.<get-limits>|<get-limits>(){}[0]
+        final fun <set-limits>(com.davils.kollect.core.limit/HealthLimits) // com.davils.kollect.core.health/HealthRegistryBuilder.limits.<set-limits>|<set-limits>(com.davils.kollect.core.limit.HealthLimits){}[0]
+
+    final fun events(com.davils.konfetti.core/EventBus) // com.davils.kollect.core.health/HealthRegistryBuilder.events|events(com.davils.konfetti.core.EventBus){}[0]
+}
+
+final class com.davils.kollect.core.health/HealthReport { // com.davils.kollect.core.health/HealthReport|null[0]
+    final val evaluatedAt // com.davils.kollect.core.health/HealthReport.evaluatedAt|{}evaluatedAt[0]
+        final fun <get-evaluatedAt>(): kotlin.time/Instant // com.davils.kollect.core.health/HealthReport.evaluatedAt.<get-evaluatedAt>|<get-evaluatedAt>(){}[0]
+    final val members // com.davils.kollect.core.health/HealthReport.members|{}members[0]
+        final fun <get-members>(): kotlin.collections/List<com.davils.kollect.core.health/MemberReport> // com.davils.kollect.core.health/HealthReport.members.<get-members>|<get-members>(){}[0]
+    final val status // com.davils.kollect.core.health/HealthReport.status|{}status[0]
+        final fun <get-status>(): com.davils.kollect.core.health/HealthStatus // com.davils.kollect.core.health/HealthReport.status.<get-status>|<get-status>(){}[0]
+
+    final fun member(kotlin/String): com.davils.kollect.core.health/MemberReport? // com.davils.kollect.core.health/HealthReport.member|member(kotlin.String){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.health/HealthReport.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.health/MemberReport { // com.davils.kollect.core.health/MemberReport|null[0]
+    final val path // com.davils.kollect.core.health/MemberReport.path|{}path[0]
+        final fun <get-path>(): kotlin/String // com.davils.kollect.core.health/MemberReport.path.<get-path>|<get-path>(){}[0]
+    final val reasons // com.davils.kollect.core.health/MemberReport.reasons|{}reasons[0]
+        final fun <get-reasons>(): kotlin.collections/List<com.davils.kollect.core.health/ReasonCode> // com.davils.kollect.core.health/MemberReport.reasons.<get-reasons>|<get-reasons>(){}[0]
+    final val status // com.davils.kollect.core.health/MemberReport.status|{}status[0]
+        final fun <get-status>(): com.davils.kollect.core.health/HealthStatus // com.davils.kollect.core.health/MemberReport.status.<get-status>|<get-status>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.health/MemberReport.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.health/MemberReport.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.health/MemberReport.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.health/ProbeRenderer { // com.davils.kollect.core.health/ProbeRenderer|null[0]
+    constructor <init>(com.davils.kollect.core.health/ProbeDetail = ...) // com.davils.kollect.core.health/ProbeRenderer.<init>|<init>(com.davils.kollect.core.health.ProbeDetail){}[0]
+
+    final val detail // com.davils.kollect.core.health/ProbeRenderer.detail|{}detail[0]
+        final fun <get-detail>(): com.davils.kollect.core.health/ProbeDetail // com.davils.kollect.core.health/ProbeRenderer.detail.<get-detail>|<get-detail>(){}[0]
+
+    final fun live(): com.davils.kollect.core.health/ProbeResponse // com.davils.kollect.core.health/ProbeRenderer.live|live(){}[0]
+    final fun ready(com.davils.kollect.core.health/HealthReport): com.davils.kollect.core.health/ProbeResponse // com.davils.kollect.core.health/ProbeRenderer.ready|ready(com.davils.kollect.core.health.HealthReport){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.health/ProbeRenderer.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.health/ProbeResponse { // com.davils.kollect.core.health/ProbeResponse|null[0]
+    final val body // com.davils.kollect.core.health/ProbeResponse.body|{}body[0]
+        final fun <get-body>(): com.davils.kollect.core/Payload // com.davils.kollect.core.health/ProbeResponse.body.<get-body>|<get-body>(){}[0]
+    final val statusCode // com.davils.kollect.core.health/ProbeResponse.statusCode|{}statusCode[0]
+        final fun <get-statusCode>(): kotlin/Int // com.davils.kollect.core.health/ProbeResponse.statusCode.<get-statusCode>|<get-statusCode>(){}[0]
+
+    final fun toString(): kotlin/String // com.davils.kollect.core.health/ProbeResponse.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.limit/ExportLimits : com.davils.kore.core.validation/Validatable { // com.davils.kollect.core.limit/ExportLimits|null[0]
+    final val maximumAttempts // com.davils.kollect.core.limit/ExportLimits.maximumAttempts|{}maximumAttempts[0]
+        final fun <get-maximumAttempts>(): kotlin/Int // com.davils.kollect.core.limit/ExportLimits.maximumAttempts.<get-maximumAttempts>|<get-maximumAttempts>(){}[0]
+    final val maximumBackoff // com.davils.kollect.core.limit/ExportLimits.maximumBackoff|{}maximumBackoff[0]
+        final fun <get-maximumBackoff>(): kotlin.time/Duration // com.davils.kollect.core.limit/ExportLimits.maximumBackoff.<get-maximumBackoff>|<get-maximumBackoff>(){}[0]
+    final val maximumPayloadBytes // com.davils.kollect.core.limit/ExportLimits.maximumPayloadBytes|{}maximumPayloadBytes[0]
+        final fun <get-maximumPayloadBytes>(): kotlin/Int // com.davils.kollect.core.limit/ExportLimits.maximumPayloadBytes.<get-maximumPayloadBytes>|<get-maximumPayloadBytes>(){}[0]
+    final val maximumPointsPerPayload // com.davils.kollect.core.limit/ExportLimits.maximumPointsPerPayload|{}maximumPointsPerPayload[0]
+        final fun <get-maximumPointsPerPayload>(): kotlin/Int // com.davils.kollect.core.limit/ExportLimits.maximumPointsPerPayload.<get-maximumPointsPerPayload>|<get-maximumPointsPerPayload>(){}[0]
+    final val maximumQueuedBatches // com.davils.kollect.core.limit/ExportLimits.maximumQueuedBatches|{}maximumQueuedBatches[0]
+        final fun <get-maximumQueuedBatches>(): kotlin/Int // com.davils.kollect.core.limit/ExportLimits.maximumQueuedBatches.<get-maximumQueuedBatches>|<get-maximumQueuedBatches>(){}[0]
+    final val maximumRetryAfter // com.davils.kollect.core.limit/ExportLimits.maximumRetryAfter|{}maximumRetryAfter[0]
+        final fun <get-maximumRetryAfter>(): kotlin.time/Duration // com.davils.kollect.core.limit/ExportLimits.maximumRetryAfter.<get-maximumRetryAfter>|<get-maximumRetryAfter>(){}[0]
+
+    final fun (com.davils.kore.core.validation/ValidationScope).validate() // com.davils.kollect.core.limit/ExportLimits.validate|validate@com.davils.kore.core.validation.ValidationScope(){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.limit/ExportLimits.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.limit/ExportLimits.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.limit/ExportLimits.toString|toString(){}[0]
+
+    final object Companion { // com.davils.kollect.core.limit/ExportLimits.Companion|null[0]
+        final const val HARD_ATTEMPTS // com.davils.kollect.core.limit/ExportLimits.Companion.HARD_ATTEMPTS|{}HARD_ATTEMPTS[0]
+            final fun <get-HARD_ATTEMPTS>(): kotlin/Int // com.davils.kollect.core.limit/ExportLimits.Companion.HARD_ATTEMPTS.<get-HARD_ATTEMPTS>|<get-HARD_ATTEMPTS>(){}[0]
+        final const val HARD_PAYLOAD_BYTES // com.davils.kollect.core.limit/ExportLimits.Companion.HARD_PAYLOAD_BYTES|{}HARD_PAYLOAD_BYTES[0]
+            final fun <get-HARD_PAYLOAD_BYTES>(): kotlin/Int // com.davils.kollect.core.limit/ExportLimits.Companion.HARD_PAYLOAD_BYTES.<get-HARD_PAYLOAD_BYTES>|<get-HARD_PAYLOAD_BYTES>(){}[0]
+        final const val HARD_POINTS_PER_PAYLOAD // com.davils.kollect.core.limit/ExportLimits.Companion.HARD_POINTS_PER_PAYLOAD|{}HARD_POINTS_PER_PAYLOAD[0]
+            final fun <get-HARD_POINTS_PER_PAYLOAD>(): kotlin/Int // com.davils.kollect.core.limit/ExportLimits.Companion.HARD_POINTS_PER_PAYLOAD.<get-HARD_POINTS_PER_PAYLOAD>|<get-HARD_POINTS_PER_PAYLOAD>(){}[0]
+        final const val HARD_QUEUED_BATCHES // com.davils.kollect.core.limit/ExportLimits.Companion.HARD_QUEUED_BATCHES|{}HARD_QUEUED_BATCHES[0]
+            final fun <get-HARD_QUEUED_BATCHES>(): kotlin/Int // com.davils.kollect.core.limit/ExportLimits.Companion.HARD_QUEUED_BATCHES.<get-HARD_QUEUED_BATCHES>|<get-HARD_QUEUED_BATCHES>(){}[0]
+
+        final val Default // com.davils.kollect.core.limit/ExportLimits.Companion.Default|{}Default[0]
+            final fun <get-Default>(): com.davils.kollect.core.limit/ExportLimits // com.davils.kollect.core.limit/ExportLimits.Companion.Default.<get-Default>|<get-Default>(){}[0]
+        final val HARD_BACKOFF // com.davils.kollect.core.limit/ExportLimits.Companion.HARD_BACKOFF|{}HARD_BACKOFF[0]
+            final fun <get-HARD_BACKOFF>(): kotlin.time/Duration // com.davils.kollect.core.limit/ExportLimits.Companion.HARD_BACKOFF.<get-HARD_BACKOFF>|<get-HARD_BACKOFF>(){}[0]
+    }
+}
+
+final class com.davils.kollect.core.limit/ExportLimitsBuilder : com.davils.kore.core.dsl/ValidatingBuilder<com.davils.kollect.core.limit/ExportLimits> { // com.davils.kollect.core.limit/ExportLimitsBuilder|null[0]
+    final var maximumAttempts // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumAttempts|{}maximumAttempts[0]
+        final fun <get-maximumAttempts>(): kotlin/Int // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumAttempts.<get-maximumAttempts>|<get-maximumAttempts>(){}[0]
+        final fun <set-maximumAttempts>(kotlin/Int) // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumAttempts.<set-maximumAttempts>|<set-maximumAttempts>(kotlin.Int){}[0]
+    final var maximumBackoff // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumBackoff|{}maximumBackoff[0]
+        final fun <get-maximumBackoff>(): kotlin.time/Duration // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumBackoff.<get-maximumBackoff>|<get-maximumBackoff>(){}[0]
+        final fun <set-maximumBackoff>(kotlin.time/Duration) // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumBackoff.<set-maximumBackoff>|<set-maximumBackoff>(kotlin.time.Duration){}[0]
+    final var maximumPayloadBytes // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumPayloadBytes|{}maximumPayloadBytes[0]
+        final fun <get-maximumPayloadBytes>(): kotlin/Int // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumPayloadBytes.<get-maximumPayloadBytes>|<get-maximumPayloadBytes>(){}[0]
+        final fun <set-maximumPayloadBytes>(kotlin/Int) // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumPayloadBytes.<set-maximumPayloadBytes>|<set-maximumPayloadBytes>(kotlin.Int){}[0]
+    final var maximumPointsPerPayload // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumPointsPerPayload|{}maximumPointsPerPayload[0]
+        final fun <get-maximumPointsPerPayload>(): kotlin/Int // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumPointsPerPayload.<get-maximumPointsPerPayload>|<get-maximumPointsPerPayload>(){}[0]
+        final fun <set-maximumPointsPerPayload>(kotlin/Int) // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumPointsPerPayload.<set-maximumPointsPerPayload>|<set-maximumPointsPerPayload>(kotlin.Int){}[0]
+    final var maximumQueuedBatches // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumQueuedBatches|{}maximumQueuedBatches[0]
+        final fun <get-maximumQueuedBatches>(): kotlin/Int // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumQueuedBatches.<get-maximumQueuedBatches>|<get-maximumQueuedBatches>(){}[0]
+        final fun <set-maximumQueuedBatches>(kotlin/Int) // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumQueuedBatches.<set-maximumQueuedBatches>|<set-maximumQueuedBatches>(kotlin.Int){}[0]
+    final var maximumRetryAfter // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumRetryAfter|{}maximumRetryAfter[0]
+        final fun <get-maximumRetryAfter>(): kotlin.time/Duration // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumRetryAfter.<get-maximumRetryAfter>|<get-maximumRetryAfter>(){}[0]
+        final fun <set-maximumRetryAfter>(kotlin.time/Duration) // com.davils.kollect.core.limit/ExportLimitsBuilder.maximumRetryAfter.<set-maximumRetryAfter>|<set-maximumRetryAfter>(kotlin.time.Duration){}[0]
+}
+
+final class com.davils.kollect.core.limit/ExpositionLimits : com.davils.kore.core.validation/Validatable { // com.davils.kollect.core.limit/ExpositionLimits|null[0]
+    final val maximumBytes // com.davils.kollect.core.limit/ExpositionLimits.maximumBytes|{}maximumBytes[0]
+        final fun <get-maximumBytes>(): kotlin/Int // com.davils.kollect.core.limit/ExpositionLimits.maximumBytes.<get-maximumBytes>|<get-maximumBytes>(){}[0]
+    final val maximumSeries // com.davils.kollect.core.limit/ExpositionLimits.maximumSeries|{}maximumSeries[0]
+        final fun <get-maximumSeries>(): kotlin/Int // com.davils.kollect.core.limit/ExpositionLimits.maximumSeries.<get-maximumSeries>|<get-maximumSeries>(){}[0]
+
+    final fun (com.davils.kore.core.validation/ValidationScope).validate() // com.davils.kollect.core.limit/ExpositionLimits.validate|validate@com.davils.kore.core.validation.ValidationScope(){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.limit/ExpositionLimits.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.limit/ExpositionLimits.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.limit/ExpositionLimits.toString|toString(){}[0]
+
+    final object Companion { // com.davils.kollect.core.limit/ExpositionLimits.Companion|null[0]
+        final const val HARD_BYTES // com.davils.kollect.core.limit/ExpositionLimits.Companion.HARD_BYTES|{}HARD_BYTES[0]
+            final fun <get-HARD_BYTES>(): kotlin/Int // com.davils.kollect.core.limit/ExpositionLimits.Companion.HARD_BYTES.<get-HARD_BYTES>|<get-HARD_BYTES>(){}[0]
+        final const val HARD_SERIES // com.davils.kollect.core.limit/ExpositionLimits.Companion.HARD_SERIES|{}HARD_SERIES[0]
+            final fun <get-HARD_SERIES>(): kotlin/Int // com.davils.kollect.core.limit/ExpositionLimits.Companion.HARD_SERIES.<get-HARD_SERIES>|<get-HARD_SERIES>(){}[0]
+
+        final val Default // com.davils.kollect.core.limit/ExpositionLimits.Companion.Default|{}Default[0]
+            final fun <get-Default>(): com.davils.kollect.core.limit/ExpositionLimits // com.davils.kollect.core.limit/ExpositionLimits.Companion.Default.<get-Default>|<get-Default>(){}[0]
+    }
+}
+
+final class com.davils.kollect.core.limit/ExpositionLimitsBuilder : com.davils.kore.core.dsl/ValidatingBuilder<com.davils.kollect.core.limit/ExpositionLimits> { // com.davils.kollect.core.limit/ExpositionLimitsBuilder|null[0]
+    final var maximumBytes // com.davils.kollect.core.limit/ExpositionLimitsBuilder.maximumBytes|{}maximumBytes[0]
+        final fun <get-maximumBytes>(): kotlin/Int // com.davils.kollect.core.limit/ExpositionLimitsBuilder.maximumBytes.<get-maximumBytes>|<get-maximumBytes>(){}[0]
+        final fun <set-maximumBytes>(kotlin/Int) // com.davils.kollect.core.limit/ExpositionLimitsBuilder.maximumBytes.<set-maximumBytes>|<set-maximumBytes>(kotlin.Int){}[0]
+    final var maximumSeries // com.davils.kollect.core.limit/ExpositionLimitsBuilder.maximumSeries|{}maximumSeries[0]
+        final fun <get-maximumSeries>(): kotlin/Int // com.davils.kollect.core.limit/ExpositionLimitsBuilder.maximumSeries.<get-maximumSeries>|<get-maximumSeries>(){}[0]
+        final fun <set-maximumSeries>(kotlin/Int) // com.davils.kollect.core.limit/ExpositionLimitsBuilder.maximumSeries.<set-maximumSeries>|<set-maximumSeries>(kotlin.Int){}[0]
+}
+
+final class com.davils.kollect.core.limit/HealthLimits : com.davils.kore.core.validation/Validatable { // com.davils.kollect.core.limit/HealthLimits|null[0]
+    final val maximumCheckTimeout // com.davils.kollect.core.limit/HealthLimits.maximumCheckTimeout|{}maximumCheckTimeout[0]
+        final fun <get-maximumCheckTimeout>(): kotlin.time/Duration // com.davils.kollect.core.limit/HealthLimits.maximumCheckTimeout.<get-maximumCheckTimeout>|<get-maximumCheckTimeout>(){}[0]
+    final val maximumCheckpoints // com.davils.kollect.core.limit/HealthLimits.maximumCheckpoints|{}maximumCheckpoints[0]
+        final fun <get-maximumCheckpoints>(): kotlin/Int // com.davils.kollect.core.limit/HealthLimits.maximumCheckpoints.<get-maximumCheckpoints>|<get-maximumCheckpoints>(){}[0]
+    final val maximumConcurrentChecks // com.davils.kollect.core.limit/HealthLimits.maximumConcurrentChecks|{}maximumConcurrentChecks[0]
+        final fun <get-maximumConcurrentChecks>(): kotlin/Int // com.davils.kollect.core.limit/HealthLimits.maximumConcurrentChecks.<get-maximumConcurrentChecks>|<get-maximumConcurrentChecks>(){}[0]
+    final val maximumDepth // com.davils.kollect.core.limit/HealthLimits.maximumDepth|{}maximumDepth[0]
+        final fun <get-maximumDepth>(): kotlin/Int // com.davils.kollect.core.limit/HealthLimits.maximumDepth.<get-maximumDepth>|<get-maximumDepth>(){}[0]
+    final val maximumMembers // com.davils.kollect.core.limit/HealthLimits.maximumMembers|{}maximumMembers[0]
+        final fun <get-maximumMembers>(): kotlin/Int // com.davils.kollect.core.limit/HealthLimits.maximumMembers.<get-maximumMembers>|<get-maximumMembers>(){}[0]
+
+    final fun (com.davils.kore.core.validation/ValidationScope).validate() // com.davils.kollect.core.limit/HealthLimits.validate|validate@com.davils.kore.core.validation.ValidationScope(){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.limit/HealthLimits.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.limit/HealthLimits.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.limit/HealthLimits.toString|toString(){}[0]
+
+    final object Companion { // com.davils.kollect.core.limit/HealthLimits.Companion|null[0]
+        final const val HARD_CHECKPOINTS // com.davils.kollect.core.limit/HealthLimits.Companion.HARD_CHECKPOINTS|{}HARD_CHECKPOINTS[0]
+            final fun <get-HARD_CHECKPOINTS>(): kotlin/Int // com.davils.kollect.core.limit/HealthLimits.Companion.HARD_CHECKPOINTS.<get-HARD_CHECKPOINTS>|<get-HARD_CHECKPOINTS>(){}[0]
+        final const val HARD_CONCURRENT_CHECKS // com.davils.kollect.core.limit/HealthLimits.Companion.HARD_CONCURRENT_CHECKS|{}HARD_CONCURRENT_CHECKS[0]
+            final fun <get-HARD_CONCURRENT_CHECKS>(): kotlin/Int // com.davils.kollect.core.limit/HealthLimits.Companion.HARD_CONCURRENT_CHECKS.<get-HARD_CONCURRENT_CHECKS>|<get-HARD_CONCURRENT_CHECKS>(){}[0]
+        final const val HARD_DEPTH // com.davils.kollect.core.limit/HealthLimits.Companion.HARD_DEPTH|{}HARD_DEPTH[0]
+            final fun <get-HARD_DEPTH>(): kotlin/Int // com.davils.kollect.core.limit/HealthLimits.Companion.HARD_DEPTH.<get-HARD_DEPTH>|<get-HARD_DEPTH>(){}[0]
+        final const val HARD_MEMBERS // com.davils.kollect.core.limit/HealthLimits.Companion.HARD_MEMBERS|{}HARD_MEMBERS[0]
+            final fun <get-HARD_MEMBERS>(): kotlin/Int // com.davils.kollect.core.limit/HealthLimits.Companion.HARD_MEMBERS.<get-HARD_MEMBERS>|<get-HARD_MEMBERS>(){}[0]
+
+        final val Default // com.davils.kollect.core.limit/HealthLimits.Companion.Default|{}Default[0]
+            final fun <get-Default>(): com.davils.kollect.core.limit/HealthLimits // com.davils.kollect.core.limit/HealthLimits.Companion.Default.<get-Default>|<get-Default>(){}[0]
+        final val HARD_CHECK_TIMEOUT // com.davils.kollect.core.limit/HealthLimits.Companion.HARD_CHECK_TIMEOUT|{}HARD_CHECK_TIMEOUT[0]
+            final fun <get-HARD_CHECK_TIMEOUT>(): kotlin.time/Duration // com.davils.kollect.core.limit/HealthLimits.Companion.HARD_CHECK_TIMEOUT.<get-HARD_CHECK_TIMEOUT>|<get-HARD_CHECK_TIMEOUT>(){}[0]
+    }
+}
+
+final class com.davils.kollect.core.limit/HealthLimitsBuilder : com.davils.kore.core.dsl/ValidatingBuilder<com.davils.kollect.core.limit/HealthLimits> { // com.davils.kollect.core.limit/HealthLimitsBuilder|null[0]
+    final var maximumCheckTimeout // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumCheckTimeout|{}maximumCheckTimeout[0]
+        final fun <get-maximumCheckTimeout>(): kotlin.time/Duration // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumCheckTimeout.<get-maximumCheckTimeout>|<get-maximumCheckTimeout>(){}[0]
+        final fun <set-maximumCheckTimeout>(kotlin.time/Duration) // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumCheckTimeout.<set-maximumCheckTimeout>|<set-maximumCheckTimeout>(kotlin.time.Duration){}[0]
+    final var maximumCheckpoints // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumCheckpoints|{}maximumCheckpoints[0]
+        final fun <get-maximumCheckpoints>(): kotlin/Int // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumCheckpoints.<get-maximumCheckpoints>|<get-maximumCheckpoints>(){}[0]
+        final fun <set-maximumCheckpoints>(kotlin/Int) // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumCheckpoints.<set-maximumCheckpoints>|<set-maximumCheckpoints>(kotlin.Int){}[0]
+    final var maximumConcurrentChecks // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumConcurrentChecks|{}maximumConcurrentChecks[0]
+        final fun <get-maximumConcurrentChecks>(): kotlin/Int // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumConcurrentChecks.<get-maximumConcurrentChecks>|<get-maximumConcurrentChecks>(){}[0]
+        final fun <set-maximumConcurrentChecks>(kotlin/Int) // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumConcurrentChecks.<set-maximumConcurrentChecks>|<set-maximumConcurrentChecks>(kotlin.Int){}[0]
+    final var maximumDepth // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumDepth|{}maximumDepth[0]
+        final fun <get-maximumDepth>(): kotlin/Int // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumDepth.<get-maximumDepth>|<get-maximumDepth>(){}[0]
+        final fun <set-maximumDepth>(kotlin/Int) // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumDepth.<set-maximumDepth>|<set-maximumDepth>(kotlin.Int){}[0]
+    final var maximumMembers // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumMembers|{}maximumMembers[0]
+        final fun <get-maximumMembers>(): kotlin/Int // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumMembers.<get-maximumMembers>|<get-maximumMembers>(){}[0]
+        final fun <set-maximumMembers>(kotlin/Int) // com.davils.kollect.core.limit/HealthLimitsBuilder.maximumMembers.<set-maximumMembers>|<set-maximumMembers>(kotlin.Int){}[0]
+}
+
+final class com.davils.kollect.core.limit/IngestLimits : com.davils.kore.core.validation/Validatable { // com.davils.kollect.core.limit/IngestLimits|null[0]
+    final val instanceExpiry // com.davils.kollect.core.limit/IngestLimits.instanceExpiry|{}instanceExpiry[0]
+        final fun <get-instanceExpiry>(): kotlin.time/Duration // com.davils.kollect.core.limit/IngestLimits.instanceExpiry.<get-instanceExpiry>|<get-instanceExpiry>(){}[0]
+    final val maximumAttributes // com.davils.kollect.core.limit/IngestLimits.maximumAttributes|{}maximumAttributes[0]
+        final fun <get-maximumAttributes>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.maximumAttributes.<get-maximumAttributes>|<get-maximumAttributes>(){}[0]
+    final val maximumBuckets // com.davils.kollect.core.limit/IngestLimits.maximumBuckets|{}maximumBuckets[0]
+        final fun <get-maximumBuckets>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.maximumBuckets.<get-maximumBuckets>|<get-maximumBuckets>(){}[0]
+    final val maximumClockSkew // com.davils.kollect.core.limit/IngestLimits.maximumClockSkew|{}maximumClockSkew[0]
+        final fun <get-maximumClockSkew>(): kotlin.time/Duration // com.davils.kollect.core.limit/IngestLimits.maximumClockSkew.<get-maximumClockSkew>|<get-maximumClockSkew>(){}[0]
+    final val maximumPayloadBytes // com.davils.kollect.core.limit/IngestLimits.maximumPayloadBytes|{}maximumPayloadBytes[0]
+        final fun <get-maximumPayloadBytes>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.maximumPayloadBytes.<get-maximumPayloadBytes>|<get-maximumPayloadBytes>(){}[0]
+    final val maximumPointAge // com.davils.kollect.core.limit/IngestLimits.maximumPointAge|{}maximumPointAge[0]
+        final fun <get-maximumPointAge>(): kotlin.time/Duration // com.davils.kollect.core.limit/IngestLimits.maximumPointAge.<get-maximumPointAge>|<get-maximumPointAge>(){}[0]
+    final val maximumPointsPerMinute // com.davils.kollect.core.limit/IngestLimits.maximumPointsPerMinute|{}maximumPointsPerMinute[0]
+        final fun <get-maximumPointsPerMinute>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.maximumPointsPerMinute.<get-maximumPointsPerMinute>|<get-maximumPointsPerMinute>(){}[0]
+    final val maximumPointsPerRequest // com.davils.kollect.core.limit/IngestLimits.maximumPointsPerRequest|{}maximumPointsPerRequest[0]
+        final fun <get-maximumPointsPerRequest>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.maximumPointsPerRequest.<get-maximumPointsPerRequest>|<get-maximumPointsPerRequest>(){}[0]
+    final val maximumSeries // com.davils.kollect.core.limit/IngestLimits.maximumSeries|{}maximumSeries[0]
+        final fun <get-maximumSeries>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.maximumSeries.<get-maximumSeries>|<get-maximumSeries>(){}[0]
+    final val maximumSeriesPerSource // com.davils.kollect.core.limit/IngestLimits.maximumSeriesPerSource|{}maximumSeriesPerSource[0]
+        final fun <get-maximumSeriesPerSource>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.maximumSeriesPerSource.<get-maximumSeriesPerSource>|<get-maximumSeriesPerSource>(){}[0]
+    final val maximumSources // com.davils.kollect.core.limit/IngestLimits.maximumSources|{}maximumSources[0]
+        final fun <get-maximumSources>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.maximumSources.<get-maximumSources>|<get-maximumSources>(){}[0]
+    final val maximumStringBytes // com.davils.kollect.core.limit/IngestLimits.maximumStringBytes|{}maximumStringBytes[0]
+        final fun <get-maximumStringBytes>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.maximumStringBytes.<get-maximumStringBytes>|<get-maximumStringBytes>(){}[0]
+    final val seriesExpiry // com.davils.kollect.core.limit/IngestLimits.seriesExpiry|{}seriesExpiry[0]
+        final fun <get-seriesExpiry>(): kotlin.time/Duration // com.davils.kollect.core.limit/IngestLimits.seriesExpiry.<get-seriesExpiry>|<get-seriesExpiry>(){}[0]
+
+    final fun (com.davils.kore.core.validation/ValidationScope).validate() // com.davils.kollect.core.limit/IngestLimits.validate|validate@com.davils.kore.core.validation.ValidationScope(){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.limit/IngestLimits.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.limit/IngestLimits.toString|toString(){}[0]
+
+    final object Companion { // com.davils.kollect.core.limit/IngestLimits.Companion|null[0]
+        final const val HARD_ATTRIBUTES // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_ATTRIBUTES|{}HARD_ATTRIBUTES[0]
+            final fun <get-HARD_ATTRIBUTES>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_ATTRIBUTES.<get-HARD_ATTRIBUTES>|<get-HARD_ATTRIBUTES>(){}[0]
+        final const val HARD_BUCKETS // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_BUCKETS|{}HARD_BUCKETS[0]
+            final fun <get-HARD_BUCKETS>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_BUCKETS.<get-HARD_BUCKETS>|<get-HARD_BUCKETS>(){}[0]
+        final const val HARD_PAYLOAD_BYTES // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_PAYLOAD_BYTES|{}HARD_PAYLOAD_BYTES[0]
+            final fun <get-HARD_PAYLOAD_BYTES>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_PAYLOAD_BYTES.<get-HARD_PAYLOAD_BYTES>|<get-HARD_PAYLOAD_BYTES>(){}[0]
+        final const val HARD_POINTS_PER_MINUTE // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_POINTS_PER_MINUTE|{}HARD_POINTS_PER_MINUTE[0]
+            final fun <get-HARD_POINTS_PER_MINUTE>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_POINTS_PER_MINUTE.<get-HARD_POINTS_PER_MINUTE>|<get-HARD_POINTS_PER_MINUTE>(){}[0]
+        final const val HARD_POINTS_PER_REQUEST // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_POINTS_PER_REQUEST|{}HARD_POINTS_PER_REQUEST[0]
+            final fun <get-HARD_POINTS_PER_REQUEST>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_POINTS_PER_REQUEST.<get-HARD_POINTS_PER_REQUEST>|<get-HARD_POINTS_PER_REQUEST>(){}[0]
+        final const val HARD_SERIES // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_SERIES|{}HARD_SERIES[0]
+            final fun <get-HARD_SERIES>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_SERIES.<get-HARD_SERIES>|<get-HARD_SERIES>(){}[0]
+        final const val HARD_SERIES_PER_SOURCE // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_SERIES_PER_SOURCE|{}HARD_SERIES_PER_SOURCE[0]
+            final fun <get-HARD_SERIES_PER_SOURCE>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_SERIES_PER_SOURCE.<get-HARD_SERIES_PER_SOURCE>|<get-HARD_SERIES_PER_SOURCE>(){}[0]
+        final const val HARD_SOURCES // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_SOURCES|{}HARD_SOURCES[0]
+            final fun <get-HARD_SOURCES>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_SOURCES.<get-HARD_SOURCES>|<get-HARD_SOURCES>(){}[0]
+        final const val HARD_STRING_BYTES // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_STRING_BYTES|{}HARD_STRING_BYTES[0]
+            final fun <get-HARD_STRING_BYTES>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_STRING_BYTES.<get-HARD_STRING_BYTES>|<get-HARD_STRING_BYTES>(){}[0]
+
+        final val Default // com.davils.kollect.core.limit/IngestLimits.Companion.Default|{}Default[0]
+            final fun <get-Default>(): com.davils.kollect.core.limit/IngestLimits // com.davils.kollect.core.limit/IngestLimits.Companion.Default.<get-Default>|<get-Default>(){}[0]
+        final val HARD_CLOCK_SKEW // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_CLOCK_SKEW|{}HARD_CLOCK_SKEW[0]
+            final fun <get-HARD_CLOCK_SKEW>(): kotlin.time/Duration // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_CLOCK_SKEW.<get-HARD_CLOCK_SKEW>|<get-HARD_CLOCK_SKEW>(){}[0]
+        final val HARD_INSTANCE_EXPIRY // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_INSTANCE_EXPIRY|{}HARD_INSTANCE_EXPIRY[0]
+            final fun <get-HARD_INSTANCE_EXPIRY>(): kotlin.time/Duration // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_INSTANCE_EXPIRY.<get-HARD_INSTANCE_EXPIRY>|<get-HARD_INSTANCE_EXPIRY>(){}[0]
+        final val HARD_POINT_AGE // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_POINT_AGE|{}HARD_POINT_AGE[0]
+            final fun <get-HARD_POINT_AGE>(): kotlin.time/Duration // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_POINT_AGE.<get-HARD_POINT_AGE>|<get-HARD_POINT_AGE>(){}[0]
+        final val HARD_SERIES_EXPIRY // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_SERIES_EXPIRY|{}HARD_SERIES_EXPIRY[0]
+            final fun <get-HARD_SERIES_EXPIRY>(): kotlin.time/Duration // com.davils.kollect.core.limit/IngestLimits.Companion.HARD_SERIES_EXPIRY.<get-HARD_SERIES_EXPIRY>|<get-HARD_SERIES_EXPIRY>(){}[0]
+    }
+}
+
+final class com.davils.kollect.core.limit/IngestLimitsBuilder : com.davils.kore.core.dsl/ValidatingBuilder<com.davils.kollect.core.limit/IngestLimits> { // com.davils.kollect.core.limit/IngestLimitsBuilder|null[0]
+    final var instanceExpiry // com.davils.kollect.core.limit/IngestLimitsBuilder.instanceExpiry|{}instanceExpiry[0]
+        final fun <get-instanceExpiry>(): kotlin.time/Duration // com.davils.kollect.core.limit/IngestLimitsBuilder.instanceExpiry.<get-instanceExpiry>|<get-instanceExpiry>(){}[0]
+        final fun <set-instanceExpiry>(kotlin.time/Duration) // com.davils.kollect.core.limit/IngestLimitsBuilder.instanceExpiry.<set-instanceExpiry>|<set-instanceExpiry>(kotlin.time.Duration){}[0]
+    final var maximumAttributes // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumAttributes|{}maximumAttributes[0]
+        final fun <get-maximumAttributes>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumAttributes.<get-maximumAttributes>|<get-maximumAttributes>(){}[0]
+        final fun <set-maximumAttributes>(kotlin/Int) // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumAttributes.<set-maximumAttributes>|<set-maximumAttributes>(kotlin.Int){}[0]
+    final var maximumBuckets // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumBuckets|{}maximumBuckets[0]
+        final fun <get-maximumBuckets>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumBuckets.<get-maximumBuckets>|<get-maximumBuckets>(){}[0]
+        final fun <set-maximumBuckets>(kotlin/Int) // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumBuckets.<set-maximumBuckets>|<set-maximumBuckets>(kotlin.Int){}[0]
+    final var maximumClockSkew // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumClockSkew|{}maximumClockSkew[0]
+        final fun <get-maximumClockSkew>(): kotlin.time/Duration // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumClockSkew.<get-maximumClockSkew>|<get-maximumClockSkew>(){}[0]
+        final fun <set-maximumClockSkew>(kotlin.time/Duration) // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumClockSkew.<set-maximumClockSkew>|<set-maximumClockSkew>(kotlin.time.Duration){}[0]
+    final var maximumPayloadBytes // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumPayloadBytes|{}maximumPayloadBytes[0]
+        final fun <get-maximumPayloadBytes>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumPayloadBytes.<get-maximumPayloadBytes>|<get-maximumPayloadBytes>(){}[0]
+        final fun <set-maximumPayloadBytes>(kotlin/Int) // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumPayloadBytes.<set-maximumPayloadBytes>|<set-maximumPayloadBytes>(kotlin.Int){}[0]
+    final var maximumPointAge // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumPointAge|{}maximumPointAge[0]
+        final fun <get-maximumPointAge>(): kotlin.time/Duration // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumPointAge.<get-maximumPointAge>|<get-maximumPointAge>(){}[0]
+        final fun <set-maximumPointAge>(kotlin.time/Duration) // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumPointAge.<set-maximumPointAge>|<set-maximumPointAge>(kotlin.time.Duration){}[0]
+    final var maximumPointsPerMinute // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumPointsPerMinute|{}maximumPointsPerMinute[0]
+        final fun <get-maximumPointsPerMinute>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumPointsPerMinute.<get-maximumPointsPerMinute>|<get-maximumPointsPerMinute>(){}[0]
+        final fun <set-maximumPointsPerMinute>(kotlin/Int) // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumPointsPerMinute.<set-maximumPointsPerMinute>|<set-maximumPointsPerMinute>(kotlin.Int){}[0]
+    final var maximumPointsPerRequest // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumPointsPerRequest|{}maximumPointsPerRequest[0]
+        final fun <get-maximumPointsPerRequest>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumPointsPerRequest.<get-maximumPointsPerRequest>|<get-maximumPointsPerRequest>(){}[0]
+        final fun <set-maximumPointsPerRequest>(kotlin/Int) // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumPointsPerRequest.<set-maximumPointsPerRequest>|<set-maximumPointsPerRequest>(kotlin.Int){}[0]
+    final var maximumSeries // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumSeries|{}maximumSeries[0]
+        final fun <get-maximumSeries>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumSeries.<get-maximumSeries>|<get-maximumSeries>(){}[0]
+        final fun <set-maximumSeries>(kotlin/Int) // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumSeries.<set-maximumSeries>|<set-maximumSeries>(kotlin.Int){}[0]
+    final var maximumSeriesPerSource // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumSeriesPerSource|{}maximumSeriesPerSource[0]
+        final fun <get-maximumSeriesPerSource>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumSeriesPerSource.<get-maximumSeriesPerSource>|<get-maximumSeriesPerSource>(){}[0]
+        final fun <set-maximumSeriesPerSource>(kotlin/Int) // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumSeriesPerSource.<set-maximumSeriesPerSource>|<set-maximumSeriesPerSource>(kotlin.Int){}[0]
+    final var maximumSources // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumSources|{}maximumSources[0]
+        final fun <get-maximumSources>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumSources.<get-maximumSources>|<get-maximumSources>(){}[0]
+        final fun <set-maximumSources>(kotlin/Int) // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumSources.<set-maximumSources>|<set-maximumSources>(kotlin.Int){}[0]
+    final var maximumStringBytes // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumStringBytes|{}maximumStringBytes[0]
+        final fun <get-maximumStringBytes>(): kotlin/Int // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumStringBytes.<get-maximumStringBytes>|<get-maximumStringBytes>(){}[0]
+        final fun <set-maximumStringBytes>(kotlin/Int) // com.davils.kollect.core.limit/IngestLimitsBuilder.maximumStringBytes.<set-maximumStringBytes>|<set-maximumStringBytes>(kotlin.Int){}[0]
+    final var seriesExpiry // com.davils.kollect.core.limit/IngestLimitsBuilder.seriesExpiry|{}seriesExpiry[0]
+        final fun <get-seriesExpiry>(): kotlin.time/Duration // com.davils.kollect.core.limit/IngestLimitsBuilder.seriesExpiry.<get-seriesExpiry>|<get-seriesExpiry>(){}[0]
+        final fun <set-seriesExpiry>(kotlin.time/Duration) // com.davils.kollect.core.limit/IngestLimitsBuilder.seriesExpiry.<set-seriesExpiry>|<set-seriesExpiry>(kotlin.time.Duration){}[0]
+}
+
+final class com.davils.kollect.core.limit/RegistryLimits : com.davils.kore.core.validation/Validatable { // com.davils.kollect.core.limit/RegistryLimits|null[0]
+    final val maximumActiveTasks // com.davils.kollect.core.limit/RegistryLimits.maximumActiveTasks|{}maximumActiveTasks[0]
+        final fun <get-maximumActiveTasks>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.maximumActiveTasks.<get-maximumActiveTasks>|<get-maximumActiveTasks>(){}[0]
+    final val maximumBuckets // com.davils.kollect.core.limit/RegistryLimits.maximumBuckets|{}maximumBuckets[0]
+        final fun <get-maximumBuckets>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.maximumBuckets.<get-maximumBuckets>|<get-maximumBuckets>(){}[0]
+    final val maximumDescriptionLength // com.davils.kollect.core.limit/RegistryLimits.maximumDescriptionLength|{}maximumDescriptionLength[0]
+        final fun <get-maximumDescriptionLength>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.maximumDescriptionLength.<get-maximumDescriptionLength>|<get-maximumDescriptionLength>(){}[0]
+    final val maximumFamilies // com.davils.kollect.core.limit/RegistryLimits.maximumFamilies|{}maximumFamilies[0]
+        final fun <get-maximumFamilies>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.maximumFamilies.<get-maximumFamilies>|<get-maximumFamilies>(){}[0]
+    final val maximumFilters // com.davils.kollect.core.limit/RegistryLimits.maximumFilters|{}maximumFilters[0]
+        final fun <get-maximumFilters>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.maximumFilters.<get-maximumFilters>|<get-maximumFilters>(){}[0]
+    final val maximumLabelValueLength // com.davils.kollect.core.limit/RegistryLimits.maximumLabelValueLength|{}maximumLabelValueLength[0]
+        final fun <get-maximumLabelValueLength>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.maximumLabelValueLength.<get-maximumLabelValueLength>|<get-maximumLabelValueLength>(){}[0]
+    final val maximumLabels // com.davils.kollect.core.limit/RegistryLimits.maximumLabels|{}maximumLabels[0]
+        final fun <get-maximumLabels>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.maximumLabels.<get-maximumLabels>|<get-maximumLabels>(){}[0]
+    final val maximumNameLength // com.davils.kollect.core.limit/RegistryLimits.maximumNameLength|{}maximumNameLength[0]
+        final fun <get-maximumNameLength>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.maximumNameLength.<get-maximumNameLength>|<get-maximumNameLength>(){}[0]
+    final val maximumSeries // com.davils.kollect.core.limit/RegistryLimits.maximumSeries|{}maximumSeries[0]
+        final fun <get-maximumSeries>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.maximumSeries.<get-maximumSeries>|<get-maximumSeries>(){}[0]
+    final val maximumSeriesPerFamily // com.davils.kollect.core.limit/RegistryLimits.maximumSeriesPerFamily|{}maximumSeriesPerFamily[0]
+        final fun <get-maximumSeriesPerFamily>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.maximumSeriesPerFamily.<get-maximumSeriesPerFamily>|<get-maximumSeriesPerFamily>(){}[0]
+    final val maximumSnapshotStall // com.davils.kollect.core.limit/RegistryLimits.maximumSnapshotStall|{}maximumSnapshotStall[0]
+        final fun <get-maximumSnapshotStall>(): kotlin.time/Duration // com.davils.kollect.core.limit/RegistryLimits.maximumSnapshotStall.<get-maximumSnapshotStall>|<get-maximumSnapshotStall>(){}[0]
+    final val maximumStates // com.davils.kollect.core.limit/RegistryLimits.maximumStates|{}maximumStates[0]
+        final fun <get-maximumStates>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.maximumStates.<get-maximumStates>|<get-maximumStates>(){}[0]
+
+    final fun (com.davils.kore.core.validation/ValidationScope).validate() // com.davils.kollect.core.limit/RegistryLimits.validate|validate@com.davils.kore.core.validation.ValidationScope(){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.limit/RegistryLimits.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.limit/RegistryLimits.toString|toString(){}[0]
+
+    final object Companion { // com.davils.kollect.core.limit/RegistryLimits.Companion|null[0]
+        final const val HARD_ACTIVE_TASKS // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_ACTIVE_TASKS|{}HARD_ACTIVE_TASKS[0]
+            final fun <get-HARD_ACTIVE_TASKS>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_ACTIVE_TASKS.<get-HARD_ACTIVE_TASKS>|<get-HARD_ACTIVE_TASKS>(){}[0]
+        final const val HARD_BUCKETS // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_BUCKETS|{}HARD_BUCKETS[0]
+            final fun <get-HARD_BUCKETS>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_BUCKETS.<get-HARD_BUCKETS>|<get-HARD_BUCKETS>(){}[0]
+        final const val HARD_DESCRIPTION_LENGTH // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_DESCRIPTION_LENGTH|{}HARD_DESCRIPTION_LENGTH[0]
+            final fun <get-HARD_DESCRIPTION_LENGTH>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_DESCRIPTION_LENGTH.<get-HARD_DESCRIPTION_LENGTH>|<get-HARD_DESCRIPTION_LENGTH>(){}[0]
+        final const val HARD_FAMILIES // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_FAMILIES|{}HARD_FAMILIES[0]
+            final fun <get-HARD_FAMILIES>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_FAMILIES.<get-HARD_FAMILIES>|<get-HARD_FAMILIES>(){}[0]
+        final const val HARD_FILTERS // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_FILTERS|{}HARD_FILTERS[0]
+            final fun <get-HARD_FILTERS>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_FILTERS.<get-HARD_FILTERS>|<get-HARD_FILTERS>(){}[0]
+        final const val HARD_LABELS // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_LABELS|{}HARD_LABELS[0]
+            final fun <get-HARD_LABELS>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_LABELS.<get-HARD_LABELS>|<get-HARD_LABELS>(){}[0]
+        final const val HARD_LABEL_VALUE_LENGTH // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_LABEL_VALUE_LENGTH|{}HARD_LABEL_VALUE_LENGTH[0]
+            final fun <get-HARD_LABEL_VALUE_LENGTH>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_LABEL_VALUE_LENGTH.<get-HARD_LABEL_VALUE_LENGTH>|<get-HARD_LABEL_VALUE_LENGTH>(){}[0]
+        final const val HARD_NAME_LENGTH // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_NAME_LENGTH|{}HARD_NAME_LENGTH[0]
+            final fun <get-HARD_NAME_LENGTH>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_NAME_LENGTH.<get-HARD_NAME_LENGTH>|<get-HARD_NAME_LENGTH>(){}[0]
+        final const val HARD_SERIES // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_SERIES|{}HARD_SERIES[0]
+            final fun <get-HARD_SERIES>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_SERIES.<get-HARD_SERIES>|<get-HARD_SERIES>(){}[0]
+        final const val HARD_SERIES_PER_FAMILY // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_SERIES_PER_FAMILY|{}HARD_SERIES_PER_FAMILY[0]
+            final fun <get-HARD_SERIES_PER_FAMILY>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_SERIES_PER_FAMILY.<get-HARD_SERIES_PER_FAMILY>|<get-HARD_SERIES_PER_FAMILY>(){}[0]
+        final const val HARD_STATES // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_STATES|{}HARD_STATES[0]
+            final fun <get-HARD_STATES>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_STATES.<get-HARD_STATES>|<get-HARD_STATES>(){}[0]
+
+        final val Default // com.davils.kollect.core.limit/RegistryLimits.Companion.Default|{}Default[0]
+            final fun <get-Default>(): com.davils.kollect.core.limit/RegistryLimits // com.davils.kollect.core.limit/RegistryLimits.Companion.Default.<get-Default>|<get-Default>(){}[0]
+        final val HARD_SNAPSHOT_STALL // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_SNAPSHOT_STALL|{}HARD_SNAPSHOT_STALL[0]
+            final fun <get-HARD_SNAPSHOT_STALL>(): kotlin.time/Duration // com.davils.kollect.core.limit/RegistryLimits.Companion.HARD_SNAPSHOT_STALL.<get-HARD_SNAPSHOT_STALL>|<get-HARD_SNAPSHOT_STALL>(){}[0]
+    }
+}
+
+final class com.davils.kollect.core.limit/RegistryLimitsBuilder : com.davils.kore.core.dsl/ValidatingBuilder<com.davils.kollect.core.limit/RegistryLimits> { // com.davils.kollect.core.limit/RegistryLimitsBuilder|null[0]
+    final var maximumActiveTasks // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumActiveTasks|{}maximumActiveTasks[0]
+        final fun <get-maximumActiveTasks>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumActiveTasks.<get-maximumActiveTasks>|<get-maximumActiveTasks>(){}[0]
+        final fun <set-maximumActiveTasks>(kotlin/Int) // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumActiveTasks.<set-maximumActiveTasks>|<set-maximumActiveTasks>(kotlin.Int){}[0]
+    final var maximumBuckets // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumBuckets|{}maximumBuckets[0]
+        final fun <get-maximumBuckets>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumBuckets.<get-maximumBuckets>|<get-maximumBuckets>(){}[0]
+        final fun <set-maximumBuckets>(kotlin/Int) // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumBuckets.<set-maximumBuckets>|<set-maximumBuckets>(kotlin.Int){}[0]
+    final var maximumDescriptionLength // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumDescriptionLength|{}maximumDescriptionLength[0]
+        final fun <get-maximumDescriptionLength>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumDescriptionLength.<get-maximumDescriptionLength>|<get-maximumDescriptionLength>(){}[0]
+        final fun <set-maximumDescriptionLength>(kotlin/Int) // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumDescriptionLength.<set-maximumDescriptionLength>|<set-maximumDescriptionLength>(kotlin.Int){}[0]
+    final var maximumFamilies // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumFamilies|{}maximumFamilies[0]
+        final fun <get-maximumFamilies>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumFamilies.<get-maximumFamilies>|<get-maximumFamilies>(){}[0]
+        final fun <set-maximumFamilies>(kotlin/Int) // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumFamilies.<set-maximumFamilies>|<set-maximumFamilies>(kotlin.Int){}[0]
+    final var maximumFilters // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumFilters|{}maximumFilters[0]
+        final fun <get-maximumFilters>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumFilters.<get-maximumFilters>|<get-maximumFilters>(){}[0]
+        final fun <set-maximumFilters>(kotlin/Int) // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumFilters.<set-maximumFilters>|<set-maximumFilters>(kotlin.Int){}[0]
+    final var maximumLabelValueLength // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumLabelValueLength|{}maximumLabelValueLength[0]
+        final fun <get-maximumLabelValueLength>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumLabelValueLength.<get-maximumLabelValueLength>|<get-maximumLabelValueLength>(){}[0]
+        final fun <set-maximumLabelValueLength>(kotlin/Int) // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumLabelValueLength.<set-maximumLabelValueLength>|<set-maximumLabelValueLength>(kotlin.Int){}[0]
+    final var maximumLabels // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumLabels|{}maximumLabels[0]
+        final fun <get-maximumLabels>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumLabels.<get-maximumLabels>|<get-maximumLabels>(){}[0]
+        final fun <set-maximumLabels>(kotlin/Int) // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumLabels.<set-maximumLabels>|<set-maximumLabels>(kotlin.Int){}[0]
+    final var maximumNameLength // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumNameLength|{}maximumNameLength[0]
+        final fun <get-maximumNameLength>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumNameLength.<get-maximumNameLength>|<get-maximumNameLength>(){}[0]
+        final fun <set-maximumNameLength>(kotlin/Int) // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumNameLength.<set-maximumNameLength>|<set-maximumNameLength>(kotlin.Int){}[0]
+    final var maximumSeries // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumSeries|{}maximumSeries[0]
+        final fun <get-maximumSeries>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumSeries.<get-maximumSeries>|<get-maximumSeries>(){}[0]
+        final fun <set-maximumSeries>(kotlin/Int) // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumSeries.<set-maximumSeries>|<set-maximumSeries>(kotlin.Int){}[0]
+    final var maximumSeriesPerFamily // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumSeriesPerFamily|{}maximumSeriesPerFamily[0]
+        final fun <get-maximumSeriesPerFamily>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumSeriesPerFamily.<get-maximumSeriesPerFamily>|<get-maximumSeriesPerFamily>(){}[0]
+        final fun <set-maximumSeriesPerFamily>(kotlin/Int) // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumSeriesPerFamily.<set-maximumSeriesPerFamily>|<set-maximumSeriesPerFamily>(kotlin.Int){}[0]
+    final var maximumSnapshotStall // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumSnapshotStall|{}maximumSnapshotStall[0]
+        final fun <get-maximumSnapshotStall>(): kotlin.time/Duration // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumSnapshotStall.<get-maximumSnapshotStall>|<get-maximumSnapshotStall>(){}[0]
+        final fun <set-maximumSnapshotStall>(kotlin.time/Duration) // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumSnapshotStall.<set-maximumSnapshotStall>|<set-maximumSnapshotStall>(kotlin.time.Duration){}[0]
+    final var maximumStates // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumStates|{}maximumStates[0]
+        final fun <get-maximumStates>(): kotlin/Int // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumStates.<get-maximumStates>|<get-maximumStates>(){}[0]
+        final fun <set-maximumStates>(kotlin/Int) // com.davils.kollect.core.limit/RegistryLimitsBuilder.maximumStates.<set-maximumStates>|<set-maximumStates>(kotlin.Int){}[0]
+}
+
+final class com.davils.kollect.core.meter/Descriptor { // com.davils.kollect.core.meter/Descriptor|null[0]
+    final val bounds // com.davils.kollect.core.meter/Descriptor.bounds|{}bounds[0]
+        final fun <get-bounds>(): com.davils.kollect.core.meter/ExplicitBounds? // com.davils.kollect.core.meter/Descriptor.bounds.<get-bounds>|<get-bounds>(){}[0]
+    final val description // com.davils.kollect.core.meter/Descriptor.description|{}description[0]
+        final fun <get-description>(): kotlin/String // com.davils.kollect.core.meter/Descriptor.description.<get-description>|<get-description>(){}[0]
+    final val kind // com.davils.kollect.core.meter/Descriptor.kind|{}kind[0]
+        final fun <get-kind>(): com.davils.kollect.core.meter/MeterKind // com.davils.kollect.core.meter/Descriptor.kind.<get-kind>|<get-kind>(){}[0]
+    final val labelKeys // com.davils.kollect.core.meter/Descriptor.labelKeys|{}labelKeys[0]
+        final fun <get-labelKeys>(): kotlin.collections/List<com.davils.kollect.core.name/LabelKey> // com.davils.kollect.core.meter/Descriptor.labelKeys.<get-labelKeys>|<get-labelKeys>(){}[0]
+    final val name // com.davils.kollect.core.meter/Descriptor.name|{}name[0]
+        final fun <get-name>(): com.davils.kollect.core.name/MetricName // com.davils.kollect.core.meter/Descriptor.name.<get-name>|<get-name>(){}[0]
+    final val states // com.davils.kollect.core.meter/Descriptor.states|{}states[0]
+        final fun <get-states>(): kotlin.collections/List<kotlin/String> // com.davils.kollect.core.meter/Descriptor.states.<get-states>|<get-states>(){}[0]
+    final val unit // com.davils.kollect.core.meter/Descriptor.unit|{}unit[0]
+        final fun <get-unit>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/Descriptor.unit.<get-unit>|<get-unit>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.meter/Descriptor.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.meter/Descriptor.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.meter/Descriptor.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.meter/ExplicitBounds { // com.davils.kollect.core.meter/ExplicitBounds|null[0]
+    final val bucketCount // com.davils.kollect.core.meter/ExplicitBounds.bucketCount|{}bucketCount[0]
+        final fun <get-bucketCount>(): kotlin/Int // com.davils.kollect.core.meter/ExplicitBounds.bucketCount.<get-bucketCount>|<get-bucketCount>(){}[0]
+    final val values // com.davils.kollect.core.meter/ExplicitBounds.values|{}values[0]
+        final fun <get-values>(): kotlin.collections/List<kotlin/Double> // com.davils.kollect.core.meter/ExplicitBounds.values.<get-values>|<get-values>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.meter/ExplicitBounds.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.meter/ExplicitBounds.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.meter/ExplicitBounds.toString|toString(){}[0]
+
+    final object Companion { // com.davils.kollect.core.meter/ExplicitBounds.Companion|null[0]
+        final val DEFAULT // com.davils.kollect.core.meter/ExplicitBounds.Companion.DEFAULT|{}DEFAULT[0]
+            final fun <get-DEFAULT>(): com.davils.kollect.core.meter/ExplicitBounds // com.davils.kollect.core.meter/ExplicitBounds.Companion.DEFAULT.<get-DEFAULT>|<get-DEFAULT>(){}[0]
+        final val SECONDS // com.davils.kollect.core.meter/ExplicitBounds.Companion.SECONDS|{}SECONDS[0]
+            final fun <get-SECONDS>(): com.davils.kollect.core.meter/ExplicitBounds // com.davils.kollect.core.meter/ExplicitBounds.Companion.SECONDS.<get-SECONDS>|<get-SECONDS>(){}[0]
+
+        final fun of(kotlin.collections/List<kotlin/Double>): com.davils.kollect.core.meter/ExplicitBounds // com.davils.kollect.core.meter/ExplicitBounds.Companion.of|of(kotlin.collections.List<kotlin.Double>){}[0]
+        final fun of(kotlin/DoubleArray...): com.davils.kollect.core.meter/ExplicitBounds // com.davils.kollect.core.meter/ExplicitBounds.Companion.of|of(kotlin.DoubleArray...){}[0]
+        final fun ofOrNull(kotlin.collections/List<kotlin/Double>): com.davils.kollect.core.meter/ExplicitBounds? // com.davils.kollect.core.meter/ExplicitBounds.Companion.ofOrNull|ofOrNull(kotlin.collections.List<kotlin.Double>){}[0]
+    }
+}
+
+final class com.davils.kollect.core.meter/MeasureUnit { // com.davils.kollect.core.meter/MeasureUnit|null[0]
+    final val prometheusSuffix // com.davils.kollect.core.meter/MeasureUnit.prometheusSuffix|{}prometheusSuffix[0]
+        final fun <get-prometheusSuffix>(): kotlin/String? // com.davils.kollect.core.meter/MeasureUnit.prometheusSuffix.<get-prometheusSuffix>|<get-prometheusSuffix>(){}[0]
+    final val ucum // com.davils.kollect.core.meter/MeasureUnit.ucum|{}ucum[0]
+        final fun <get-ucum>(): kotlin/String // com.davils.kollect.core.meter/MeasureUnit.ucum.<get-ucum>|<get-ucum>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.meter/MeasureUnit.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.meter/MeasureUnit.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.meter/MeasureUnit.toString|toString(){}[0]
+
+    final object Companion { // com.davils.kollect.core.meter/MeasureUnit.Companion|null[0]
+        final val AMPERES // com.davils.kollect.core.meter/MeasureUnit.Companion.AMPERES|{}AMPERES[0]
+            final fun <get-AMPERES>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/MeasureUnit.Companion.AMPERES.<get-AMPERES>|<get-AMPERES>(){}[0]
+        final val BYTES // com.davils.kollect.core.meter/MeasureUnit.Companion.BYTES|{}BYTES[0]
+            final fun <get-BYTES>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/MeasureUnit.Companion.BYTES.<get-BYTES>|<get-BYTES>(){}[0]
+        final val CELSIUS // com.davils.kollect.core.meter/MeasureUnit.Companion.CELSIUS|{}CELSIUS[0]
+            final fun <get-CELSIUS>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/MeasureUnit.Companion.CELSIUS.<get-CELSIUS>|<get-CELSIUS>(){}[0]
+        final val HERTZ // com.davils.kollect.core.meter/MeasureUnit.Companion.HERTZ|{}HERTZ[0]
+            final fun <get-HERTZ>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/MeasureUnit.Companion.HERTZ.<get-HERTZ>|<get-HERTZ>(){}[0]
+        final val JOULES // com.davils.kollect.core.meter/MeasureUnit.Companion.JOULES|{}JOULES[0]
+            final fun <get-JOULES>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/MeasureUnit.Companion.JOULES.<get-JOULES>|<get-JOULES>(){}[0]
+        final val METERS // com.davils.kollect.core.meter/MeasureUnit.Companion.METERS|{}METERS[0]
+            final fun <get-METERS>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/MeasureUnit.Companion.METERS.<get-METERS>|<get-METERS>(){}[0]
+        final val NONE // com.davils.kollect.core.meter/MeasureUnit.Companion.NONE|{}NONE[0]
+            final fun <get-NONE>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/MeasureUnit.Companion.NONE.<get-NONE>|<get-NONE>(){}[0]
+        final val PERCENT // com.davils.kollect.core.meter/MeasureUnit.Companion.PERCENT|{}PERCENT[0]
+            final fun <get-PERCENT>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/MeasureUnit.Companion.PERCENT.<get-PERCENT>|<get-PERCENT>(){}[0]
+        final val RATIO // com.davils.kollect.core.meter/MeasureUnit.Companion.RATIO|{}RATIO[0]
+            final fun <get-RATIO>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/MeasureUnit.Companion.RATIO.<get-RATIO>|<get-RATIO>(){}[0]
+        final val SECONDS // com.davils.kollect.core.meter/MeasureUnit.Companion.SECONDS|{}SECONDS[0]
+            final fun <get-SECONDS>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/MeasureUnit.Companion.SECONDS.<get-SECONDS>|<get-SECONDS>(){}[0]
+        final val VOLTS // com.davils.kollect.core.meter/MeasureUnit.Companion.VOLTS|{}VOLTS[0]
+            final fun <get-VOLTS>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/MeasureUnit.Companion.VOLTS.<get-VOLTS>|<get-VOLTS>(){}[0]
+        final val WATTS // com.davils.kollect.core.meter/MeasureUnit.Companion.WATTS|{}WATTS[0]
+            final fun <get-WATTS>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/MeasureUnit.Companion.WATTS.<get-WATTS>|<get-WATTS>(){}[0]
+
+        final fun annotation(kotlin/String): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.meter/MeasureUnit.Companion.annotation|annotation(kotlin.String){}[0]
+        final fun ofUcumOrNull(kotlin/String): com.davils.kollect.core.meter/MeasureUnit? // com.davils.kollect.core.meter/MeasureUnit.Companion.ofUcumOrNull|ofUcumOrNull(kotlin.String){}[0]
+    }
+}
+
+final class com.davils.kollect.core.name/Labels : kotlin/Comparable<com.davils.kollect.core.name/Labels> { // com.davils.kollect.core.name/Labels|null[0]
+    final val keys // com.davils.kollect.core.name/Labels.keys|{}keys[0]
+        final fun <get-keys>(): kotlin.collections/List<com.davils.kollect.core.name/LabelKey> // com.davils.kollect.core.name/Labels.keys.<get-keys>|<get-keys>(){}[0]
+    final val size // com.davils.kollect.core.name/Labels.size|{}size[0]
+        final fun <get-size>(): kotlin/Int // com.davils.kollect.core.name/Labels.size.<get-size>|<get-size>(){}[0]
+    final val values // com.davils.kollect.core.name/Labels.values|{}values[0]
+        final fun <get-values>(): kotlin.collections/List<kotlin/String> // com.davils.kollect.core.name/Labels.values.<get-values>|<get-values>(){}[0]
+
+    final fun compareTo(com.davils.kollect.core.name/Labels): kotlin/Int // com.davils.kollect.core.name/Labels.compareTo|compareTo(com.davils.kollect.core.name.Labels){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.name/Labels.equals|equals(kotlin.Any?){}[0]
+    final fun get(com.davils.kollect.core.name/LabelKey): kotlin/String? // com.davils.kollect.core.name/Labels.get|get(com.davils.kollect.core.name.LabelKey){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.name/Labels.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.name/Labels.toString|toString(){}[0]
+
+    final object Companion { // com.davils.kollect.core.name/Labels.Companion|null[0]
+        final val EMPTY // com.davils.kollect.core.name/Labels.Companion.EMPTY|{}EMPTY[0]
+            final fun <get-EMPTY>(): com.davils.kollect.core.name/Labels // com.davils.kollect.core.name/Labels.Companion.EMPTY.<get-EMPTY>|<get-EMPTY>(){}[0]
+    }
+}
+
+final class com.davils.kollect.core.otlp/Ingestion { // com.davils.kollect.core.otlp/Ingestion|null[0]
+    final val accepted // com.davils.kollect.core.otlp/Ingestion.accepted|{}accepted[0]
+        final fun <get-accepted>(): kotlin/Long // com.davils.kollect.core.otlp/Ingestion.accepted.<get-accepted>|<get-accepted>(){}[0]
+    final val rejected // com.davils.kollect.core.otlp/Ingestion.rejected|{}rejected[0]
+        final fun <get-rejected>(): kotlin.collections/Map<com.davils.kollect.core.otlp/IngestRejection, kotlin/Long> // com.davils.kollect.core.otlp/Ingestion.rejected.<get-rejected>|<get-rejected>(){}[0]
+    final val response // com.davils.kollect.core.otlp/Ingestion.response|{}response[0]
+        final fun <get-response>(): com.davils.kollect.core/Payload // com.davils.kollect.core.otlp/Ingestion.response.<get-response>|<get-response>(){}[0]
+    final val verdict // com.davils.kollect.core.otlp/Ingestion.verdict|{}verdict[0]
+        final fun <get-verdict>(): com.davils.kollect.core.otlp/IngestVerdict // com.davils.kollect.core.otlp/Ingestion.verdict.<get-verdict>|<get-verdict>(){}[0]
+
+    final fun toString(): kotlin/String // com.davils.kollect.core.otlp/Ingestion.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.otlp/OtlpBatch { // com.davils.kollect.core.otlp/OtlpBatch|null[0]
+    final val droppedPoints // com.davils.kollect.core.otlp/OtlpBatch.droppedPoints|{}droppedPoints[0]
+        final fun <get-droppedPoints>(): kotlin/Int // com.davils.kollect.core.otlp/OtlpBatch.droppedPoints.<get-droppedPoints>|<get-droppedPoints>(){}[0]
+    final val payloads // com.davils.kollect.core.otlp/OtlpBatch.payloads|{}payloads[0]
+        final fun <get-payloads>(): kotlin.collections/List<com.davils.kollect.core/Payload> // com.davils.kollect.core.otlp/OtlpBatch.payloads.<get-payloads>|<get-payloads>(){}[0]
+    final val points // com.davils.kollect.core.otlp/OtlpBatch.points|{}points[0]
+        final fun <get-points>(): kotlin/Int // com.davils.kollect.core.otlp/OtlpBatch.points.<get-points>|<get-points>(){}[0]
+
+    final fun toString(): kotlin/String // com.davils.kollect.core.otlp/OtlpBatch.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.otlp/OtlpIngestion { // com.davils.kollect.core.otlp/OtlpIngestion|null[0]
+    final val limits // com.davils.kollect.core.otlp/OtlpIngestion.limits|{}limits[0]
+        final fun <get-limits>(): com.davils.kollect.core.limit/IngestLimits // com.davils.kollect.core.otlp/OtlpIngestion.limits.<get-limits>|<get-limits>(){}[0]
+    final val sourceCount // com.davils.kollect.core.otlp/OtlpIngestion.sourceCount|{}sourceCount[0]
+        final fun <get-sourceCount>(): kotlin/Int // com.davils.kollect.core.otlp/OtlpIngestion.sourceCount.<get-sourceCount>|<get-sourceCount>(){}[0]
+
+    final fun forget(com.davils.kollect.core.otlp/Source): kotlin/Boolean // com.davils.kollect.core.otlp/OtlpIngestion.forget|forget(com.davils.kollect.core.otlp.Source){}[0]
+    final fun ingest(com.davils.kollect.core.otlp/Source, kotlin/String, kotlin/ByteArray): com.davils.kollect.core.otlp/Ingestion // com.davils.kollect.core.otlp/OtlpIngestion.ingest|ingest(com.davils.kollect.core.otlp.Source;kotlin.String;kotlin.ByteArray){}[0]
+    final fun snapshot(): com.davils.kollect.core.snapshot/MetricsSnapshot // com.davils.kollect.core.otlp/OtlpIngestion.snapshot|snapshot(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.otlp/OtlpIngestion.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.otlp/OtlpIngestionBuilder { // com.davils.kollect.core.otlp/OtlpIngestionBuilder|null[0]
+    final var limits // com.davils.kollect.core.otlp/OtlpIngestionBuilder.limits|{}limits[0]
+        final fun <get-limits>(): com.davils.kollect.core.limit/IngestLimits // com.davils.kollect.core.otlp/OtlpIngestionBuilder.limits.<get-limits>|<get-limits>(){}[0]
+        final fun <set-limits>(com.davils.kollect.core.limit/IngestLimits) // com.davils.kollect.core.otlp/OtlpIngestionBuilder.limits.<set-limits>|<set-limits>(com.davils.kollect.core.limit.IngestLimits){}[0]
+
+    final fun acceptAnyFamily(kotlin/String) // com.davils.kollect.core.otlp/OtlpIngestionBuilder.acceptAnyFamily|acceptAnyFamily(kotlin.String){}[0]
+    final fun acceptFamily(kotlin/String, com.davils.kollect.core.meter/MeterKind, com.davils.kollect.core.meter/MeasureUnit = ..., kotlin/Array<out kotlin/String>...) // com.davils.kollect.core.otlp/OtlpIngestionBuilder.acceptFamily|acceptFamily(kotlin.String;com.davils.kollect.core.meter.MeterKind;com.davils.kollect.core.meter.MeasureUnit;kotlin.Array<out|kotlin.String>...){}[0]
+}
+
+final class com.davils.kollect.core.otlp/Resource { // com.davils.kollect.core.otlp/Resource|null[0]
+    final val attributes // com.davils.kollect.core.otlp/Resource.attributes|{}attributes[0]
+        final fun <get-attributes>(): kotlin.collections/List<kotlin/Pair<kotlin/String, kotlin/String>> // com.davils.kollect.core.otlp/Resource.attributes.<get-attributes>|<get-attributes>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.otlp/Resource.equals|equals(kotlin.Any?){}[0]
+    final fun get(kotlin/String): kotlin/String? // com.davils.kollect.core.otlp/Resource.get|get(kotlin.String){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.otlp/Resource.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.otlp/Resource.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.otlp/ResourceBuilder { // com.davils.kollect.core.otlp/ResourceBuilder|null[0]
+    final fun allow(kotlin/String) // com.davils.kollect.core.otlp/ResourceBuilder.allow|allow(kotlin.String){}[0]
+    final fun attribute(kotlin/String, kotlin/String) // com.davils.kollect.core.otlp/ResourceBuilder.attribute|attribute(kotlin.String;kotlin.String){}[0]
+}
+
+final class com.davils.kollect.core.snapshot/FamilySnapshot { // com.davils.kollect.core.snapshot/FamilySnapshot|null[0]
+    final val descriptor // com.davils.kollect.core.snapshot/FamilySnapshot.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): com.davils.kollect.core.meter/Descriptor // com.davils.kollect.core.snapshot/FamilySnapshot.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+    final val points // com.davils.kollect.core.snapshot/FamilySnapshot.points|{}points[0]
+        final fun <get-points>(): kotlin.collections/List<com.davils.kollect.core.snapshot/Point> // com.davils.kollect.core.snapshot/FamilySnapshot.points.<get-points>|<get-points>(){}[0]
+    final val temporality // com.davils.kollect.core.snapshot/FamilySnapshot.temporality|{}temporality[0]
+        final fun <get-temporality>(): com.davils.kollect.core.snapshot/Temporality // com.davils.kollect.core.snapshot/FamilySnapshot.temporality.<get-temporality>|<get-temporality>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.snapshot/FamilySnapshot.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.snapshot/FamilySnapshot.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.snapshot/FamilySnapshot.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.snapshot/GaugePoint : com.davils.kollect.core.snapshot/Point { // com.davils.kollect.core.snapshot/GaugePoint|null[0]
+    final val labels // com.davils.kollect.core.snapshot/GaugePoint.labels|{}labels[0]
+        final fun <get-labels>(): com.davils.kollect.core.name/Labels // com.davils.kollect.core.snapshot/GaugePoint.labels.<get-labels>|<get-labels>(){}[0]
+    final val observedAt // com.davils.kollect.core.snapshot/GaugePoint.observedAt|{}observedAt[0]
+        final fun <get-observedAt>(): kotlin.time/Instant // com.davils.kollect.core.snapshot/GaugePoint.observedAt.<get-observedAt>|<get-observedAt>(){}[0]
+    final val start // com.davils.kollect.core.snapshot/GaugePoint.start|{}start[0]
+        final fun <get-start>(): kotlin.time/Instant // com.davils.kollect.core.snapshot/GaugePoint.start.<get-start>|<get-start>(){}[0]
+    final val value // com.davils.kollect.core.snapshot/GaugePoint.value|{}value[0]
+        final fun <get-value>(): kotlin/Double // com.davils.kollect.core.snapshot/GaugePoint.value.<get-value>|<get-value>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.snapshot/GaugePoint.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.snapshot/GaugePoint.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.snapshot/GaugePoint.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.snapshot/HistogramPoint : com.davils.kollect.core.snapshot/Point { // com.davils.kollect.core.snapshot/HistogramPoint|null[0]
+    final val bucketCounts // com.davils.kollect.core.snapshot/HistogramPoint.bucketCounts|{}bucketCounts[0]
+        final fun <get-bucketCounts>(): kotlin.collections/List<kotlin/Long> // com.davils.kollect.core.snapshot/HistogramPoint.bucketCounts.<get-bucketCounts>|<get-bucketCounts>(){}[0]
+    final val count // com.davils.kollect.core.snapshot/HistogramPoint.count|{}count[0]
+        final fun <get-count>(): kotlin/Long // com.davils.kollect.core.snapshot/HistogramPoint.count.<get-count>|<get-count>(){}[0]
+    final val labels // com.davils.kollect.core.snapshot/HistogramPoint.labels|{}labels[0]
+        final fun <get-labels>(): com.davils.kollect.core.name/Labels // com.davils.kollect.core.snapshot/HistogramPoint.labels.<get-labels>|<get-labels>(){}[0]
+    final val max // com.davils.kollect.core.snapshot/HistogramPoint.max|{}max[0]
+        final fun <get-max>(): kotlin/Double? // com.davils.kollect.core.snapshot/HistogramPoint.max.<get-max>|<get-max>(){}[0]
+    final val min // com.davils.kollect.core.snapshot/HistogramPoint.min|{}min[0]
+        final fun <get-min>(): kotlin/Double? // com.davils.kollect.core.snapshot/HistogramPoint.min.<get-min>|<get-min>(){}[0]
+    final val start // com.davils.kollect.core.snapshot/HistogramPoint.start|{}start[0]
+        final fun <get-start>(): kotlin.time/Instant // com.davils.kollect.core.snapshot/HistogramPoint.start.<get-start>|<get-start>(){}[0]
+    final val sum // com.davils.kollect.core.snapshot/HistogramPoint.sum|{}sum[0]
+        final fun <get-sum>(): kotlin/Double // com.davils.kollect.core.snapshot/HistogramPoint.sum.<get-sum>|<get-sum>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.snapshot/HistogramPoint.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.snapshot/HistogramPoint.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.snapshot/HistogramPoint.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.snapshot/InfoPoint : com.davils.kollect.core.snapshot/Point { // com.davils.kollect.core.snapshot/InfoPoint|null[0]
+    final val labels // com.davils.kollect.core.snapshot/InfoPoint.labels|{}labels[0]
+        final fun <get-labels>(): com.davils.kollect.core.name/Labels // com.davils.kollect.core.snapshot/InfoPoint.labels.<get-labels>|<get-labels>(){}[0]
+    final val start // com.davils.kollect.core.snapshot/InfoPoint.start|{}start[0]
+        final fun <get-start>(): kotlin.time/Instant // com.davils.kollect.core.snapshot/InfoPoint.start.<get-start>|<get-start>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.snapshot/InfoPoint.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.snapshot/InfoPoint.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.snapshot/InfoPoint.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.snapshot/MetricsSnapshot { // com.davils.kollect.core.snapshot/MetricsSnapshot|null[0]
+    final val families // com.davils.kollect.core.snapshot/MetricsSnapshot.families|{}families[0]
+        final fun <get-families>(): kotlin.collections/List<com.davils.kollect.core.snapshot/FamilySnapshot> // com.davils.kollect.core.snapshot/MetricsSnapshot.families.<get-families>|<get-families>(){}[0]
+    final val timestamp // com.davils.kollect.core.snapshot/MetricsSnapshot.timestamp|{}timestamp[0]
+        final fun <get-timestamp>(): kotlin.time/Instant // com.davils.kollect.core.snapshot/MetricsSnapshot.timestamp.<get-timestamp>|<get-timestamp>(){}[0]
+    final val unreadable // com.davils.kollect.core.snapshot/MetricsSnapshot.unreadable|{}unreadable[0]
+        final fun <get-unreadable>(): kotlin.collections/List<com.davils.kollect.core.snapshot/Unreadable> // com.davils.kollect.core.snapshot/MetricsSnapshot.unreadable.<get-unreadable>|<get-unreadable>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.snapshot/MetricsSnapshot.equals|equals(kotlin.Any?){}[0]
+    final fun family(com.davils.kollect.core.name/MetricName): com.davils.kollect.core.snapshot/FamilySnapshot? // com.davils.kollect.core.snapshot/MetricsSnapshot.family|family(com.davils.kollect.core.name.MetricName){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.snapshot/MetricsSnapshot.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.snapshot/MetricsSnapshot.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.snapshot/StateSetPoint : com.davils.kollect.core.snapshot/Point { // com.davils.kollect.core.snapshot/StateSetPoint|null[0]
+    final val active // com.davils.kollect.core.snapshot/StateSetPoint.active|{}active[0]
+        final fun <get-active>(): kotlin/Int // com.davils.kollect.core.snapshot/StateSetPoint.active.<get-active>|<get-active>(){}[0]
+    final val labels // com.davils.kollect.core.snapshot/StateSetPoint.labels|{}labels[0]
+        final fun <get-labels>(): com.davils.kollect.core.name/Labels // com.davils.kollect.core.snapshot/StateSetPoint.labels.<get-labels>|<get-labels>(){}[0]
+    final val start // com.davils.kollect.core.snapshot/StateSetPoint.start|{}start[0]
+        final fun <get-start>(): kotlin.time/Instant // com.davils.kollect.core.snapshot/StateSetPoint.start.<get-start>|<get-start>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.snapshot/StateSetPoint.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.snapshot/StateSetPoint.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.snapshot/StateSetPoint.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.snapshot/SumPoint : com.davils.kollect.core.snapshot/Point { // com.davils.kollect.core.snapshot/SumPoint|null[0]
+    final val labels // com.davils.kollect.core.snapshot/SumPoint.labels|{}labels[0]
+        final fun <get-labels>(): com.davils.kollect.core.name/Labels // com.davils.kollect.core.snapshot/SumPoint.labels.<get-labels>|<get-labels>(){}[0]
+    final val start // com.davils.kollect.core.snapshot/SumPoint.start|{}start[0]
+        final fun <get-start>(): kotlin.time/Instant // com.davils.kollect.core.snapshot/SumPoint.start.<get-start>|<get-start>(){}[0]
+    final val value // com.davils.kollect.core.snapshot/SumPoint.value|{}value[0]
+        final fun <get-value>(): kotlin/Double // com.davils.kollect.core.snapshot/SumPoint.value.<get-value>|<get-value>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.snapshot/SumPoint.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.snapshot/SumPoint.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.snapshot/SumPoint.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core.snapshot/Unreadable { // com.davils.kollect.core.snapshot/Unreadable|null[0]
+    final val name // com.davils.kollect.core.snapshot/Unreadable.name|{}name[0]
+        final fun <get-name>(): com.davils.kollect.core.name/MetricName // com.davils.kollect.core.snapshot/Unreadable.name.<get-name>|<get-name>(){}[0]
+    final val reason // com.davils.kollect.core.snapshot/Unreadable.reason|{}reason[0]
+        final fun <get-reason>(): com.davils.kollect.core.snapshot/Unreadability // com.davils.kollect.core.snapshot/Unreadable.reason.<get-reason>|<get-reason>(){}[0]
+
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.snapshot/Unreadable.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.snapshot/Unreadable.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.snapshot/Unreadable.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core/MeterRegistry { // com.davils.kollect.core/MeterRegistry|null[0]
+    final val limits // com.davils.kollect.core/MeterRegistry.limits|{}limits[0]
+        final fun <get-limits>(): com.davils.kollect.core.limit/RegistryLimits // com.davils.kollect.core/MeterRegistry.limits.<get-limits>|<get-limits>(){}[0]
+
+    final fun <#A1: kotlin/Enum<#A1>> stateSet(kotlin/String, kotlin.collections/List<kotlin/String>, kotlin/Int, kotlin/Function1<com.davils.kollect.core.declare/FamilyBuilder, kotlin/Unit>): com.davils.kollect.core/Registration<com.davils.kollect.core/Family<com.davils.kollect.core.meter/StateSet<#A1>>> // com.davils.kollect.core/MeterRegistry.stateSet|stateSet(kotlin.String;kotlin.collections.List<kotlin.String>;kotlin.Int;kotlin.Function1<com.davils.kollect.core.declare.FamilyBuilder,kotlin.Unit>){0§<kotlin.Enum<0:0>>}[0]
+    final fun close() // com.davils.kollect.core/MeterRegistry.close|close(){}[0]
+    final fun counter(kotlin/String, kotlin/Function1<com.davils.kollect.core.declare/FamilyBuilder, kotlin/Unit> = ...): com.davils.kollect.core/Registration<com.davils.kollect.core/Family<com.davils.kollect.core.meter/Counter>> // com.davils.kollect.core/MeterRegistry.counter|counter(kotlin.String;kotlin.Function1<com.davils.kollect.core.declare.FamilyBuilder,kotlin.Unit>){}[0]
+    final fun gauge(kotlin/String, kotlin/Function1<com.davils.kollect.core.declare/FamilyBuilder, kotlin/Unit> = ...): com.davils.kollect.core/Registration<com.davils.kollect.core/Family<com.davils.kollect.core.meter/Gauge>> // com.davils.kollect.core/MeterRegistry.gauge|gauge(kotlin.String;kotlin.Function1<com.davils.kollect.core.declare.FamilyBuilder,kotlin.Unit>){}[0]
+    final fun histogram(kotlin/String, kotlin/Function1<com.davils.kollect.core.declare/HistogramBuilder, kotlin/Unit> = ...): com.davils.kollect.core/Registration<com.davils.kollect.core/Family<com.davils.kollect.core.meter/Histogram>> // com.davils.kollect.core/MeterRegistry.histogram|histogram(kotlin.String;kotlin.Function1<com.davils.kollect.core.declare.HistogramBuilder,kotlin.Unit>){}[0]
+    final fun info(kotlin/String, kotlin/Function1<com.davils.kollect.core.declare/FamilyBuilder, kotlin/Unit> = ...): com.davils.kollect.core/Registration<com.davils.kollect.core/Family<com.davils.kollect.core.meter/Info>> // com.davils.kollect.core/MeterRegistry.info|info(kotlin.String;kotlin.Function1<com.davils.kollect.core.declare.FamilyBuilder,kotlin.Unit>){}[0]
+    final fun longTaskTimer(kotlin/String, kotlin/Function1<com.davils.kollect.core.declare/FamilyBuilder, kotlin/Unit> = ...): com.davils.kollect.core/Registration<com.davils.kollect.core/Family<com.davils.kollect.core.meter/LongTaskTimer>> // com.davils.kollect.core/MeterRegistry.longTaskTimer|longTaskTimer(kotlin.String;kotlin.Function1<com.davils.kollect.core.declare.FamilyBuilder,kotlin.Unit>){}[0]
+    final fun observedCounter(kotlin/String, kotlin/Function1<com.davils.kollect.core.declare/FamilyBuilder, kotlin/Unit> = ..., kotlin/Function1<com.davils.kollect.core.meter/ObservationSink, kotlin/Unit>): com.davils.kollect.core/Registration<com.davils.kollect.core/ObservedFamily> // com.davils.kollect.core/MeterRegistry.observedCounter|observedCounter(kotlin.String;kotlin.Function1<com.davils.kollect.core.declare.FamilyBuilder,kotlin.Unit>;kotlin.Function1<com.davils.kollect.core.meter.ObservationSink,kotlin.Unit>){}[0]
+    final fun observedGauge(kotlin/String, kotlin/Function1<com.davils.kollect.core.declare/FamilyBuilder, kotlin/Unit> = ..., kotlin/Function1<com.davils.kollect.core.meter/ObservationSink, kotlin/Unit>): com.davils.kollect.core/Registration<com.davils.kollect.core/ObservedFamily> // com.davils.kollect.core/MeterRegistry.observedGauge|observedGauge(kotlin.String;kotlin.Function1<com.davils.kollect.core.declare.FamilyBuilder,kotlin.Unit>;kotlin.Function1<com.davils.kollect.core.meter.ObservationSink,kotlin.Unit>){}[0]
+    final fun observedUpDownCounter(kotlin/String, kotlin/Function1<com.davils.kollect.core.declare/FamilyBuilder, kotlin/Unit> = ..., kotlin/Function1<com.davils.kollect.core.meter/ObservationSink, kotlin/Unit>): com.davils.kollect.core/Registration<com.davils.kollect.core/ObservedFamily> // com.davils.kollect.core/MeterRegistry.observedUpDownCounter|observedUpDownCounter(kotlin.String;kotlin.Function1<com.davils.kollect.core.declare.FamilyBuilder,kotlin.Unit>;kotlin.Function1<com.davils.kollect.core.meter.ObservationSink,kotlin.Unit>){}[0]
+    final fun remove(com.davils.kollect.core.name/MetricName): kotlin/Boolean // com.davils.kollect.core/MeterRegistry.remove|remove(com.davils.kollect.core.name.MetricName){}[0]
+    final fun snapshot(): com.davils.kollect.core.snapshot/MetricsSnapshot // com.davils.kollect.core/MeterRegistry.snapshot|snapshot(){}[0]
+    final fun timer(kotlin/String, kotlin/Function1<com.davils.kollect.core.declare/HistogramBuilder, kotlin/Unit> = ...): com.davils.kollect.core/Registration<com.davils.kollect.core/Family<com.davils.kollect.core.meter/Timer>> // com.davils.kollect.core/MeterRegistry.timer|timer(kotlin.String;kotlin.Function1<com.davils.kollect.core.declare.HistogramBuilder,kotlin.Unit>){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core/MeterRegistry.toString|toString(){}[0]
+    final fun upDownCounter(kotlin/String, kotlin/Function1<com.davils.kollect.core.declare/FamilyBuilder, kotlin/Unit> = ...): com.davils.kollect.core/Registration<com.davils.kollect.core/Family<com.davils.kollect.core.meter/UpDownCounter>> // com.davils.kollect.core/MeterRegistry.upDownCounter|upDownCounter(kotlin.String;kotlin.Function1<com.davils.kollect.core.declare.FamilyBuilder,kotlin.Unit>){}[0]
+    final inline fun <#A1: reified kotlin/Enum<#A1>> stateSet(kotlin/String, #A1, noinline kotlin/Function1<com.davils.kollect.core.declare/FamilyBuilder, kotlin/Unit> = ...): com.davils.kollect.core/Registration<com.davils.kollect.core/Family<com.davils.kollect.core.meter/StateSet<#A1>>> // com.davils.kollect.core/MeterRegistry.stateSet|stateSet(kotlin.String;0:0;kotlin.Function1<com.davils.kollect.core.declare.FamilyBuilder,kotlin.Unit>){0§<kotlin.Enum<0:0>>}[0]
+}
+
+final class com.davils.kollect.core/MeterRegistryBuilder { // com.davils.kollect.core/MeterRegistryBuilder|null[0]
+    final var limits // com.davils.kollect.core/MeterRegistryBuilder.limits|{}limits[0]
+        final fun <get-limits>(): com.davils.kollect.core.limit/RegistryLimits // com.davils.kollect.core/MeterRegistryBuilder.limits.<get-limits>|<get-limits>(){}[0]
+        final fun <set-limits>(com.davils.kollect.core.limit/RegistryLimits) // com.davils.kollect.core/MeterRegistryBuilder.limits.<set-limits>|<set-limits>(com.davils.kollect.core.limit.RegistryLimits){}[0]
+
+    final fun events(com.davils.konfetti.core/EventBus) // com.davils.kollect.core/MeterRegistryBuilder.events|events(com.davils.konfetti.core.EventBus){}[0]
+    final fun filter(com.davils.kollect.core.filter/MeterFilter) // com.davils.kollect.core/MeterRegistryBuilder.filter|filter(com.davils.kollect.core.filter.MeterFilter){}[0]
+}
+
+final class com.davils.kollect.core/ObservedFamily : kotlin/AutoCloseable { // com.davils.kollect.core/ObservedFamily|null[0]
+    final val descriptor // com.davils.kollect.core/ObservedFamily.descriptor|{}descriptor[0]
+        final fun <get-descriptor>(): com.davils.kollect.core.meter/Descriptor? // com.davils.kollect.core/ObservedFamily.descriptor.<get-descriptor>|<get-descriptor>(){}[0]
+
+    final fun close() // com.davils.kollect.core/ObservedFamily.close|close(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core/ObservedFamily.toString|toString(){}[0]
+}
+
+final class com.davils.kollect.core/Payload { // com.davils.kollect.core/Payload|null[0]
+    final val contentType // com.davils.kollect.core/Payload.contentType|{}contentType[0]
+        final fun <get-contentType>(): kotlin/String // com.davils.kollect.core/Payload.contentType.<get-contentType>|<get-contentType>(){}[0]
+    final val size // com.davils.kollect.core/Payload.size|{}size[0]
+        final fun <get-size>(): kotlin/Int // com.davils.kollect.core/Payload.size.<get-size>|<get-size>(){}[0]
+
+    final fun copyBytes(): kotlin/ByteArray // com.davils.kollect.core/Payload.copyBytes|copyBytes(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core/Payload.toString|toString(){}[0]
+    final fun writeTo(kotlin/Function2<kotlin/ByteArray, kotlin/Int, kotlin/Unit>) // com.davils.kollect.core/Payload.writeTo|writeTo(kotlin.Function2<kotlin.ByteArray,kotlin.Int,kotlin.Unit>){}[0]
+}
+
+final value class com.davils.kollect.core.name/LabelKey : kotlin/Comparable<com.davils.kollect.core.name/LabelKey> { // com.davils.kollect.core.name/LabelKey|null[0]
+    final val isReserved // com.davils.kollect.core.name/LabelKey.isReserved|{}isReserved[0]
+        final fun <get-isReserved>(): kotlin/Boolean // com.davils.kollect.core.name/LabelKey.isReserved.<get-isReserved>|<get-isReserved>(){}[0]
+    final val value // com.davils.kollect.core.name/LabelKey.value|{}value[0]
+        final fun <get-value>(): kotlin/String // com.davils.kollect.core.name/LabelKey.value.<get-value>|<get-value>(){}[0]
+
+    final fun compareTo(com.davils.kollect.core.name/LabelKey): kotlin/Int // com.davils.kollect.core.name/LabelKey.compareTo|compareTo(com.davils.kollect.core.name.LabelKey){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.name/LabelKey.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.name/LabelKey.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.name/LabelKey.toString|toString(){}[0]
+
+    final object Companion { // com.davils.kollect.core.name/LabelKey.Companion|null[0]
+        final val OVERFLOW // com.davils.kollect.core.name/LabelKey.Companion.OVERFLOW|{}OVERFLOW[0]
+            final fun <get-OVERFLOW>(): com.davils.kollect.core.name/LabelKey // com.davils.kollect.core.name/LabelKey.Companion.OVERFLOW.<get-OVERFLOW>|<get-OVERFLOW>(){}[0]
+
+        final fun of(kotlin/String): com.davils.kollect.core.name/LabelKey // com.davils.kollect.core.name/LabelKey.Companion.of|of(kotlin.String){}[0]
+        final fun ofOrNull(kotlin/String): com.davils.kollect.core.name/LabelKey? // com.davils.kollect.core.name/LabelKey.Companion.ofOrNull|ofOrNull(kotlin.String){}[0]
+    }
+}
+
+final value class com.davils.kollect.core.name/MetricName : kotlin/Comparable<com.davils.kollect.core.name/MetricName> { // com.davils.kollect.core.name/MetricName|null[0]
+    final val value // com.davils.kollect.core.name/MetricName.value|{}value[0]
+        final fun <get-value>(): kotlin/String // com.davils.kollect.core.name/MetricName.value.<get-value>|<get-value>(){}[0]
+
+    final fun compareTo(com.davils.kollect.core.name/MetricName): kotlin/Int // com.davils.kollect.core.name/MetricName.compareTo|compareTo(com.davils.kollect.core.name.MetricName){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.name/MetricName.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.name/MetricName.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.name/MetricName.toString|toString(){}[0]
+
+    final object Companion { // com.davils.kollect.core.name/MetricName.Companion|null[0]
+        final const val MAXIMUM_LENGTH // com.davils.kollect.core.name/MetricName.Companion.MAXIMUM_LENGTH|{}MAXIMUM_LENGTH[0]
+            final fun <get-MAXIMUM_LENGTH>(): kotlin/Int // com.davils.kollect.core.name/MetricName.Companion.MAXIMUM_LENGTH.<get-MAXIMUM_LENGTH>|<get-MAXIMUM_LENGTH>(){}[0]
+
+        final fun of(kotlin/String): com.davils.kollect.core.name/MetricName // com.davils.kollect.core.name/MetricName.Companion.of|of(kotlin.String){}[0]
+        final fun ofOrNull(kotlin/String): com.davils.kollect.core.name/MetricName? // com.davils.kollect.core.name/MetricName.Companion.ofOrNull|ofOrNull(kotlin.String){}[0]
+    }
+}
+
+final value class com.davils.kollect.core.otlp/Source : kotlin/Comparable<com.davils.kollect.core.otlp/Source> { // com.davils.kollect.core.otlp/Source|null[0]
+    final val id // com.davils.kollect.core.otlp/Source.id|{}id[0]
+        final fun <get-id>(): kotlin/String // com.davils.kollect.core.otlp/Source.id.<get-id>|<get-id>(){}[0]
+
+    final fun compareTo(com.davils.kollect.core.otlp/Source): kotlin/Int // com.davils.kollect.core.otlp/Source.compareTo|compareTo(com.davils.kollect.core.otlp.Source){}[0]
+    final fun equals(kotlin/Any?): kotlin/Boolean // com.davils.kollect.core.otlp/Source.equals|equals(kotlin.Any?){}[0]
+    final fun hashCode(): kotlin/Int // com.davils.kollect.core.otlp/Source.hashCode|hashCode(){}[0]
+    final fun toString(): kotlin/String // com.davils.kollect.core.otlp/Source.toString|toString(){}[0]
+
+    final object Companion { // com.davils.kollect.core.otlp/Source.Companion|null[0]
+        final fun of(kotlin/String): com.davils.kollect.core.otlp/Source // com.davils.kollect.core.otlp/Source.Companion.of|of(kotlin.String){}[0]
+        final fun ofOrNull(kotlin/String): com.davils.kollect.core.otlp/Source? // com.davils.kollect.core.otlp/Source.Companion.ofOrNull|ofOrNull(kotlin.String){}[0]
+    }
+}
+
+open class com.davils.kollect.core.declare/FamilyBuilder { // com.davils.kollect.core.declare/FamilyBuilder|null[0]
+    final var description // com.davils.kollect.core.declare/FamilyBuilder.description|{}description[0]
+        final fun <get-description>(): kotlin/String // com.davils.kollect.core.declare/FamilyBuilder.description.<get-description>|<get-description>(){}[0]
+        final fun <set-description>(kotlin/String) // com.davils.kollect.core.declare/FamilyBuilder.description.<set-description>|<set-description>(kotlin.String){}[0]
+    final var unit // com.davils.kollect.core.declare/FamilyBuilder.unit|{}unit[0]
+        final fun <get-unit>(): com.davils.kollect.core.meter/MeasureUnit // com.davils.kollect.core.declare/FamilyBuilder.unit.<get-unit>|<get-unit>(){}[0]
+        final fun <set-unit>(com.davils.kollect.core.meter/MeasureUnit) // com.davils.kollect.core.declare/FamilyBuilder.unit.<set-unit>|<set-unit>(com.davils.kollect.core.meter.MeasureUnit){}[0]
+
+    final fun labelKeys(kotlin/Array<out kotlin/String>...) // com.davils.kollect.core.declare/FamilyBuilder.labelKeys|labelKeys(kotlin.Array<out|kotlin.String>...){}[0]
+}
+
+open class com.davils.kollect.core.health/HealthGroupBuilder { // com.davils.kollect.core.health/HealthGroupBuilder|null[0]
+    final fun group(kotlin/String, com.davils.kollect.core.health/Impact = ..., kotlin/Function1<com.davils.kollect.core.health/HealthGroupBuilder, kotlin/Unit>) // com.davils.kollect.core.health/HealthGroupBuilder.group|group(kotlin.String;com.davils.kollect.core.health.Impact;kotlin.Function1<com.davils.kollect.core.health.HealthGroupBuilder,kotlin.Unit>){}[0]
+    final fun indicator(kotlin/String, com.davils.kollect.core.health/Impact = ..., kotlin.time/Duration = ..., com.davils.kollect.core.health/HealthIndicator) // com.davils.kollect.core.health/HealthGroupBuilder.indicator|indicator(kotlin.String;com.davils.kollect.core.health.Impact;kotlin.time.Duration;com.davils.kollect.core.health.HealthIndicator){}[0]
+    final fun state(kotlin/String, com.davils.kollect.core.health/Impact = ..., kotlin/Function1<com.davils.kollect.core.health.rule/StateRuleBuilder, kotlin/Unit>) // com.davils.kollect.core.health/HealthGroupBuilder.state|state(kotlin.String;com.davils.kollect.core.health.Impact;kotlin.Function1<com.davils.kollect.core.health.rule.StateRuleBuilder,kotlin.Unit>){}[0]
+    final fun threshold(kotlin/String, com.davils.kollect.core.health/Impact = ..., kotlin/Function1<com.davils.kollect.core.health.rule/ThresholdRuleBuilder, kotlin/Unit>) // com.davils.kollect.core.health/HealthGroupBuilder.threshold|threshold(kotlin.String;com.davils.kollect.core.health.Impact;kotlin.Function1<com.davils.kollect.core.health.rule.ThresholdRuleBuilder,kotlin.Unit>){}[0]
+}
+
+final object com.davils.kollect.core.event/MetricTopics { // com.davils.kollect.core.event/MetricTopics|null[0]
+    final val HEALTH // com.davils.kollect.core.event/MetricTopics.HEALTH|{}HEALTH[0]
+        final fun <get-HEALTH>(): com.davils.konfetti.core/TopicKey<com.davils.kollect.core.event/HealthEvent> // com.davils.kollect.core.event/MetricTopics.HEALTH.<get-HEALTH>|<get-HEALTH>(){}[0]
+    final val REGISTRY // com.davils.kollect.core.event/MetricTopics.REGISTRY|{}REGISTRY[0]
+        final fun <get-REGISTRY>(): com.davils.konfetti.core/TopicKey<com.davils.kollect.core.event/RegistryEvent> // com.davils.kollect.core.event/MetricTopics.REGISTRY.<get-REGISTRY>|<get-REGISTRY>(){}[0]
+}
+
+final object com.davils.kollect.core.export/OtlpResponses { // com.davils.kollect.core.export/OtlpResponses|null[0]
+    final fun deliveryOf(kotlin/Int, kotlin/ByteArray? = ..., kotlin.time/Duration? = ...): com.davils.kollect.core.export/Delivery // com.davils.kollect.core.export/OtlpResponses.deliveryOf|deliveryOf(kotlin.Int;kotlin.ByteArray?;kotlin.time.Duration?){}[0]
+}
+
+final object com.davils.kollect.core.name/PrometheusNaming { // com.davils.kollect.core.name/PrometheusNaming|null[0]
+    final val RESERVED_SUFFIXES // com.davils.kollect.core.name/PrometheusNaming.RESERVED_SUFFIXES|{}RESERVED_SUFFIXES[0]
+        final fun <get-RESERVED_SUFFIXES>(): kotlin.collections/List<kotlin/String> // com.davils.kollect.core.name/PrometheusNaming.RESERVED_SUFFIXES.<get-RESERVED_SUFFIXES>|<get-RESERVED_SUFFIXES>(){}[0]
+
+    final fun familyName(com.davils.kollect.core.meter/Descriptor): kotlin/String // com.davils.kollect.core.name/PrometheusNaming.familyName|familyName(com.davils.kollect.core.meter.Descriptor){}[0]
+    final fun isReserved(com.davils.kollect.core.meter/Descriptor): kotlin/Boolean // com.davils.kollect.core.name/PrometheusNaming.isReserved|isReserved(com.davils.kollect.core.meter.Descriptor){}[0]
+    final fun labelName(com.davils.kollect.core.name/LabelKey): kotlin/String // com.davils.kollect.core.name/PrometheusNaming.labelName|labelName(com.davils.kollect.core.name.LabelKey){}[0]
+    final fun sampleNames(com.davils.kollect.core.meter/Descriptor): kotlin.collections/List<kotlin/String> // com.davils.kollect.core.name/PrometheusNaming.sampleNames|sampleNames(com.davils.kollect.core.meter.Descriptor){}[0]
+}
+
+final object com.davils.kollect.core/MetricViolationCodes { // com.davils.kollect.core/MetricViolationCodes|null[0]
+    final val ABOVE_HARD_LIMIT // com.davils.kollect.core/MetricViolationCodes.ABOVE_HARD_LIMIT|{}ABOVE_HARD_LIMIT[0]
+        final fun <get-ABOVE_HARD_LIMIT>(): com.davils.kore.core.validation.violation/ViolationCode // com.davils.kollect.core/MetricViolationCodes.ABOVE_HARD_LIMIT.<get-ABOVE_HARD_LIMIT>|<get-ABOVE_HARD_LIMIT>(){}[0]
+    final val NOT_POSITIVE // com.davils.kollect.core/MetricViolationCodes.NOT_POSITIVE|{}NOT_POSITIVE[0]
+        final fun <get-NOT_POSITIVE>(): com.davils.kore.core.validation.violation/ViolationCode // com.davils.kollect.core/MetricViolationCodes.NOT_POSITIVE.<get-NOT_POSITIVE>|<get-NOT_POSITIVE>(){}[0]
+}
+
+final fun (com.davils.kollect.core.trace/Tracer).com.davils.kollect.core.trace/metered(com.davils.kollect.core/MeterRegistry, com.davils.kollect.core.meter/ExplicitBounds = ...): com.davils.kollect.core.trace/Tracer // com.davils.kollect.core.trace/metered|metered@com.davils.kollect.core.trace.Tracer(com.davils.kollect.core.MeterRegistry;com.davils.kollect.core.meter.ExplicitBounds){}[0]
+final fun (com.davils.kollect.core/MeterRegistry).com.davils.kollect.core.binder/bindBusMetrics(com.davils.konfetti.core/EventBus): com.davils.kollect.core.binder/BusMetrics // com.davils.kollect.core.binder/bindBusMetrics|bindBusMetrics@com.davils.kollect.core.MeterRegistry(com.davils.konfetti.core.EventBus){}[0]
+final fun (com.davils.kollect.core/MeterRegistry).com.davils.kollect.core.binder/jobMonitor(kotlin/String): com.davils.kollect.core.binder/JobMonitor // com.davils.kollect.core.binder/jobMonitor|jobMonitor@com.davils.kollect.core.MeterRegistry(kotlin.String){}[0]
+final fun (kotlinx.coroutines/CoroutineDispatcher).com.davils.kollect.core.binder/metered(com.davils.kollect.core/MeterRegistry, kotlin/String): com.davils.kollect.core.binder/MeteredDispatcher // com.davils.kollect.core.binder/metered|metered@kotlinx.coroutines.CoroutineDispatcher(com.davils.kollect.core.MeterRegistry;kotlin.String){}[0]
+final fun <#A: kotlin/Any?> (com.davils.kollect.core/Registration<#A>).com.davils.kollect.core/orThrow(): #A // com.davils.kollect.core/orThrow|orThrow@com.davils.kollect.core.Registration<0:0>(){0§<kotlin.Any?>}[0]
+final fun com.davils.kollect.core.export/metricExporter(kotlinx.coroutines/CoroutineScope, com.davils.kollect.core/MeterRegistry, com.davils.kollect.core.otlp/Resource, com.davils.kollect.core.export/Transport, kotlin/Function1<com.davils.kollect.core.export/ExporterBuilder, kotlin/Unit> = ...): com.davils.kollect.core.export/MetricExporter // com.davils.kollect.core.export/metricExporter|metricExporter(kotlinx.coroutines.CoroutineScope;com.davils.kollect.core.MeterRegistry;com.davils.kollect.core.otlp.Resource;com.davils.kollect.core.export.Transport;kotlin.Function1<com.davils.kollect.core.export.ExporterBuilder,kotlin.Unit>){}[0]
+final fun com.davils.kollect.core.exposition/exposition(kotlin/Function1<com.davils.kollect.core.exposition/ExpositionBuilder, kotlin/Unit> = ...): com.davils.kollect.core.exposition/Exposition // com.davils.kollect.core.exposition/exposition|exposition(kotlin.Function1<com.davils.kollect.core.exposition.ExpositionBuilder,kotlin.Unit>){}[0]
+final fun com.davils.kollect.core.exposition/negotiateExposition(kotlin/String?): com.davils.kollect.core.exposition/ExpositionFormat // com.davils.kollect.core.exposition/negotiateExposition|negotiateExposition(kotlin.String?){}[0]
+final fun com.davils.kollect.core.health/healthRegistry(com.davils.kollect.core/MeterRegistry? = ..., kotlin.time/Clock = ..., kotlin/Function1<com.davils.kollect.core.health/HealthRegistryBuilder, kotlin/Unit>): com.davils.kollect.core.health/HealthRegistry // com.davils.kollect.core.health/healthRegistry|healthRegistry(com.davils.kollect.core.MeterRegistry?;kotlin.time.Clock;kotlin.Function1<com.davils.kollect.core.health.HealthRegistryBuilder,kotlin.Unit>){}[0]
+final fun com.davils.kollect.core.limit/exportLimits(com.davils.kollect.core.limit/ExportLimits = ..., kotlin/Function1<com.davils.kollect.core.limit/ExportLimitsBuilder, kotlin/Unit>): com.davils.kollect.core.limit/ExportLimits // com.davils.kollect.core.limit/exportLimits|exportLimits(com.davils.kollect.core.limit.ExportLimits;kotlin.Function1<com.davils.kollect.core.limit.ExportLimitsBuilder,kotlin.Unit>){}[0]
+final fun com.davils.kollect.core.limit/expositionLimits(com.davils.kollect.core.limit/ExpositionLimits = ..., kotlin/Function1<com.davils.kollect.core.limit/ExpositionLimitsBuilder, kotlin/Unit>): com.davils.kollect.core.limit/ExpositionLimits // com.davils.kollect.core.limit/expositionLimits|expositionLimits(com.davils.kollect.core.limit.ExpositionLimits;kotlin.Function1<com.davils.kollect.core.limit.ExpositionLimitsBuilder,kotlin.Unit>){}[0]
+final fun com.davils.kollect.core.limit/healthLimits(com.davils.kollect.core.limit/HealthLimits = ..., kotlin/Function1<com.davils.kollect.core.limit/HealthLimitsBuilder, kotlin/Unit>): com.davils.kollect.core.limit/HealthLimits // com.davils.kollect.core.limit/healthLimits|healthLimits(com.davils.kollect.core.limit.HealthLimits;kotlin.Function1<com.davils.kollect.core.limit.HealthLimitsBuilder,kotlin.Unit>){}[0]
+final fun com.davils.kollect.core.limit/ingestLimits(com.davils.kollect.core.limit/IngestLimits = ..., kotlin/Function1<com.davils.kollect.core.limit/IngestLimitsBuilder, kotlin/Unit>): com.davils.kollect.core.limit/IngestLimits // com.davils.kollect.core.limit/ingestLimits|ingestLimits(com.davils.kollect.core.limit.IngestLimits;kotlin.Function1<com.davils.kollect.core.limit.IngestLimitsBuilder,kotlin.Unit>){}[0]
+final fun com.davils.kollect.core.limit/registryLimits(com.davils.kollect.core.limit/RegistryLimits = ..., kotlin/Function1<com.davils.kollect.core.limit/RegistryLimitsBuilder, kotlin/Unit>): com.davils.kollect.core.limit/RegistryLimits // com.davils.kollect.core.limit/registryLimits|registryLimits(com.davils.kollect.core.limit.RegistryLimits;kotlin.Function1<com.davils.kollect.core.limit.RegistryLimitsBuilder,kotlin.Unit>){}[0]
+final fun com.davils.kollect.core.otlp/encodeOtlp(com.davils.kollect.core.snapshot/MetricsSnapshot, com.davils.kollect.core.otlp/Resource, com.davils.kollect.core.limit/ExportLimits = ...): com.davils.kollect.core.otlp/OtlpBatch // com.davils.kollect.core.otlp/encodeOtlp|encodeOtlp(com.davils.kollect.core.snapshot.MetricsSnapshot;com.davils.kollect.core.otlp.Resource;com.davils.kollect.core.limit.ExportLimits){}[0]
+final fun com.davils.kollect.core.otlp/otlpIngestion(kotlin.time/Clock = ..., kotlin/Function1<com.davils.kollect.core.otlp/OtlpIngestionBuilder, kotlin/Unit>): com.davils.kollect.core.otlp/OtlpIngestion // com.davils.kollect.core.otlp/otlpIngestion|otlpIngestion(kotlin.time.Clock;kotlin.Function1<com.davils.kollect.core.otlp.OtlpIngestionBuilder,kotlin.Unit>){}[0]
+final fun com.davils.kollect.core.otlp/resource(kotlin/String, kotlin/Function1<com.davils.kollect.core.otlp/ResourceBuilder, kotlin/Unit> = ...): com.davils.kollect.core.otlp/Resource // com.davils.kollect.core.otlp/resource|resource(kotlin.String;kotlin.Function1<com.davils.kollect.core.otlp.ResourceBuilder,kotlin.Unit>){}[0]
+final fun com.davils.kollect.core/meterRegistry(kotlin.time/Clock = ..., kotlin.time/TimeSource.WithComparableMarks = ..., kotlin/Function1<com.davils.kollect.core/MeterRegistryBuilder, kotlin/Unit> = ...): com.davils.kollect.core/MeterRegistry // com.davils.kollect.core/meterRegistry|meterRegistry(kotlin.time.Clock;kotlin.time.TimeSource.WithComparableMarks;kotlin.Function1<com.davils.kollect.core.MeterRegistryBuilder,kotlin.Unit>){}[0]
+final inline fun <#A: kotlin/Any?> (com.davils.kollect.core.meter/Timer).com.davils.kollect.core.meter/time(kotlin/Function0<#A>): #A // com.davils.kollect.core.meter/time|time@com.davils.kollect.core.meter.Timer(kotlin.Function0<0:0>){0§<kotlin.Any?>}[0]
+final inline fun <#A: kotlin/Any?> (com.davils.kollect.core.trace/Tracer).com.davils.kollect.core.trace/traced(kotlin/String, com.davils.kollect.core.trace/SpanKind = ..., kotlin/Function1<com.davils.kollect.core.trace/Span, #A>): #A // com.davils.kollect.core.trace/traced|traced@com.davils.kollect.core.trace.Tracer(kotlin.String;com.davils.kollect.core.trace.SpanKind;kotlin.Function1<com.davils.kollect.core.trace.Span,0:0>){0§<kotlin.Any?>}[0]
