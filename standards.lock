@@ -1,0 +1,221 @@
+{
+    "schemaVersion": 1,
+    "standards": [
+        {
+            "id": "document:health-check-response-format-for-http-apis",
+            "reviewedOn": "2026-11-21",
+            "note": "ProbeRenderer writes application/health+json with pass, warn and fail and, only with ProbeDetail.Checks, the checks of every member.",
+            "snapshot": {
+                "title": "document:health-check-response-format-for-http-apis",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {},
+                "fingerprint": "sha256:4bf68a95c0f2e682a631b274b435cc9c8c57db6c4c6eaaf4defe99ed3646a551"
+            }
+        },
+        {
+            "id": "document:prometheus-text-exposition-format-0.0.4",
+            "reviewedOn": "2026-11-21",
+            "note": "The default exposition of kollect: names translated by PrometheusNaming, label values escaped, histograms with _bucket, _sum and _count.",
+            "snapshot": {
+                "title": "document:prometheus-text-exposition-format-0.0.4",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {},
+                "fingerprint": "sha256:93d9a0a115c159f89bf6cd9c7126031ab62d3937f0878b2a154d4b634b38040a"
+            }
+        },
+        {
+            "id": "document:protocol-buffers-encoding",
+            "reviewedOn": "2026-11-21",
+            "note": "The bounded ProtoWriter and ProtoReader: varints of at most ten bytes, length-delimited fields checked before allocation, groups refused, unknown fields skipped without recursion.",
+            "snapshot": {
+                "title": "document:protocol-buffers-encoding",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {},
+                "fingerprint": "sha256:9c6280315bb554ef2d113ea280d40a730153d2d82f3559cca92c3c1ab2874246"
+            }
+        },
+        {
+            "id": "document:ucum",
+            "reviewedOn": "2026-11-21",
+            "note": "MeasureUnit offers UCUM base codes such as s, By, 1, Cel, V, A, W, J, Hz and m and checked annotations such as {request}.",
+            "snapshot": {
+                "title": "document:ucum",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {},
+                "fingerprint": "sha256:28752ebc54ece1d29578695a627dbf1c327eb647bbb818768a6abc79dbcd4b04"
+            }
+        },
+        {
+            "id": "github:open-telemetry/opentelemetry-proto",
+            "reviewedOn": "2026-11-21",
+            "note": "kollect encodes and decodes the metrics messages of ExportMetricsServiceRequest and its response by hand; exponential histograms and summaries are rejected, exemplars ignored.",
+            "snapshot": {
+                "title": "open-telemetry/opentelemetry-proto",
+                "revision": "v1.11.1",
+                "published": "2026-09-29",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {}
+            }
+        },
+        {
+            "id": "github:open-telemetry/opentelemetry-specification",
+            "reviewedOn": "2026-11-21",
+            "note": "OTLP/HTTP status mapping and partial success, the overflow attribute otel.metric.overflow and the Prometheus compatibility of state sets and info.",
+            "snapshot": {
+                "title": "open-telemetry/opentelemetry-specification",
+                "revision": "v1.62.0",
+                "published": "2026-10-22",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {}
+            }
+        },
+        {
+            "id": "github:open-telemetry/semantic-conventions",
+            "reviewedOn": "2026-11-21",
+            "note": "The JVM binder names jvm.memory, jvm.gc, jvm.thread, jvm.class, jvm.cpu and jvm.file_descriptor metrics and the resource service and telemetry.sdk attributes after these conventions.",
+            "snapshot": {
+                "title": "open-telemetry/semantic-conventions",
+                "revision": "v1.45.0",
+                "published": "2026-11-02",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {}
+            }
+        },
+        {
+            "id": "github:prometheus/openmetrics",
+            "reviewedOn": "2026-11-21",
+            "note": "kollect writes OpenMetrics 1.0 with UNIT, _created, stateset, info and # EOF and negotiates it from Accept; refused text is reported, never altered.",
+            "snapshot": {
+                "title": "prometheus/openmetrics",
+                "revision": "v1.0.0",
+                "published": "2024-11-28",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {}
+            }
+        },
+        {
+            "id": "rfc:3629",
+            "reviewedOn": "2026-11-21",
+            "note": "The protobuf reader decodes strings as strict UTF-8 and every exposition is UTF-8.",
+            "snapshot": {
+                "title": "UTF-8, a transformation format of ISO 10646",
+                "status": "INTERNET STANDARD",
+                "published": "November 2003",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {}
+            }
+        },
+        {
+            "id": "rfc:8259",
+            "reviewedOn": "2026-11-21",
+            "note": "The internal JSON writer of the health probes escapes quotes, backslashes and control characters.",
+            "snapshot": {
+                "title": "The JavaScript Object Notation (JSON) Data Interchange Format",
+                "status": "INTERNET STANDARD",
+                "published": "December 2017",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {
+                    "5210": "VERIFIED",
+                    "5218": "REJECTED",
+                    "5318": "VERIFIED",
+                    "5853": "REJECTED",
+                    "6208": "REJECTED",
+                    "7307": "REJECTED",
+                    "7383": "VERIFIED",
+                    "7600": "VERIFIED",
+                    "7603": "VERIFIED",
+                    "7617": "REJECTED",
+                    "7650": "HELD",
+                    "7673": "REJECTED",
+                    "8438": "HELD",
+                    "8622": "REJECTED",
+                    "8874": "REJECTED",
+                    "9095": "REPORTED"
+                }
+            }
+        },
+        {
+            "id": "rfc:9110",
+            "reviewedOn": "2026-11-21",
+            "note": "negotiateExposition reads the Accept header with media ranges and quality values; ingestion verdicts and OtlpResponses use its status codes.",
+            "snapshot": {
+                "title": "HTTP Semantics",
+                "status": "INTERNET STANDARD",
+                "published": "June 2022",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {
+                    "7105": "VERIFIED",
+                    "7107": "REJECTED",
+                    "7109": "VERIFIED",
+                    "7138": "VERIFIED",
+                    "7306": "VERIFIED",
+                    "7419": "VERIFIED",
+                    "7530": "REJECTED",
+                    "7599": "REJECTED",
+                    "7870": "REJECTED",
+                    "8138": "REJECTED",
+                    "8268": "VERIFIED",
+                    "8459": "REJECTED",
+                    "9162": "REJECTED",
+                    "9164": "REJECTED"
+                }
+            }
+        },
+        {
+            "id": "rfc:9562",
+            "reviewedOn": "2026-11-21",
+            "note": "service.instance.id of a resource is a UUID version 4 from the secure generator of Kore; kollect implements nothing of RFC 9562 itself.",
+            "snapshot": {
+                "title": "Universally Unique IDentifiers (UUIDs)",
+                "status": "PROPOSED STANDARD",
+                "published": "May 2024",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {
+                    "7929": "VERIFIED",
+                    "7931": "REPORTED",
+                    "7955": "VERIFIED",
+                    "7958": "VERIFIED",
+                    "8288": "VERIFIED",
+                    "8695": "VERIFIED"
+                }
+            }
+        },
+        {
+            "id": "unicode:ucd",
+            "reviewedOn": "2026-11-21",
+            "note": "kollect refuses control characters and lone surrogates in exposed text and shows untrusted text through SafeText of Kore, which follows the tables of the platform.",
+            "snapshot": {
+                "title": "Unicode Character Database",
+                "revision": "18.0.0",
+                "withdrawn": false,
+                "replacedBy": [],
+                "updatedBy": [],
+                "errata": {}
+            }
+        }
+    ]
+}
