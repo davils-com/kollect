@@ -193,7 +193,8 @@ from configuration and the text of failures. kollect is built so that a mistake 
 
 kollect opts into these `@DavilsInternal` declarations of Kore; Kore changes them only in a major version:
 `ShortestDecimal`, `OrderedMap`, `OrderedSet`, `SafeText.text`, `SafeText.quoted` and `SafeText.REDACTED`,
-`WorkBudget`, `immutableList` and `immutableMap`, and the annotation `DavilsPlatformBinding`. A new use is added here
+`WorkBudget`, `immutableList` and `immutableMap`, since 1.1.0 `guard`, `grownDelay` and `fullJitter`, and the
+annotation `DavilsPlatformBinding`. A new use is added here
 and to the table of Kore's `AGENTS.md`.
 
 ## Public API
