@@ -37,7 +37,7 @@ dependencyResolutionManagement {
 ```kotlin
 // build.gradle.kts
 dependencies {
-    implementation("com.davils:kollect-core:1.0.0")
+    implementation("com.davils:kollect-core:1.0.1")
 }
 ```
 
