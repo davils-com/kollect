@@ -14,16 +14,19 @@
  * limitations under the License.
  */
 
+@file:OptIn(DavilsInternal::class)
+
 package com.davils.kollect.core.internal.cell
 
-import com.davils.kollect.core.internal.platform.Guard
-import com.davils.kollect.core.internal.platform.guard
 import com.davils.kollect.core.meter.LongTask
 import com.davils.kollect.core.meter.LongTaskTimer
 import com.davils.kollect.core.meter.Rejection
 import com.davils.kollect.core.name.Labels
 import com.davils.kollect.core.snapshot.GaugePoint
 import com.davils.kollect.core.snapshot.Point
+import com.davils.kore.core.annotation.DavilsInternal
+import com.davils.kore.core.concurrency.Guard
+import com.davils.kore.core.concurrency.guard
 import kotlin.time.ComparableTimeMark
 import kotlin.time.DurationUnit
 import kotlin.time.Instant

@@ -14,12 +14,15 @@
  * limitations under the License.
  */
 
+@file:OptIn(DavilsInternal::class)
+
 package com.davils.kollect.core.internal.binder
 
-import com.davils.kollect.core.internal.platform.Guard
-import com.davils.kollect.core.internal.platform.guard
 import com.davils.konfetti.core.EventBus
 import com.davils.konfetti.core.observe.BusSnapshot
+import com.davils.kore.core.annotation.DavilsInternal
+import com.davils.kore.core.concurrency.Guard
+import com.davils.kore.core.concurrency.guard
 import kotlin.time.ComparableTimeMark
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.TimeSource

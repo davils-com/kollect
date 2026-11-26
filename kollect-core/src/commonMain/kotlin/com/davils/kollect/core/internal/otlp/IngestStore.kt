@@ -18,8 +18,6 @@
 
 package com.davils.kollect.core.internal.otlp
 
-import com.davils.kollect.core.internal.platform.Guard
-import com.davils.kollect.core.internal.platform.guard
 import com.davils.kollect.core.internal.text.TextRules
 import com.davils.kollect.core.limit.IngestLimits
 import com.davils.kollect.core.meter.MeasureUnit
@@ -32,6 +30,8 @@ import com.davils.kollect.core.snapshot.MetricsSnapshot
 import com.davils.kore.core.annotation.DavilsInternal
 import com.davils.kore.core.collection.OrderedMap
 import com.davils.kore.core.collection.OrderedSet
+import com.davils.kore.core.concurrency.Guard
+import com.davils.kore.core.concurrency.guard
 import kotlin.time.Duration.Companion.minutes
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.DurationUnit

@@ -29,8 +29,7 @@ class PlatformParityTest : FunSpec({
         counter.sum shouldBe AMOUNT - 1L
     }
 
-    test("a guard runs its block and returns its result") {
-        guard().locked { AMOUNT } shouldBe AMOUNT
+    test("a spin pause returns at once") {
         spinPause()
     }
 })

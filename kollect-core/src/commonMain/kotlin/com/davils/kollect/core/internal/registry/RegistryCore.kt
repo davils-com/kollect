@@ -23,8 +23,6 @@ import com.davils.kollect.core.ObservedFamily
 import com.davils.kollect.core.Refusal
 import com.davils.kollect.core.Registration
 import com.davils.kollect.core.filter.MeterFilter
-import com.davils.kollect.core.internal.platform.Guard
-import com.davils.kollect.core.internal.platform.guard
 import com.davils.kollect.core.meter.Descriptor
 import com.davils.kollect.core.meter.ObservationSink
 import com.davils.kollect.core.meter.Rejection
@@ -33,6 +31,8 @@ import com.davils.kollect.core.snapshot.MetricsSnapshot
 import com.davils.kollect.core.snapshot.Unreadable
 import com.davils.kore.core.annotation.DavilsInternal
 import com.davils.kore.core.collection.OrderedMap
+import com.davils.kore.core.concurrency.Guard
+import com.davils.kore.core.concurrency.guard
 import com.davils.kore.core.outcome.Outcome
 
 private const val MINIMUM_TOMBSTONES: Int = 64

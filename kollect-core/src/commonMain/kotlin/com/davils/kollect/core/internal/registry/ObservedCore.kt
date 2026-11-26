@@ -18,8 +18,6 @@
 
 package com.davils.kollect.core.internal.registry
 
-import com.davils.kollect.core.internal.platform.Guard
-import com.davils.kollect.core.internal.platform.guard
 import com.davils.kollect.core.meter.Descriptor
 import com.davils.kollect.core.meter.MeterKind
 import com.davils.kollect.core.meter.ObservationSink
@@ -33,6 +31,8 @@ import com.davils.kollect.core.snapshot.Unreadability
 import com.davils.kollect.core.snapshot.Unreadable
 import com.davils.kore.core.annotation.DavilsInternal
 import com.davils.kore.core.collection.OrderedMap
+import com.davils.kore.core.concurrency.Guard
+import com.davils.kore.core.concurrency.guard
 import com.davils.kore.core.failure.contained
 import kotlin.time.Instant
 

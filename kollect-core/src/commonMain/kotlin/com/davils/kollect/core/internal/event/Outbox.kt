@@ -14,17 +14,18 @@
  * limitations under the License.
  */
 
-@file:OptIn(ExperimentalAtomicApi::class)
+@file:OptIn(ExperimentalAtomicApi::class, DavilsInternal::class)
 
 package com.davils.kollect.core.internal.event
 
-import com.davils.kollect.core.internal.platform.Guard
-import com.davils.kollect.core.internal.platform.guard
 import com.davils.konfetti.core.Event
 import com.davils.konfetti.core.EventBus
 import com.davils.konfetti.core.Topic
 import com.davils.konfetti.core.TopicKey
 import com.davils.konfetti.core.publish.PublishResult
+import com.davils.kore.core.annotation.DavilsInternal
+import com.davils.kore.core.concurrency.Guard
+import com.davils.kore.core.concurrency.guard
 import com.davils.kore.core.failure.contained
 import kotlin.concurrent.atomics.AtomicLong
 import kotlin.concurrent.atomics.ExperimentalAtomicApi

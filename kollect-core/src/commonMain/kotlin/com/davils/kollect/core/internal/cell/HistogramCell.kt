@@ -14,18 +14,19 @@
  * limitations under the License.
  */
 
-@file:OptIn(ExperimentalAtomicApi::class)
+@file:OptIn(ExperimentalAtomicApi::class, DavilsInternal::class)
 
 package com.davils.kollect.core.internal.cell
 
-import com.davils.kollect.core.internal.platform.Guard
-import com.davils.kollect.core.internal.platform.guard
 import com.davils.kollect.core.internal.platform.spinPause
 import com.davils.kollect.core.meter.Histogram
 import com.davils.kollect.core.meter.Rejection
 import com.davils.kollect.core.name.Labels
 import com.davils.kollect.core.snapshot.HistogramPoint
 import com.davils.kollect.core.snapshot.Point
+import com.davils.kore.core.annotation.DavilsInternal
+import com.davils.kore.core.concurrency.Guard
+import com.davils.kore.core.concurrency.guard
 import kotlin.concurrent.atomics.AtomicLong
 import kotlin.concurrent.atomics.ExperimentalAtomicApi
 import kotlin.time.Instant
