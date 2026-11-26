@@ -45,12 +45,12 @@
         },
         {
             "id": "github:open-telemetry/opentelemetry-specification",
-            "reviewedOn": "2026-11-21",
-            "note": "OTLP/HTTP status mapping and partial success, the overflow attribute otel.metric.overflow and the Prometheus compatibility of state sets and info.",
+            "reviewedOn": "2026-11-26",
+            "note": "OTLP/HTTP status mapping and partial success, the overflow attribute otel.metric.overflow and the Prometheus compatibility of state sets and info. Reviewed v1.63.0: its Prometheus changes cover histograms without a sum, which kollect never writes, and the target info metric, which kollect does not expose; nothing changes for kollect.",
             "snapshot": {
                 "title": "open-telemetry/opentelemetry-specification",
-                "revision": "v1.62.0",
-                "published": "2026-10-22",
+                "revision": "v1.63.0",
+                "published": "2026-11-23",
                 "withdrawn": false,
                 "replacedBy": [],
                 "updatedBy": [],
