@@ -132,7 +132,7 @@ from configuration and the text of failures. kollect is built so that a mistake 
   entropy run inside `contained` or `attempted` of Kore. Their failure becomes a refusal, an unreadable family, a Down
   member or a counted failure, never an exception in the caller.
 - **Randomness is secure by default.** The jitter of retries comes from the `Entropy` of konfetti, which defaults to
-  secure randomness.
+  `SecureEntropy` of Kore.
 - **Hide what Java must not reach.** The runtime lives in `internal` packages that `module-info.java` never exports.
 - **Every sink has an injection test** with hostile text, and every limit has a test at the limit and one past it.
 
