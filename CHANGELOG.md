@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.1.0 - 2026-11-26
+
+### Fixed
+
+- **An exporter whose entropy fails waits before it retries.** The export backoff fell back to no wait at all when its
+  entropy threw, so the retries of a failing export fired back to back; it now waits the whole ceiling of the attempt,
+  as konfetti and kontinuity do.
+
+### Changed
+
+- **The export backoff and the guards of critical sections come from Kore 2.5.0.** kollect drops its own copies of
+  the backoff arithmetic, the random fraction and the lock; the delays are unchanged.
+- **Built with Kreate 5.5.2 and Gradle 9.9.2 on Kore 2.5.0 and konfetti 1.1.0**, with the version floors of the build
+  tools raised.
+
 ## 1.0.1 - 2026-11-26
 
 ### Changed
